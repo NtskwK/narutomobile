@@ -5,6 +5,26 @@
 
 <div align="center">
 
+##如何开发这个项目
+首先你需要了解语法规范：
+https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md
+通过这个去了解如何修改（narotomobile\assets\resource\base\pipeline\my_task.json）文件
+
+同时注意使用增加截图的时候使用MFATools截图
+https://github.com/SweetSmellFox/MFATools
+
+使用MAAdebugger进行调试
+https://github.com/MaaXYZ/MaaDebugger
+
+可以阅读视频教程
+https://www.bilibili.com/video/BV1yr421E7MW/
+
+最后了解MFAAvalonia的语法规范
+https://github.com/SweetSmellFox/MFAAvalonia
+知道怎么修改(narotomobile\MFAAvalonia-v1.2.3-win-x64\interface.json)文件
+
+如果你想要方便的打开MAAdebugger可以参考的的(narotomobile\MaaDebugger.bat)文件编写一个批处理文件
+
 # MaaPracticeBoilerplate
 
 </div>
