@@ -1,0 +1,339 @@
+{
+    "打开火影":{
+        "recognition": "TemplateMatch",
+        "template":"ico.png",
+        "action": "Click"
+    }
+    ,"开始游戏":{
+        "recognition": "OCR",
+        "expected":"开始游戏",
+        "action": "Click",
+        "next":[
+            "开始游戏",
+            "关闭公告",
+            "周签到",
+            "关闭忍者展示",
+            "招财",
+            "排行榜",
+            "试炼"
+        ]
+    }
+    ,"关闭公告":{
+        "recognition": "TemplateMatch",
+        "template":"x.png",
+        "action": "Click"
+    }
+    ,"关闭忍者展示":{
+        "recognition": "TemplateMatch",
+        "template":"x2.png",
+        "action": "Click"
+    }
+    ,"周签到":{
+        "recognition": "OCR",
+        "expected":"领取",
+        "action": "Click"
+    }
+    ,"招财":{
+        "post_wait_freezes":500,
+        "recognition": "TemplateMatch",
+        "template":"chopper.png",
+        "action": "Click",
+        "next":[
+            "招财1",
+            "招财2",
+            "关闭招财"
+        ]
+    }
+    ,"招财1":{
+        "recognition": "OCR",
+        "expected":"免费一次",
+        "action": "Click"
+    }
+    ,"招财2":{
+        "recognition": "OCR",
+        "expected":"免费一次",
+        "action": "Click"
+    }
+    ,"关闭招财":{
+        "recognition": "TemplateMatch",
+        "template":"x.png",
+        "action": "Click"
+    }
+    ,"排行榜":{
+        "recognition": "TemplateMatch",
+        "template":"broad.png",
+        "action": "Click",
+        "next":[
+            "点赞",
+            "关闭排行榜"
+        ]
+    }
+    ,"点赞":{
+        "recognition": "TemplateMatch",
+        "template":"thumb.png",
+        "action": "Click"
+    }
+    ,"关闭排行榜":{
+        "recognition": "TemplateMatch",
+        "template":"x3.png",
+        "action": "Click"
+    }
+    ,"试炼":{
+        "recognition": "TemplateMatch",
+        "template":"exam.png",
+        "action": "Click",
+        "next":[
+            "生存"
+        ]
+    }
+    ,"生存":{
+        "recognition": "TemplateMatch",
+        "template":"survival.png",
+        "action": "Click",
+        "next":[
+            "生存领取",
+            "生存扫荡",
+            "生存准备",
+            "生存确定",
+            "扫荡卷确定",
+            "生存退出"
+        ]
+    }
+    ,"生存领取":{
+        "recognition": "DirectHit",
+        "action": "Click"
+    }
+    ,"生存扫荡":{
+        "recognition": "OCR",
+        "expected":"开始扫荡",
+        "action": "Click"
+    }
+    ,"生存准备":{
+        "recognition": "OCR",
+        "expected":"准备就绪",
+        "action": "Click"
+    }
+    ,"生存确定":{
+        "recognition": "TemplateMatch",
+        "template":"confirm.png",
+        "action": "Click"
+    }
+    ,"扫荡卷确定":{
+        "recognition": "TemplateMatch",
+        "template":"confirm.png",
+        "action": "Click"
+    }
+    ,"生存退出":{
+        "recognition": "TemplateMatch",
+        "template":"x3.png",
+        "action": "Click"
+    }
+    ,"送体力":{
+        "recognition": "TemplateMatch",
+        "template":"energe.png",
+        "action": "Click",
+        "next":[
+            "一键赠送",
+            "一键领取",
+            "送体力退出"
+        ]
+    }
+    ,"一键赠送":{
+        "recognition": "TemplateMatch",
+        "template":"give.png",
+        "action": "Click"
+    }
+    ,"一键领取":{
+        "recognition": "TemplateMatch",
+        "template":"get.png",
+        "action": "Click"
+    }
+    ,"送体力退出":{
+        "recognition": "TemplateMatch",
+        "template":"x.png",
+        "action": "Click"
+    }
+    ,"组织":{
+        "recognition": "TemplateMatch",
+        "template":"group.png",
+        "action": "Click",
+        "next":"组织玩法"
+    }
+    ,"组织玩法":{
+        "recognition": "OCR",
+        "expected":"玩法",
+        "action": "Click",
+        "next":"祈福入口"
+    }
+    ,"祈福入口":{
+        "recognition": "TemplateMatch",
+        "template":"goto.png",
+        "action": "Click",
+        "next":"昨日"
+    }
+    ,"昨日":{
+        "recognition": "TemplateMatch",
+        "template":"yesterday.png",
+        "action": "Click",
+        "next":"昨日奖励"
+    }
+    ,"昨日奖励":{
+        "recognition": "TemplateMatch",
+        "template":"get2.png",
+        "action": "Click"
+    }
+    ,"退出昨日":{
+        "recognition": "TemplateMatch",
+        "template":"x3.png",
+        "action": "Click"
+    }
+    ,"祈福":{
+        "recognition": "TemplateMatch",
+        "template":"pray.png",
+        "action": "Click"
+    }
+    ,"领取祈福1":{
+        "recognition": "TemplateMatch",
+        "template":"praybox1.png",
+        "action": "Click"
+    }
+    ,"领取祈福2":{
+        "recognition": "TemplateMatch",
+        "template":"praybox2.png",
+        "action": "Click"
+    }
+    ,"领取祈福2.1":{
+        "recognition": "TemplateMatch",
+        "template":"praybox3.png",
+        "action": "Click"
+    }
+    ,"退出祈福":{
+        "recognition": "TemplateMatch",
+        "template":"x3.png",
+        "action": "Click"
+    }
+    ,"退出组织":{
+        "recognition": "TemplateMatch",
+        "template":"quit_group.png",
+        "action": "Click"
+    }
+    ,"小队":{
+        "recognition": "TemplateMatch",
+        "template":"team.png",
+        "action": "Click",
+        "next":"组织助战"
+    }
+    ,"组织助战":{
+        "recognition": "TemplateMatch",
+        "template":"group_help.png",
+        "action": "Click",
+        "next":"我的助战"
+    }
+    ,"我的助战":{
+        "recognition": "TemplateMatch",
+        "template":"my_help.png",
+        "action": "Click",
+        "next":"领取助战奖励"
+    }
+    ,"领取助战奖励":{
+        "recognition": "TemplateMatch",
+        "template":"get3.png",
+        "action": "Click",
+        "next":"退出领取助战奖励"
+    }
+    ,"退出领取助战奖励":{
+        "recognition": "TemplateMatch",
+        "template":"x3.png",
+        "action": "Click",
+        "next":"邀请"
+    }
+    ,"邀请":{
+        "recognition": "TemplateMatch",
+        "template":"invite.png",
+        "action": "Click",
+        "next":"开始小队"
+    }
+    ,"开始小队":{
+        "recognition": "TemplateMatch",
+        "template":"fight1.png",
+        "action": "Click"
+    }
+    ,"丰饶":{
+        "recognition": "TemplateMatch",
+        "template":"room.png",
+        "action": "Click",
+        "next":"挑战丰饶"
+    }
+    ,"挑战丰饶":{
+        "recognition": "TemplateMatch",
+        "template":"try_room.png",
+        "action": "Click"
+    }
+    ,"退出丰饶":{
+        "recognition": "TemplateMatch",
+        "template":"x4.png",
+        "action": "Click"
+    }
+    ,"fight":{
+        "recognition": "TemplateMatch",
+        "template":"pain_skill1.png",
+        "action": "Click",
+        "next":"skill1"
+    }
+    ,"normal-a":{
+        "recognition": "TemplateMatch",
+        "template":"normal-a.png",
+        "action": "Click",
+        "next":"fight"
+    }
+    ,"skill1":{
+        "recognition": "TemplateMatch",
+        "template":"pain_skill1.png",
+        "action": "Click",
+        "next":"skill2"
+    }
+    ,"skill2":{
+        "recognition": "TemplateMatch",
+        "template":"pain_skill2.png",
+        "action": "Click",
+        "next":"normal-a"
+    }
+    ,"活动":{
+        "recognition": "TemplateMatch",
+        "template":"activity.png",
+        "action": "Click",
+        "next":[
+            "拉面",
+            "活动上滑"
+        ]
+    }
+    ,"拉面":{
+        "recognition": "TemplateMatch",
+        "template":"noodles.png",
+        "action": "Click",
+        "next":"拉面"
+    }
+    ,"活动上滑":{
+        "post_delay":200,
+        "action":"Swipe",
+        "begin":[
+            80,700,10,10
+        ],
+        "end":[
+            80,100,10,10
+        ],
+        "duration":100,
+        "next":"月签到"
+    }
+    ,"月签到":{
+        "recognition": "FeatureMatch",
+        "template":"mouth_sign_in.png",
+        "action": "Click",
+        "next":"签到"
+    }
+    ,"签到":{
+        "recognition": "TemplateMatch",
+        "template":"sign.png",
+        "action": "Click"
+    }
+}
