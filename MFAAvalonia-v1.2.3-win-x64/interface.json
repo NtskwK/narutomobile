@@ -3,19 +3,20 @@
    {
      "name": "官服",
      "path": "{PROJECT_DIR}/resource/base"
-   },
-   {
-     "name": "Bilibili服",
-     "path": [
-       "{PROJECT_DIR}/resource/base",
-       "{PROJECT_DIR}/resource/bilibili"
-     ]
    }
  ],
  "task": [
-   {
+{
+    "name": "测试",
+    "entry": "test"
+  }
+  ,{
+    "name": "关闭通知",
+    "entry": "close_notification"
+  }
+   ,{
      "name": "打开火影",
-     "entry": "打开火影"
+     "entry": "my_task"
   }
    ,{
      "name": "招财",
