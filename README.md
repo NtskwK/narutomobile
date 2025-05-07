@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
-  <img alt="LOGO" src="[https://github.com/duorua/image_bed/blob/main/cover.png" width="256" height="256" />
+  <img alt="LOGO" src="[https://github.com/duorua/image_bed/blob/main/cover.png" width="1457" height="1491" />
 </p>
 
 <div align="center">
