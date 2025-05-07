@@ -1,4 +1,13 @@
 {
+    "start_up": {
+        "next": [
+            "click_icon"
+        ],
+        "interrupt": [
+            "unagreement",
+            "agreement"
+        ]
+    },
     "click_icon": {
         "recognition": "TemplateMatch",
         "template": "Startup/icon.png",
@@ -22,17 +31,19 @@
             294,
             75
         ],
-        "action": "DoNothing"
+        "action": "StopTask"
     },
     "unagreement": {
         "recognition": "TemplateMatch",
         "template": "Startup/uncheck.png",
+        "threshold": 0.97,
         "action": "Click",
         "next": "account_type"
     },
     "agreement": {
         "recognition": "TemplateMatch",
         "template": "Startup/check.png",
+        "threshold": 0.97,
         "action": "DoNothing",
         "next": "account_type"
     },
@@ -84,7 +95,8 @@
             "shut_app",
             "click_icon"
         ],
-        "pre_wait_freezes": 100
+        "pre_wait_freezes": 100,
+        "post_wait_freezes": 2000
     },
     "shut_app": {
         "action": "StopApp",

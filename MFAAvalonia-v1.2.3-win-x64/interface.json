@@ -24,24 +24,37 @@
     "task": [
         {
             "name": "进入火影",
-            "entry": "click_icon",
+            "entry": "start_up",
             "check": true,
             "option": [
-                "加载时间选择"
+                "加载时间选择",
+                "账号属性"
             ]
+        },
+        {
+            "name": "开始游戏",
+            "entry": "start_game",
+            "check": true
+        },
+        {
+            "name": "招财",
+            "entry": "get_chopper",
+            "check": true
+        },
+        {
+            "name": "排行榜",
+            "entry": "leaderboard",
+            "check": true
+        },
+        {
+            "name": "送体力",
+            "entry": "give_energy",
+            "check": true
         }
     ],
     "option": {
         "加载时间选择": {
             "cases": [
-                {
-                    "name": "加载时间10s",
-                    "pipeline_override": {
-                        "click_icon": {
-                            "post_delay": 10000
-                        }
-                    }
-                },
                 {
                     "name": "加载时间20s",
                     "pipeline_override": {
@@ -51,10 +64,30 @@
                     }
                 },
                 {
+                    "name": "加载时间10s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 10000
+                        }
+                    }
+                },
+                {
                     "name": "加载时间30s",
                     "pipeline_override": {
                         "click_icon": {
                             "post_delay": 30000
+                        }
+                    }
+                }
+            ]
+        },
+        "账号属性": {
+            "cases": [
+                {
+                    "name": "安卓QQ",
+                    "pipeline_override": {
+                        "account_type": {
+                            "next": "android_qq"
                         }
                     }
                 }

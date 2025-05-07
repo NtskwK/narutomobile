@@ -1,0 +1,51 @@
+{
+    "leaderboard": {
+        "next": [
+            "entry_leaderboard"
+        ],
+        "interrupt": [
+            "start_game"
+        ]
+    },
+    "entry_leaderboard": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/board.png",
+        "roi": [
+            213,
+            150,
+            42,
+            85
+        ],
+        "action": "Click",
+        "next": [
+            "click_thumb"
+        ],
+        "post_wait_freezes": 100
+    },
+    "click_thumb": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/thumb.png",
+        "action": "Click",
+        "next": [
+            "close_board"
+        ]
+    },
+    "close_board": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/x.png",
+        "roi": [
+            1173,
+            0,
+            94,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "check_main_screen"
+        ],
+        "interrupt": [
+            "start_game"
+        ],
+        "post_wait_freezes": 200
+    }
+}
