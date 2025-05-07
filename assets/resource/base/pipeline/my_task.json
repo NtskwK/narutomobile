@@ -254,7 +254,7 @@
     "重置修行": {
         "recognition": "TemplateMatch",
         "template": "reset_p.png",
-        "recommended roi": [
+        "roi": [
             702,
             602,
             131,

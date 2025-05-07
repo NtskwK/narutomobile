@@ -1,72 +1,64 @@
 {
- "resource": [
-   {
-     "name": "官服",
-     "path": "{PROJECT_DIR}/resource/base"
-   }
- ],
- "task": [
-{
-    "name": "测试",
-    "entry": "test"
-  }
-  ,{
-    "name": "关闭通知",
-    "entry": "close_notification"
-  }
-   ,{
-     "name": "打开火影",
-     "entry": "my_task"
-  }
-   ,{
-     "name": "招财",
-     "entry": "招财",
-     "check": true
-  }
-   ,{
-     "name": "排行榜",
-     "entry": "排行榜",
-     "check": true
-  }
-   ,{
-    "name": "试炼修行",
-    "entry": "试炼修行",
-    "check": true
-  }
-  ,{
-    "name": "试炼生存",
-    "entry": "试炼生存",
-    "check": true
-  }
-  ,{
-    "name": "送体力",
-    "entry": "送体力",
-    "check": true
-  }
-  ,{
-    "name": "组织",
-    "entry": "组织",
-    "check": true
-  }
-  ,{
-    "name": "小队",
-    "entry": "小队",
-    "check": true
-  }
-  ,{
-    "name": "邮箱",
-    "entry": "邮箱",
-    "check": true
-  }
-  ,{
-    "name": "活动",
-    "entry": "活动",
-    "check": true
-  }
-  ,{
-    "name": "积分赛",
-    "entry": "积分赛",
-    "check": true
-  }
- ]
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb"
+        },
+        {
+            "name": "桌面端",
+            "type": "Win32",
+            "win32": {
+                "class_regex": ".*",
+                "window_regex": "Visual Studio"
+            }
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource/base"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "进入火影",
+            "entry": "click_icon",
+            "check": true,
+            "option": [
+                "加载时间选择"
+            ]
+        }
+    ],
+    "option": {
+        "加载时间选择": {
+            "cases": [
+                {
+                    "name": "加载时间10s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 10000
+                        }
+                    }
+                },
+                {
+                    "name": "加载时间20s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 20000
+                        }
+                    }
+                },
+                {
+                    "name": "加载时间30s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 30000
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }
