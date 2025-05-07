@@ -40,11 +40,11 @@
         },
         {
             "name": "排行榜",
-            "entry": "leaderboard",
+            "entry": "leaderboard"
         },
         {
             "name": "送体力",
-            "entry": "give_energy",
+            "entry": "give_energy"
         }
     ],
     "option": {
