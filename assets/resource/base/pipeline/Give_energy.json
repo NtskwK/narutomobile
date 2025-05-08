@@ -4,13 +4,16 @@
             "energy_entry"
         ],
         "interrupt": [
+            "give_energy_done",
             "give_energy",
             "start_game"
         ]
     },
     "energy_entry": {
         "recognition": "TemplateMatch",
-        "template": "Give_energy/give_energy.png",
+        "template": [
+            "Give_energy/give_energy.png"
+        ],
         "roi": [
             35,
             195,
@@ -22,6 +25,17 @@
             "sent_energy"
         ],
         "post_wait_freezes": 500
+    },
+    "give_energy_done": {
+        "recognition": "TemplateMatch",
+        "template": "Give_energy/give_energy_done.png",
+        "roi": [
+            34,
+            192,
+            46,
+            29
+        ],
+        "action": "StopTask"
     },
     "sent_energy": {
         "recognition": "OCR",
