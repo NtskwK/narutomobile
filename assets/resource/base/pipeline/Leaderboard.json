@@ -41,7 +41,7 @@
         ],
         "action": "Click",
         "next": [
-            "check_main_screen"
+            "check_main_screen_and_stop"
         ],
         "interrupt": [
             "start_game"

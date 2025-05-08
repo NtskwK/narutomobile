@@ -9,7 +9,7 @@
             "close_announcement",
             "close_new_ninjia_page",
             "weekly_sign",
-            "check_main_screen",
+            "check_main_screen_and_stop",
             "start_game"
         ]
     },
@@ -24,7 +24,7 @@
         ],
         "action": "Click",
         "next": [
-            "check_main_screen"
+            "check_main_screen_and_stop"
         ],
         "interrupt": [
             "close_announcement",
@@ -33,19 +33,32 @@
         ],
         "post_delay": 3000
     },
+    "check_main_screen_and_stop": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Startgame/main.png"
+        ],
+        "roi": [
+            392,
+            26,
+            39,
+            31
+        ],
+        "action": "StopTask",
+        "pre_wait_freezes": 500
+    },
     "check_main_screen": {
         "recognition": "TemplateMatch",
         "template": [
-            "Startgame/main.png",
-            "Startgame/night_main.png"
+            "Startgame/main.png"
         ],
         "roi": [
-            359,
-            363,
-            216,
-            131
+            392,
+            26,
+            39,
+            31
         ],
-        "action": "StopTask",
+        "action": "DoNothing",
         "pre_wait_freezes": 500
     },
     "close_announcement": {

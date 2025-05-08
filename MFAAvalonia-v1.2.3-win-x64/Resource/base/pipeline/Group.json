@@ -7,7 +7,100 @@
     },
     "group_entry": {
         "recognition": "TemplateMatch",
-        "template": "group.png",
-        "action": "Click"
+        "template": "Group/group.png",
+        "roi": [
+            174,
+            297,
+            43,
+            81
+        ],
+        "action": "Click",
+        "next": [
+            "group_gameplay_undone"
+        ]
+    },
+    "group_gameplay_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_gameplay_undone.png",
+        "roi": [
+            87,
+            393,
+            82,
+            68
+        ],
+        "action": "Click",
+        "next": [
+            "check_selected_group_gameplay"
+        ],
+        "interrupt": [
+            "group_gameplay_undone"
+        ]
+    },
+    "check_selected_group_gameplay": {
+        "recognition": "TemplateMatch",
+        "template": "Group/selected_group_gameplay.png",
+        "roi": [
+            80,
+            417,
+            93,
+            48
+        ],
+        "action": "DoNothing",
+        "next": [
+            "check_group_pray_undone"
+        ],
+        "interrupt": []
+    },
+    "check_group_pray_undone": {
+        "recognition": "TemplateMatch",
+        "threshold": 0.97,
+        "template": "Group/group_pray_undone.png",
+        "action": "DoNothing",
+        "next": [
+            "group_pray_undone"
+        ]
+    },
+    "group_pray_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/selected_group_gameplay_undone_button.png",
+        "action": "Click",
+        "next": [
+            "chopper_group_pray"
+        ],
+        "post_wait_freezes": 300
+    },
+    "chopper_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/chopper_pray.png",
+        "roi": [
+            476,
+            542,
+            200,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "award"
+        ]
+    },
+    "award": {
+        "next": [
+            "check_yesterday_award"
+        ],
+        "interrupt": [
+            "get_yesterday_award"
+        ]
+    },
+    "check_yesterday_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/yesterday_award.png",
+        "action": "DoNothing",
+        "inverse": true
+    },
+    "get_yesterday_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/yesterday_award.png",
+        "action": "Click",
+        "next": []
     }
 }

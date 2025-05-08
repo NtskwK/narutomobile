@@ -45,6 +45,10 @@
         {
             "name": "送体力",
             "entry": "give_energy"
+        },
+        {
+            "name": "每日分享",
+            "entry": "share"
         }
     ],
     "option": {

@@ -1,0 +1,2 @@
+"template" : "first_box_wait.png"
+"recommended roi" : [1153,352,91,110]
