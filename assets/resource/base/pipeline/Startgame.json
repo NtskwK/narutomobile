@@ -69,7 +69,11 @@
     },
     "weekly_sign": {
         "recognition": "OCR",
-        "expected": "领取",
+        "expected": [
+            "领取",
+            "领",
+            "取"
+        ],
         "roi": [
             606,
             587,

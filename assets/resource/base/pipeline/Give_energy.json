@@ -1,14 +1,14 @@
 {
     "give_energy": {
         "next": [
-            "entry_energy"
+            "energy_entry"
         ],
         "interrupt": [
             "give_energy",
             "start_game"
         ]
     },
-    "entry_energy": {
+    "energy_entry": {
         "recognition": "TemplateMatch",
         "template": "Give_energy/give_energy.png",
         "roi": [
@@ -46,6 +46,7 @@
         "recognition": "OCR",
         "expected": [
             "一键领取",
+            "键领取",
             "领取",
             "一键",
             "取"

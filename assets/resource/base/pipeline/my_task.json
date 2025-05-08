@@ -185,8 +185,7 @@
     "关闭招财": {
         "recognition": "TemplateMatch",
         "template": "x.png",
-        "action": "Click",
-        "next":"完成招财"
+        "action": "Click"
     },
     "完成招财": {
         "recognition": "TemplateMatch",

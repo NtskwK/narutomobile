@@ -1,13 +1,13 @@
 {
     "leaderboard": {
         "next": [
-            "entry_leaderboard"
+            "leaderboard_entry"
         ],
         "interrupt": [
             "start_game"
         ]
     },
-    "entry_leaderboard": {
+    "leaderboard_entry": {
         "recognition": "TemplateMatch",
         "template": "Leaderboard/board.png",
         "roi": [

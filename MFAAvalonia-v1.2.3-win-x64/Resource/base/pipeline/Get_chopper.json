@@ -1,13 +1,13 @@
 {
     "get_chopper": {
         "next": [
-            "entry_get_chopper"
+            "get_chopper_entry"
         ],
         "interrupt": [
             "start_game"
         ]
     },
-    "entry_get_chopper": {
+    "get_chopper_entry": {
         "recognition": "TemplateMatch",
         "template": "Get_chopper/chopper.png",
         "roi": [
