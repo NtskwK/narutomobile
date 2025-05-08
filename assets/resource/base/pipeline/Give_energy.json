@@ -63,7 +63,7 @@
         "interrupt": [
             "close_energy"
         ],
-        "post_wait_freezes": 200
+        "post_wait_freezes": 500
     },
     "confirm_get_energy": {
         "recognition": "OCR",
