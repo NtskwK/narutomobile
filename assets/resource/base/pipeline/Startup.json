@@ -1,12 +1,25 @@
 {
     "start_up": {
         "next": [
-            "click_icon"
+            "start_naruto"
         ],
         "interrupt": [
             "unagreement",
             "agreement"
         ]
+    },
+    "start_naruto": {
+        "action": "StartApp",
+        "package": "com.tencent.KiHan",
+        "next": [
+            "check_start_game"
+        ],
+        "interrupt": [
+            "unagreement",
+            "agreement",
+            "click_icon"
+        ],
+        "post_delay": 30000
     },
     "click_icon": {
         "recognition": "TemplateMatch",
@@ -92,13 +105,13 @@
         ],
         "interrupt": [
             "agreement",
-            "shut_app",
+            "restart_naruto",
             "click_icon"
         ],
         "pre_wait_freezes": 100,
         "post_wait_freezes": 2000
     },
-    "shut_app": {
+    "restart_naruto": {
         "action": "StopApp",
         "package": "com.tencent.KiHan",
         "next": [

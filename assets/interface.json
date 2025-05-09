@@ -49,6 +49,10 @@
         {
             "name": "每日分享",
             "entry": "share"
+        },
+        {
+            "name": "火影情报社",
+            "entry": "naruto_club"
         }
     ],
     "option": {
@@ -87,6 +91,12 @@
                     "pipeline_override": {
                         "account_type": {
                             "next": "android_qq"
+                        },
+                        "try_share": {
+                            "next": "share_to_qq_friend"
+                        },
+                        "naruto_club_entry": {
+                            "next": "click_qq_icon"
                         }
                     }
                 }

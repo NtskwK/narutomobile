@@ -4,7 +4,8 @@
             "get_chopper_entry"
         ],
         "interrupt": [
-            "start_game"
+            "back_main_screen",
+            "get_chopper"
         ]
     },
     "get_chopper_entry": {

@@ -100,6 +100,7 @@
         ],
         "interrupt": [
             "close_home_page_mini_program",
+            "close_chat",
             "keep_close_x",
             "close_announcement",
             "close_new_ninjia_page",
@@ -107,9 +108,19 @@
             "weekly_sign",
             "unagreement",
             "agreement",
-            "check_main_screen_and_stop",
             "start_game"
         ]
+    },
+    "close_chat": {
+        "recognition": "TemplateMatch",
+        "template": "Share/chat_close_button.png",
+        "roi": [
+            807,
+            295,
+            53,
+            104
+        ],
+        "action": "Click"
     },
     "keep_close_x": {
         "next": [
@@ -117,6 +128,7 @@
         ],
         "interrupt": [
             "click_x",
+            "close_headhunt_end_announcement",
             "keep_close_x"
         ]
     },

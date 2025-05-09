@@ -71,6 +71,7 @@
             134,
             42
         ],
+        "action": "Click",
         "next": [
             "confirm_get_energy"
         ],

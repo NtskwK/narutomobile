@@ -54,6 +54,10 @@
         {
             "name": "每日分享",
             "entry": "share"
+        },
+        {
+            "name": "火影情报社",
+            "entry": "naruto_club"
         }
     ],
     "option": {
@@ -64,6 +68,9 @@
                     "pipeline_override": {
                         "click_icon": {
                             "post_delay": 20000
+                        },
+                        "start_naruto": {
+                            "post_delay": 20000
                         }
                     }
                 },
@@ -72,6 +79,9 @@
                     "pipeline_override": {
                         "click_icon": {
                             "post_delay": 10000
+                        },
+                        "start_naruto": {
+                            "post_delay": 10000
                         }
                     }
                 },
@@ -79,6 +89,9 @@
                     "name": "加载时间30s",
                     "pipeline_override": {
                         "click_icon": {
+                            "post_delay": 30000
+                        },
+                        "start_naruto": {
                             "post_delay": 30000
                         }
                     }
@@ -90,8 +103,23 @@
                 {
                     "name": "安卓QQ",
                     "pipeline_override": {
+                        "start_naruto": {
+                            "package": "com.tencent.KiHan"
+                        },
                         "account_type": {
                             "next": "android_qq"
+                        },
+                        "try_share": {
+                            "next": "share_to_qq_friend"
+                        },
+                        "naruto_club_entry": {
+                            "next": "start_qq"
+                        },
+                        "shut_qq": {
+                            "package": "com.tencent.mobileqq"
+                        },
+                        "shut_wechat": {
+                            "package": "com.tencent.mm"
                         }
                     }
                 }

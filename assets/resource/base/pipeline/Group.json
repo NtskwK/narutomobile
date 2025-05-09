@@ -3,7 +3,10 @@
         "next": [
             "group_entry"
         ],
-        "interrupt": []
+        "interrupt": [
+            "back_main_screen",
+            "group"
+        ]
     },
     "group_entry": {
         "recognition": "TemplateMatch",
