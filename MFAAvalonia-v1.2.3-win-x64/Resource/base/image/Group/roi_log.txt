@@ -1,2 +1,8 @@
 "template" : "first_box_wait.png"
-"recommended roi" : [1153,352,91,110]
+"recommended roi" : [1154,374,85,80]
+"template" : "second_box_wait.png"
+"recommended roi" : [1166,268,77,66]
+"template" : "third_box_wait.png"
+"recommended roi" : [1153,154,88,83]
+"template" : "group_pray_red_packet.png"
+"recommended roi" : [585,181,102,80]

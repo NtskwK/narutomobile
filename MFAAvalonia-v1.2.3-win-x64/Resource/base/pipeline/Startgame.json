@@ -5,12 +5,7 @@
         ],
         "interrupt": [
             "unagreement",
-            "agreement",
-            "close_announcement",
-            "close_new_ninjia_page",
-            "weekly_sign",
-            "back_main_screen",
-            "start_game"
+            "agreement"
         ]
     },
     "click_start_game": {
@@ -24,16 +19,16 @@
         ],
         "action": "Click",
         "next": [
+            "close_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [
-            "close_announcement",
             "close_new_ninjia_page",
             "close_headhunt_end_announcement",
             "weekly_sign",
             "back_main_screen"
         ],
-        "post_delay": 10000
+        "post_delay": 8000
     },
     "check_main_screen_and_stop": {
         "recognition": "TemplateMatch",
@@ -47,7 +42,7 @@
             31
         ],
         "action": "StopTask",
-        "pre_wait_freezes": 500
+        "pre_wait_freezes": 4000
     },
     "check_main_screen": {
         "recognition": "TemplateMatch",
@@ -72,14 +67,19 @@
             140,
             118
         ],
+        "threshold": 0.5,
         "action": "Click",
         "post_wait_freezes": 200
     },
     "close_announcement": {
         "recognition": "TemplateMatch",
-        "template": "Startgame/green_masked_x.png",
+        "template": [
+            "Startgame/green_masked_x.png",
+            "Startgame/headhunt_end_green_masked.png"
+        ],
         "action": "Click",
         "green_mask": true,
+        "threshold": 0.5,
         "post_wait_freezes": 100
     },
     "close_new_ninjia_page": {

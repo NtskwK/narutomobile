@@ -4,8 +4,7 @@
             "get_chopper_entry"
         ],
         "interrupt": [
-            "back_main_screen",
-            "get_chopper"
+            "back_main_screen"
         ]
     },
     "get_chopper_entry": {
@@ -24,6 +23,7 @@
         "interrupt": [
             "check_chopper_done"
         ],
+        "pre_wait_freezes": 500,
         "post_wait_freezes": 200
     },
     "start_chooper": {
@@ -79,10 +79,12 @@
         ],
         "action": "Click",
         "next": [
+            "close_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [
-            "close_chooper"
-        ]
+            "back_main_screen"
+        ],
+        "post_wait_freezes": 300
     }
 }

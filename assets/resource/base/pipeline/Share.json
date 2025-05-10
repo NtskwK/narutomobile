@@ -1,11 +1,11 @@
 {
     "share": {
         "next": [
+            "close_announcement",
             "share_entry"
         ],
         "interrupt": [
-            "back_main_screen",
-            "share"
+            "back_main_screen"
         ]
     },
     "share_entry": {
@@ -91,18 +91,20 @@
         ],
         "action": "Click",
         "next": [
+            "close_announcement",
             "check_main_screen_and_stop"
         ]
     },
     "back_main_screen": {
         "next": [
+            "close_announcement",
+            "close_headhunt_end_announcement",
             "check_main_screen"
         ],
         "interrupt": [
             "close_home_page_mini_program",
             "close_chat",
             "keep_close_x",
-            "close_announcement",
             "close_new_ninjia_page",
             "close_qq_friend_share",
             "weekly_sign",

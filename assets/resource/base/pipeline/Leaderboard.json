@@ -4,12 +4,16 @@
             "leaderboard_entry"
         ],
         "interrupt": [
-            "start_game"
+            "back_main_screen"
         ]
     },
     "leaderboard_entry": {
         "recognition": "TemplateMatch",
-        "template": "Leaderboard/board.png",
+        "template": [
+            "Leaderboard/board.png",
+            "Leaderboard/board_day.png"
+        ],
+        "threshold": 0.2,
         "roi": [
             213,
             150,
@@ -20,6 +24,7 @@
         "next": [
             "click_thumb"
         ],
+        "pre_wait_freezes": 500,
         "post_wait_freezes": 100
     },
     "click_thumb": {
@@ -41,10 +46,11 @@
         ],
         "action": "Click",
         "next": [
+            "close_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [
-            "start_game"
+            "back_main_screen"
         ],
         "post_wait_freezes": 200
     }

@@ -1,3 +1,3 @@
 d:
-cd D:\flie\project\NM\narutomobile
+cd D:\file\project\NM\narutomobile
 python -m MaaDebugger

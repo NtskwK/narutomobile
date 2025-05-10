@@ -4,13 +4,16 @@
             "group_entry"
         ],
         "interrupt": [
-            "back_main_screen",
-            "group"
+            "back_main_screen"
         ]
     },
     "group_entry": {
         "recognition": "TemplateMatch",
-        "template": "Group/group.png",
+        "template": [
+            "Group/group.png",
+            "Group/group_day.png"
+        ],
+        "threshold": 0.3,
         "roi": [
             174,
             297,
@@ -20,7 +23,9 @@
         "action": "Click",
         "next": [
             "group_gameplay_undone"
-        ]
+        ],
+        "pre_wait_freezes": 500,
+        "post_delay": 200
     },
     "group_gameplay_undone": {
         "recognition": "TemplateMatch",

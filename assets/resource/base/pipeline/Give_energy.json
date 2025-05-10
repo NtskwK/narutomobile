@@ -5,8 +5,8 @@
         ],
         "interrupt": [
             "give_energy_done",
-            "give_energy",
-            "start_game"
+            "back_main_screen",
+            "give_energy"
         ]
     },
     "energy_entry": {
@@ -24,7 +24,8 @@
         "next": [
             "sent_energy"
         ],
-        "post_wait_freezes": 500
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 200
     },
     "give_energy_done": {
         "recognition": "TemplateMatch",
@@ -102,11 +103,13 @@
             99,
             83
         ],
+        "action": "Click",
         "next": [
+            "close_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [
-            "start_game"
+            "back_main_screen"
         ],
         "post_wait_freezes": 300
     }
