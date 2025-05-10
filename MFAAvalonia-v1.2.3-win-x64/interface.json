@@ -53,11 +53,13 @@
         },
         {
             "name": "每日分享",
-            "entry": "share"
+            "entry": "share",
+            "check": true
         },
         {
             "name": "火影情报社",
-            "entry": "naruto_club"
+            "entry": "naruto_club",
+            "check": true
         }
     ],
     "option": {
