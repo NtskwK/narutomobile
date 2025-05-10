@@ -4,7 +4,26 @@
             "leaderboard_entry"
         ],
         "interrupt": [
+            "swipe_for_left_entries",
             "back_main_screen"
+        ]
+    },
+    "swipe_for_left_entries": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/practice_place.png",
+        "threshold": 0.97,
+        "action": "Swipe",
+        "begin": [
+            150,
+            150,
+            50,
+            50
+        ],
+        "end": [
+            850,
+            150,
+            50,
+            50
         ]
     },
     "leaderboard_entry": {

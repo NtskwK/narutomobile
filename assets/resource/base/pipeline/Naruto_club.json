@@ -716,7 +716,10 @@
             77,
             58
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
     },
     "check_in_qq": {
         "recognition": "OCR",

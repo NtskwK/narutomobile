@@ -4,6 +4,7 @@
             "group_entry"
         ],
         "interrupt": [
+            "swipe_for_left_entries",
             "back_main_screen"
         ]
     },
@@ -13,16 +14,13 @@
             "Group/group.png",
             "Group/group_day.png"
         ],
-        "threshold": 0.3,
-        "roi": [
-            174,
-            297,
-            43,
-            81
-        ],
+        "threshold": 0.9,
         "action": "Click",
         "next": [
             "group_gameplay_undone"
+        ],
+        "interrupt": [
+            "back_main_screen_and_stop"
         ],
         "pre_wait_freezes": 500,
         "post_delay": 200
@@ -88,27 +86,193 @@
         ],
         "action": "Click",
         "next": [
-            "award"
+            "confirm_chopper_group_pray"
         ]
+    },
+    "confirm_chopper_group_pray": {
+        "action": "Click",
+        "next": "award"
     },
     "award": {
         "next": [
             "check_yesterday_award"
         ],
         "interrupt": [
-            "get_yesterday_award"
+            "yesterday_award_entry"
         ]
     },
     "check_yesterday_award": {
         "recognition": "TemplateMatch",
         "template": "Group/yesterday_award.png",
         "action": "DoNothing",
+        "inverse": true,
+        "next": [
+            "first_group_award_done"
+        ],
+        "interrupt": [
+            "first_group_award"
+        ]
+    },
+    "first_group_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/first_box_done.png",
+        "roi": [
+            1153,
+            370,
+            88,
+            83
+        ],
+        "threshold": 0.98,
+        "next": "second_group_award"
+    },
+    "first_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/first_box_wait.png",
+        "roi": [
+            1154,
+            374,
+            85,
+            80
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "second_group_award_done",
+        "interrupt": [
+            "second_group_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "second_group_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/second_box_done.png",
+        "roi": [
+            1161,
+            261,
+            85,
+            78
+        ],
+        "threshold": 0.98,
+        "next": "third_group_award_entry"
+    },
+    "second_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/second_box_wait.png",
+        "roi": [
+            1166,
+            268,
+            77,
+            66
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "second_group_award_box",
+        "post_wait_freezes": 300
+    },
+    "second_group_award_box": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_red_packet.png",
+        "roi": [
+            585,
+            181,
+            102,
+            80
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "close_second_group_award_box",
+        "post_wait_freezes": 300
+    },
+    "close_second_group_award_box": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_red_packet_text.png",
+        "roi": [
+            555,
+            124,
+            170,
+            48
+        ],
+        "action": "Click",
+        "target_offset": [
+            300,
+            0,
+            -60,
+            0
+        ],
+        "post_wait_freezes": 300,
+        "next": "third_group_award_done",
+        "interrupt": "third_group_award"
+    },
+    "third_group_award_entry": {
+        "next": "third_group_award_done",
+        "interrupt": "third_group_award"
+    },
+    "third_group_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/third_box_done.png",
+        "roi": [
+            1161,
+            261,
+            85,
+            78
+        ],
+        "threshold": 0.98,
+        "next": "close_group_pray"
+    },
+    "third_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/third_box_wait.png",
+        "roi": [
+            1153,
+            154,
+            88,
+            83
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "close_group_pray"
+    },
+    "close_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_x.png",
+        "roi": [
+            1171,
+            0,
+            99,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen"
+        ]
+    },
+    "pursuit_dawn_organization_entry": {
+        "recognition": "TemplateMatch",
+        "template": "dawn_organization.png",
+        "roi": [
+            124,
+            190,
+            118,
+            229
+        ],
+        "action": "Click"
+    },
+    "yesterday_award_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Group/yesterday_award.png",
+        "action": "Click",
+        "next": [
+            "yesterday_award_done"
+        ],
+        "interrupt": []
+    },
+    "yesterday_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "get2.png",
         "inverse": true
     },
     "get_yesterday_award": {
         "recognition": "TemplateMatch",
-        "template": "Group/yesterday_award.png",
-        "action": "Click",
-        "next": []
+        "template": "get2.png",
+        "action": "Click"
     }
 }

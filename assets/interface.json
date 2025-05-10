@@ -53,6 +53,14 @@
         {
             "name": "火影情报社",
             "entry": "naruto_club"
+        },
+        {
+            "name": "组织",
+            "entry": "group"
+        },
+        {
+            "name": "邮箱",
+            "entry": "mail"
         }
     ],
     "option": {

@@ -60,6 +60,16 @@
             "name": "火影情报社",
             "entry": "naruto_club",
             "check": true
+        },
+        {
+            "name": "组织",
+            "entry": "group",
+            "check": true
+        },
+        {
+            "name": "邮箱",
+            "entry": "mail",
+            "check": true
         }
     ],
     "option": {

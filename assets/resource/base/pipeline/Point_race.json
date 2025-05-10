@@ -1,0 +1,23 @@
+{
+    "point_race": {
+        "next": [
+            "point_race_entry"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries",
+            "back_main_screen"
+        ]
+    },
+    "point_race_entry": {
+        "next": [],
+        "interrupt": [
+            "point_race_undone"
+        ]
+    },
+    "point_race_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Point_race/point_race_undone.png",
+        "threshold": 0.98,
+        "action": "Click"
+    }
+}
