@@ -5,7 +5,8 @@
 
 <div align="center">
 
-##如何开发这个项目
+  
+## 如何开发这个项目
 首先你需要了解语法规范：
 https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md
 通过这个去了解如何修改（narotomobile\assets\resource\base\pipeline\my_task.json）文件
