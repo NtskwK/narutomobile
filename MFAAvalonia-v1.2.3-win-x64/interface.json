@@ -70,6 +70,24 @@
             "name": "邮箱",
             "entry": "mail",
             "check": true
+        },
+        {
+            "name": "积分赛",
+            "entry": "point_race",
+            "check": true
+        },
+        {
+            "name": "试炼",
+            "entry": "practice_place",
+            "option": [
+                "不做修行",
+                "等待生存扫荡时间选择"
+            ],
+            "check": true
+        },
+        {
+            "name": "丰饶",
+            "entry": "rich_room"
         }
     ],
     "option": {
@@ -132,6 +150,46 @@
                         },
                         "shut_wechat": {
                             "package": "com.tencent.mm"
+                        }
+                    }
+                }
+            ]
+        },
+        "不做修行": {
+            "cases": [
+                {
+                    "name": "不做修行",
+                    "pipeline_override": {
+                        "train_road": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "等待生存扫荡时间选择": {
+            "cases": [
+                {
+                    "name": "等待20秒",
+                    "pipeline_override": {
+                        "survival_challenge_sweep_ticket_confirm": {
+                            "post_delay": 20000
+                        }
+                    }
+                },
+                {
+                    "name": "等待30秒",
+                    "pipeline_override": {
+                        "survival_challenge_sweep_ticket_confirm": {
+                            "post_delay": 30000
+                        }
+                    }
+                },
+                {
+                    "name": "等待40秒",
+                    "pipeline_override": {
+                        "survival_challenge_sweep_ticket_confirm": {
+                            "post_delay": 40000
                         }
                     }
                 }

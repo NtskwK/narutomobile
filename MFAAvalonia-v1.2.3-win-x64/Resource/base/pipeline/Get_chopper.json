@@ -79,7 +79,6 @@
         ],
         "action": "Click",
         "next": [
-            "close_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [

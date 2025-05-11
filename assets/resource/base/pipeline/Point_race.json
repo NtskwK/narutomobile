@@ -9,15 +9,64 @@
         ]
     },
     "point_race_entry": {
-        "next": [],
+        "next": [
+            "point_race_done"
+        ],
         "interrupt": [
             "point_race_undone"
         ]
     },
+    "point_race_done": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "NULL.png"
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": [
+            "check_main_screen_and_stop"
+        ]
+    },
     "point_race_undone": {
         "recognition": "TemplateMatch",
-        "template": "Point_race/point_race_undone.png",
+        "template": [
+            "Point_race/point_race_undone.png",
+            "Point_race/point_race_undone_day.png"
+        ],
         "threshold": 0.98,
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "get_point_race_award"
+        ]
+    },
+    "get_point_race_award": {
+        "recognition": "TemplateMatch",
+        "template": "Point_race/get_award.png",
+        "roi": [
+            668,
+            23,
+            131,
+            66
+        ],
+        "action": "Click",
+        "next": [
+            "get_point_race_award1"
+        ],
+        "post_wait_freezes": 300
+    },
+    "get_point_race_award1": {
+        "recognition": "TemplateMatch",
+        "template": "Point_race/get_award.png",
+        "roi": [
+            668,
+            23,
+            131,
+            66
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
     }
 }

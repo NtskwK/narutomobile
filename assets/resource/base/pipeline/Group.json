@@ -29,10 +29,10 @@
         "recognition": "TemplateMatch",
         "template": "Group/group_gameplay_undone.png",
         "roi": [
-            87,
+            88,
             393,
-            82,
-            68
+            80,
+            66
         ],
         "action": "Click",
         "next": [
@@ -162,7 +162,7 @@
             85,
             78
         ],
-        "threshold": 0.95,
+        "threshold": 0.98,
         "next": "third_group_award_entry"
     },
     "second_group_award": {
@@ -221,10 +221,10 @@
         "recognition": "TemplateMatch",
         "template": "Group/third_box_done.png",
         "roi": [
-            1161,
-            261,
-            85,
-            78
+            1147,
+            151,
+            88,
+            75
         ],
         "threshold": 0.95,
         "next": "close_group_pray"

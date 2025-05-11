@@ -559,19 +559,12 @@
     "挑战丰饶": {
         "recognition": "TemplateMatch",
         "template": "try_room.png",
-        "action": "Click",
-        "next": "fight"
+        "action": "Click"
     },
     "退出丰饶": {
         "recognition": "TemplateMatch",
         "template": "x4.png",
         "action": "Click"
-    },
-    "fight": {
-        "recognition": "TemplateMatch",
-        "template": "pain_skill1.png",
-        "action": "Click",
-        "next": "skill1"
     },
     "normal-a": {
         "recognition": "TemplateMatch",
