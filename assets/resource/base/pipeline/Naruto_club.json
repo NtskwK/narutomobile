@@ -443,7 +443,7 @@
     "gold_helper_undone": {
         "recognition": "TemplateMatch",
         "template": "Naruto_club/gold_helper.png",
-        "threshold": 0.98,
+        "threshold": 0.95,
         "action": "Click",
         "target_offset": [
             500,
@@ -462,7 +462,7 @@
         "next": [
             "swipe_for_club_submit"
         ],
-        "threshold": 0.98
+        "threshold": 0.95
     },
     "gold_helper_done": {
         "recognition": "TemplateMatch",
@@ -470,7 +470,7 @@
         "next": [
             "swipe_for_club_submit"
         ],
-        "threshold": 0.98
+        "threshold": 0.95
     },
     "close_gold_helper": {
         "recognition": "TemplateMatch",
@@ -579,6 +579,7 @@
         "next": [
             "confirm_club_first_award"
         ],
+        "pre_wait_freezes": 300,
         "post_wait_freezes": 300
     },
     "confirm_club_first_award": {
@@ -627,14 +628,17 @@
         "recognition": "TemplateMatch",
         "template": "Naruto_club/confirm_club_second_award.png",
         "roi": [
-            658,
-            390,
-            121,
-            48
+            579,
+            428,
+            124,
+            52
         ],
         "action": "Click",
         "next": [
             "roger_club_second_award"
+        ],
+        "interrupt": [
+            "club_second_award_done"
         ],
         "post_wait_freezes": 300
     },
