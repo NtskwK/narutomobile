@@ -28,7 +28,10 @@
         "template": "Mail/mail_wait.png",
         "threshold": 0.9,
         "action": "Click",
-        "next": [],
+        "next": [
+            "get_mail_award"
+        ],
+        "pre_wait_freezes": 500,
         "post_wait_freezes": 200
     },
     "get_mail_award": {
