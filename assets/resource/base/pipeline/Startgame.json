@@ -19,7 +19,6 @@
         ],
         "action": "Click",
         "next": [
-            "close_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [
@@ -33,29 +32,33 @@
     "check_main_screen_and_stop": {
         "recognition": "TemplateMatch",
         "template": [
-            "Startgame/main.png"
+            "Startgame/main_green_masked.png"
         ],
         "roi": [
-            392,
-            26,
-            39,
-            31
+            16,
+            0,
+            1264,
+            720
         ],
+        "threshold": 0.97,
         "action": "StopTask",
+        "green_mask": true,
         "pre_wait_freezes": 4000
     },
     "check_main_screen": {
         "recognition": "TemplateMatch",
         "template": [
-            "Startgame/main.png"
+            "Startgame/main_green_masked.png"
         ],
         "roi": [
-            392,
-            26,
-            39,
-            31
+            16,
+            0,
+            1264,
+            720
         ],
+        "threshold": 0.97,
         "action": "DoNothing",
+        "green_mask": true,
         "pre_wait_freezes": 500
     },
     "close_headhunt_end_announcement": {

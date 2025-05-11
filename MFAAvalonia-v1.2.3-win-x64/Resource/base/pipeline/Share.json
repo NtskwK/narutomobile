@@ -91,14 +91,11 @@
         ],
         "action": "Click",
         "next": [
-            "close_announcement",
             "check_main_screen_and_stop"
         ]
     },
     "back_main_screen": {
         "next": [
-            "close_announcement",
-            "close_headhunt_end_announcement",
             "check_main_screen"
         ],
         "interrupt": [
@@ -115,8 +112,6 @@
     },
     "back_main_screen_and_stop": {
         "next": [
-            "close_announcement",
-            "close_headhunt_end_announcement",
             "check_main_screen_and_stop"
         ],
         "interrupt": [

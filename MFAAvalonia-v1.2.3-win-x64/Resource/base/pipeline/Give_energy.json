@@ -5,8 +5,7 @@
         ],
         "interrupt": [
             "give_energy_done",
-            "back_main_screen",
-            "give_energy"
+            "back_main_screen"
         ]
     },
     "energy_entry": {
