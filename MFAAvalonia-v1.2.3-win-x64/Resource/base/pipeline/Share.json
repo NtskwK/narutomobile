@@ -48,6 +48,9 @@
         "next": [
             "share_to_qq_friend"
         ],
+        "interrupt": [
+            "close_weekly_ninjia_title"
+        ],
         "pre_wait_freezes": 200,
         "post_wait_freezes": 200
     },
@@ -101,14 +104,25 @@
         "interrupt": [
             "close_home_page_mini_program",
             "close_chat",
-            "keep_close_x",
             "close_new_ninjia_page",
             "close_qq_friend_share",
             "weekly_sign",
+            "keep_close_x",
             "unagreement",
             "agreement",
             "start_game"
         ]
+    },
+    "close_weekly_ninjia_title": {
+        "recognition": "TemplateMatch",
+        "template": "Share/weekly_ninjia_title.png",
+        "roi": [
+            319,
+            629,
+            203,
+            80
+        ],
+        "action": "Click"
     },
     "back_main_screen_and_stop": {
         "next": [
@@ -117,10 +131,10 @@
         "interrupt": [
             "close_home_page_mini_program",
             "close_chat",
-            "keep_close_x",
             "close_new_ninjia_page",
             "close_qq_friend_share",
             "weekly_sign",
+            "keep_close_x",
             "unagreement",
             "agreement",
             "start_game"

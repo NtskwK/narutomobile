@@ -137,6 +137,14 @@
         "不做修行": {
             "cases": [
                 {
+                    "name": "做修行",
+                    "pipeline_override": {
+                        "train_road": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
                     "name": "不做修行",
                     "pipeline_override": {
                         "train_road": {

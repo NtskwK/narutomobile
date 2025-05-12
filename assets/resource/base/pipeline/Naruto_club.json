@@ -285,7 +285,7 @@
             "confirm_naruto_club_sign"
         ],
         "interrupt": [],
-        "post_wait_freezes": 500
+        "post_wait_freezes": 1000
     },
     "confirm_naruto_club_sign": {
         "recognition": "TemplateMatch",
@@ -685,7 +685,7 @@
         "next": [
             "confirm_club_third_award"
         ],
-        "post_wait_freezes": 300
+        "post_wait_freezes": 800
     },
     "confirm_club_third_award": {
         "recognition": "TemplateMatch",

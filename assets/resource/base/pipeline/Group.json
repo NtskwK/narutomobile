@@ -23,7 +23,7 @@
             "back_main_screen_and_stop"
         ],
         "pre_wait_freezes": 500,
-        "post_delay": 700
+        "post_delay": 1000
     },
     "group_gameplay_undone": {
         "recognition": "TemplateMatch",
@@ -90,8 +90,18 @@
         ]
     },
     "confirm_chopper_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/confirm_group_pray.png",
+        "roi": [
+            497,
+            140,
+            275,
+            58
+        ],
         "action": "Click",
-        "next": "award"
+        "next": "award",
+        "pre_wait_freezes": 300,
+        "post_wait_freezes": 300
     },
     "award": {
         "next": [
@@ -154,7 +164,8 @@
         "recognition": "TemplateMatch",
         "template": [
             "Group/second_box_done_1.png",
-            "Group/second_box_done.png"
+            "Group/second_box_done.png",
+            "Group/second_box_done_2.png"
         ],
         "roi": [
             1161,
@@ -253,19 +264,133 @@
         ],
         "action": "Click",
         "next": [
+            "pursuit_dawn_organization"
+        ],
+        "post_wait_freezes": 500
+    },
+    "pursuit_dawn_organization": {
+        "next": [
+            "pursuit_dawn_organization_done",
+            "pursuit_dawn_organization_undone"
+        ],
+        "interrupt": [
+            "back_main_screen",
+            "pursuit_dawn_organization_entry"
+        ]
+    },
+    "pursuit_dawn_organization_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_done.png",
+        "roi": [
+            98,
+            162,
+            137,
+            205
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "pursuit_dawn_organization_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_undone.png",
+        "roi": [
+            101,
+            170,
+            134,
+            186
+        ],
+        "action": "Click",
+        "next": [
+            "pursuit_dawn_organization_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "pursuit_dawn_organization_award": {
+        "next": [
+            "pursuit_dawn_organization_award_done",
+            "pursuit_dawn_organization_award_undone"
+        ]
+    },
+    "pursuit_dawn_organization_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_done.png",
+        "roi": [
+            677,
+            606,
+            61,
+            58
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "pursuit_dawn_organization_award_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_undone.png",
+        "roi": [
+            676,
+            606,
+            64,
+            56
+        ],
+        "action": "Click",
+        "next": [
+            "to_pursuit_dawn_organization_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "to_pursuit_dawn_organization_award": {
+        "next": [
+            "check_no_pursuit_dawn_organization_award"
+        ],
+        "interrupt": [
+            "get_pursuit_dawn_organization_award"
+        ]
+    },
+    "get_pursuit_dawn_organization_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_waiting.png",
+        "roi": [
+            997,
+            192,
+            104,
+            52
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200
+    },
+    "check_no_pursuit_dawn_organization_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_waiting.png",
+        "roi": [
+            997,
+            192,
+            104,
+            52
+        ],
+        "inverse": true,
+        "next": [
             "back_main_screen_and_stop"
         ]
     },
     "pursuit_dawn_organization_entry": {
         "recognition": "TemplateMatch",
-        "template": "dawn_organization.png",
-        "roi": [
-            124,
-            190,
-            118,
-            229
+        "template": "Group/dawn_organization_entry_group.png",
+        "action": "Click",
+        "next": [
+            "pursuit_dawn_organization_entry_button"
         ],
-        "action": "Click"
+        "post_wait_freezes": 1000
+    },
+    "pursuit_dawn_organization_entry_button": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_entry_group_button.png",
+        "action": "Click",
+        "next": [
+            "pursuit_dawn_organization"
+        ],
+        "post_wait_freezes": 1000
     },
     "yesterday_award_entry": {
         "recognition": "TemplateMatch",
