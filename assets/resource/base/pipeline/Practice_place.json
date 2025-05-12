@@ -57,9 +57,40 @@
     },
     "train_road_entry": {
         "next": [
+            "train_road_award",
             "train_road_unreset",
             "train_road_done"
         ]
+    },
+    "train_road_award": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_award.png",
+        "roi": [
+            817,
+            431,
+            170,
+            64
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_train_road_award"
+        ],
+        "post_wait_freezes": 400
+    },
+    "confirm_train_road_award": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/confirm_train_road_award.png",
+        "roi": [
+            461,
+            121,
+            335,
+            96
+        ],
+        "action": "Click",
+        "next": [
+            "close_train_road"
+        ],
+        "post_wait_freezes": 500
     },
     "train_road_unreset": {
         "recognition": "TemplateMatch",

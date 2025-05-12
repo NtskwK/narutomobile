@@ -1,0 +1,45 @@
+{
+    "ninjia_book": {
+        "next": [
+            "ninjia_book_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "ninjia_book_entry": {
+        "next": [
+            "ninjia_book_undone"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "ninjia_book_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/ninjia_book_undone_masked.png",
+        "roi": [
+            1205,
+            412,
+            63,
+            39
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [],
+        "post_wait_freezes": 800
+    },
+    "ninjia_book_share": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/ninjia_book_share.png",
+        "roi": [
+            897,
+            162,
+            167,
+            58
+        ],
+        "action": "Click",
+        "next": [],
+        "post_wait_freezes": 1000
+    }
+}

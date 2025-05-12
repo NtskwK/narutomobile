@@ -685,7 +685,7 @@
         "next": [
             "confirm_club_third_award"
         ],
-        "post_wait_freezes": 300
+        "post_wait_freezes": 800
     },
     "confirm_club_third_award": {
         "recognition": "TemplateMatch",
