@@ -308,6 +308,7 @@
             58
         ],
         "next": [
+            "ninjia_book_award_done",
             "ninjia_book_award_undone"
         ],
         "action": "Click",
@@ -333,12 +334,15 @@
     },
     "ninjia_book_award_undone": {
         "recognition": "TemplateMatch",
-        "template": "Ninjia_book/ninjia_book_award_undone.png",
+        "template": [
+            "Ninjia_book/ninjia_book_award_undone.png",
+            "Ninjia_book/ninjia_book_award_undone_1.png"
+        ],
         "roi": [
-            401,
-            77,
-            77,
-            36
+            404,
+            65,
+            86,
+            55
         ],
         "threshold": 0.9,
         "next": [
@@ -354,7 +358,8 @@
     "check_no_ninjia_book_award": {
         "recognition": "TemplateMatch",
         "template": [
-            "Ninjia_book/chopper_waiting.png"
+            "Ninjia_book/chopper_waiting.png",
+            "Ninjia_book/fame_waiting.png"
         ],
         "roi": [
             501,
@@ -370,7 +375,8 @@
     "get_ninjia_book_award": {
         "recognition": "TemplateMatch",
         "template": [
-            "Ninjia_book/chopper_waiting.png"
+            "Ninjia_book/chopper_waiting.png",
+            "Ninjia_book/fame_waiting.png"
         ],
         "roi": [
             501,

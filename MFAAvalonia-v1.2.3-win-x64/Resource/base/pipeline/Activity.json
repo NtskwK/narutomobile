@@ -1,0 +1,129 @@
+{
+    "activity": {
+        "next": [
+            "activity_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "activity_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/headhunt.png",
+        "roi": [
+            1194,
+            132,
+            50,
+            42
+        ],
+        "action": "Click",
+        "target": [
+            1196,
+            32,
+            53,
+            45
+        ],
+        "next": [
+            "check_no_energy"
+        ],
+        "interrupt": [
+            "get_ramen"
+        ],
+        "post_wait_freezes": 500
+    },
+    "check_no_energy": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/ramen.png",
+        "roi": [
+            190,
+            108,
+            1077,
+            395
+        ],
+        "inverse": true,
+        "next": [
+            "swipes_for_monthly_sign"
+        ],
+        "post_delay": 200
+    },
+    "swipes_for_monthly_sign": {
+        "action": "Swipe",
+        "begin": [
+            80,
+            700,
+            10,
+            10
+        ],
+        "end": [
+            80,
+            100,
+            10,
+            10
+        ],
+        "next": [
+            "mouthly_sign_done",
+            "mouthly_sign_undone"
+        ],
+        "duration": 100,
+        "post_delay": 500
+    },
+    "get_ramen": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/ramen.png",
+        "roi": [
+            190,
+            108,
+            1077,
+            395
+        ],
+        "action": "Click"
+    },
+    "mouthly_sign_undone": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Activity/monthly_sign_undone_activity.png"
+        ],
+        "roi": [
+            24,
+            423,
+            148,
+            58
+        ],
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "mouthly_signature"
+        ],
+        "post_wait_freezes": 500
+    },
+    "mouthly_sign_done": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Activity/monthly_sign_done_activity.png"
+        ],
+        "roi": [
+            24,
+            423,
+            148,
+            66
+        ],
+        "threshold": 0.95,
+        "next": [
+            "back_main_screen"
+        ]
+    },
+    "mouthly_signature": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/sign.png",
+        "roi": [
+            1107,
+            547,
+            164,
+            61
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen"
+        ]
+    }
+}

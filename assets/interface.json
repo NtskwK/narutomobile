@@ -88,6 +88,14 @@
         {
             "name": "忍法帖",
             "entry": "ninjia_book"
+        },
+        {
+            "name": "免费招募",
+            "entry": "headhunt"
+        },
+        {
+            "name": "月签到和活动",
+            "entry": "activity"
         }
     ],
     "option": {

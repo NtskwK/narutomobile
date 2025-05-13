@@ -102,6 +102,16 @@
             "name": "忍法帖",
             "entry": "ninjia_book",
             "check": true
+        },
+        {
+            "name": "免费招募",
+            "entry": "headhunt",
+            "check": true
+        },
+        {
+            "name": "月签到和活动",
+            "entry": "activity",
+            "check": true
         }
     ],
     "option": {
