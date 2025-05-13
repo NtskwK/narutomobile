@@ -10,10 +10,11 @@
     },
     "point_race_entry": {
         "next": [
-            "point_race_done"
+            "point_race_done",
+            "point_race_undone"
         ],
         "interrupt": [
-            "point_race_undone"
+            "swipe_for_left_entries"
         ]
     },
     "point_race_done": {
@@ -33,7 +34,7 @@
             "Point_race/point_race_undone.png",
             "Point_race/point_race_undone_day.png"
         ],
-        "threshold": 0.98,
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "get_point_race_award"

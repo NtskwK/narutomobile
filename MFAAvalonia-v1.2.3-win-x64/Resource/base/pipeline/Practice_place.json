@@ -19,7 +19,8 @@
     "practice_place_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "Practice_place/practice_place_done_night.png"
+            "Practice_place/practice_place_done_night.png",
+            "Practice_place/practice_place_done_day.png"
         ],
         "threshold": 0.98,
         "next": [
@@ -29,7 +30,8 @@
     "practice_place_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Practice_place/practice_place_undone_night.png"
+            "Practice_place/practice_place_undone_night.png",
+            "Practice_place/practice_place_undone_day.png"
         ],
         "threshold": 0.98,
         "action": "Click",
@@ -101,6 +103,7 @@
             428,
             126
         ],
+        "threshold": 0.96,
         "next": [
             "train_road_reset"
         ],
@@ -199,7 +202,8 @@
     "survival_challenge_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Practice_place/practice_place_undone_night.png"
+            "Practice_place/practice_place_undone_night.png",
+            "Practice_place/practice_place_undone_day.png"
         ],
         "threshold": 0.98,
         "action": "Click",

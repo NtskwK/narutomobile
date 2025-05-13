@@ -20,8 +20,11 @@
         "template": "Mail/mail_done.png",
         "threshold": 0.9,
         "next": [
-            "back_main_screen_and_stop"
+            "stoptask"
         ]
+    },
+    "stoptask": {
+        "action": "StopTask"
     },
     "open_mail": {
         "recognition": "TemplateMatch",

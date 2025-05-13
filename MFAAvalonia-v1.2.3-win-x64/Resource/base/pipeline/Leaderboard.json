@@ -11,7 +11,7 @@
     "swipe_for_left_entries": {
         "recognition": "TemplateMatch",
         "template": "Leaderboard/practice_place.png",
-        "threshold": 0.97,
+        "threshold": 0.9,
         "action": "Swipe",
         "begin": [
             150,

@@ -168,6 +168,9 @@
         "green_mask": true,
         "inverse": true,
         "threshold": 0.5,
+        "next": [
+            "check_main_screen_and_stop"
+        ],
         "pre_wait_freezes": 200
     },
     "click_x": {

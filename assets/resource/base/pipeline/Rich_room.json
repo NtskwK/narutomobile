@@ -19,7 +19,10 @@
     },
     "rich_room_done": {
         "recognition": "TemplateMatch",
-        "template": "Rich_room/rich_room_done_night.png",
+        "template": [
+            "Rich_room/rich_room_done_night.png",
+            "Rich_room/rich_room_done_day.png"
+        ],
         "threshold": 0.95,
         "next": [
             "back_main_screen_and_stop"
@@ -27,7 +30,10 @@
     },
     "rich_room_undone": {
         "recognition": "TemplateMatch",
-        "template": "Rich_room/rich_room_undone_night.png",
+        "template": [
+            "Rich_room/rich_room_undone_night.png",
+            "Rich_room/rich_room_undone_day.png"
+        ],
         "threshold": 0.95,
         "action": "Click",
         "next": [

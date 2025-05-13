@@ -38,6 +38,7 @@
         "next": [
             "check_selected_group_gameplay"
         ],
+        "threshold": 0.8,
         "interrupt": [
             "group_gameplay_undone"
         ]
@@ -53,13 +54,28 @@
         ],
         "action": "DoNothing",
         "next": [
+            "check_group_pray_done",
             "check_group_pray_undone"
         ],
         "interrupt": []
     },
+    "check_group_pray_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/selected_group_gameplay_done_button.png",
+        "roi": [
+            237,
+            567,
+            175,
+            75
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "close_group_pray",
+        "post_wait_freezes": 1000
+    },
     "check_group_pray_undone": {
         "recognition": "TemplateMatch",
-        "threshold": 0.97,
+        "threshold": 0.99,
         "template": "Group/group_pray_undone.png",
         "action": "DoNothing",
         "next": [
@@ -287,6 +303,7 @@
             137,
             205
         ],
+        "threshold": 0.95,
         "next": [
             "back_main_screen_and_stop"
         ]
@@ -301,6 +318,7 @@
             186
         ],
         "action": "Click",
+        "threshold": 0.95,
         "next": [
             "pursuit_dawn_organization_award"
         ],
@@ -321,6 +339,7 @@
             61,
             58
         ],
+        "threshold": 0.97,
         "next": [
             "back_main_screen_and_stop"
         ]
@@ -334,6 +353,7 @@
             64,
             56
         ],
+        "threshold": 0.97,
         "action": "Click",
         "next": [
             "to_pursuit_dawn_organization_award"
@@ -351,24 +371,12 @@
     "get_pursuit_dawn_organization_award": {
         "recognition": "TemplateMatch",
         "template": "Group/dawn_organization_award_waiting.png",
-        "roi": [
-            997,
-            192,
-            104,
-            52
-        ],
         "action": "Click",
         "post_wait_freezes": 200
     },
     "check_no_pursuit_dawn_organization_award": {
         "recognition": "TemplateMatch",
         "template": "Group/dawn_organization_award_waiting.png",
-        "roi": [
-            997,
-            192,
-            104,
-            52
-        ],
         "inverse": true,
         "next": [
             "back_main_screen_and_stop"

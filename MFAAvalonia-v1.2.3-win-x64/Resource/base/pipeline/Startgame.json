@@ -40,7 +40,7 @@
             1264,
             720
         ],
-        "threshold": 0.97,
+        "threshold": 0.94,
         "action": "StopTask",
         "green_mask": true,
         "pre_wait_freezes": 4000
@@ -56,7 +56,7 @@
             1264,
             720
         ],
-        "threshold": 0.97,
+        "threshold": 0.94,
         "action": "DoNothing",
         "green_mask": true,
         "pre_wait_freezes": 500
