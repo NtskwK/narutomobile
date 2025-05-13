@@ -97,6 +97,11 @@
                 "等待自动战斗时间选择"
             ],
             "check": true
+        },
+        {
+            "name": "忍法帖",
+            "entry": "ninjia_book",
+            "check": true
         }
     ],
     "option": {
