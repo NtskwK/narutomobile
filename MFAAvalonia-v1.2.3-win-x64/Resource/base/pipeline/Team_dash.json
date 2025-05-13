@@ -28,7 +28,10 @@
     },
     "team_dash_undone": {
         "recognition": "TemplateMatch",
-        "template": "Team_dash/team_dash_undone_night.png",
+        "template": [
+            "Team_dash/team_dash_undone_night.png",
+            "Team_dash/team_dash_undone_day.png"
+        ],
         "threshold": 0.95,
         "action": "Click",
         "next": [

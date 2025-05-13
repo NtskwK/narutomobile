@@ -28,7 +28,10 @@
     },
     "team_dash_undone": {
         "recognition": "TemplateMatch",
-        "template": "Team_dash/team_dash_undone_night.png",
+        "template": [
+            "Team_dash/team_dash_undone_night.png",
+            "Team_dash/team_dash_undone_day.png"
+        ],
         "threshold": 0.95,
         "action": "Click",
         "next": [
@@ -61,6 +64,7 @@
             77,
             91
         ],
+        "threshold": 0.96,
         "next": [
             "team_dash_invite"
         ],
@@ -133,6 +137,12 @@
         "expected": [
             "2"
         ],
+        "roi": [
+            722,
+            618,
+            29,
+            34
+        ],
         "next": [
             "team_dash_auto_fight1"
         ]
@@ -157,6 +167,12 @@
         "expected": [
             "1"
         ],
+        "roi": [
+            722,
+            618,
+            29,
+            34
+        ],
         "next": [
             "team_dash_auto_fight2"
         ]
@@ -180,6 +196,12 @@
         "recognition": "OCR",
         "expected": [
             "0"
+        ],
+        "roi": [
+            722,
+            618,
+            29,
+            34
         ],
         "next": [
             "back_main_screen_and_stop"
