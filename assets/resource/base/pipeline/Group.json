@@ -17,6 +17,7 @@
         "threshold": 0.9,
         "action": "Click",
         "next": [
+            "group_gameplay_done",
             "group_gameplay_undone"
         ],
         "interrupt": [
@@ -38,9 +39,25 @@
         "next": [
             "check_selected_group_gameplay"
         ],
-        "threshold": 0.8,
+        "threshold": 0.9,
         "interrupt": [
             "group_gameplay_undone"
+        ],
+        "post_wait_freezes": 300
+    },
+    "group_gameplay_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_gameplay_done.png",
+        "roi": [
+            85,
+            393,
+            101,
+            69
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
         ]
     },
     "check_selected_group_gameplay": {
@@ -54,10 +71,11 @@
         ],
         "action": "DoNothing",
         "next": [
-            "check_group_pray_done",
-            "check_group_pray_undone"
+            "check_group_pray_undone",
+            "check_group_pray_done"
         ],
-        "interrupt": []
+        "interrupt": [],
+        "post_wait_freezes": 300
     },
     "check_group_pray_done": {
         "recognition": "TemplateMatch",
@@ -102,17 +120,32 @@
         ],
         "action": "Click",
         "next": [
-            "confirm_chopper_group_pray"
+            "confirm_chopper_group_pray",
+            "award"
+        ],
+        "interrupt": [
+            "close_chopper_group_pray"
         ]
+    },
+    "close_chopper_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/confirm_chopper_pray_done.png",
+        "roi": [
+            535,
+            412,
+            199,
+            77
+        ],
+        "action": "Click"
     },
     "confirm_chopper_group_pray": {
         "recognition": "TemplateMatch",
         "template": "Group/confirm_group_pray.png",
         "roi": [
-            497,
-            140,
-            275,
-            58
+            534,
+            151,
+            506,
+            284
         ],
         "action": "Click",
         "next": "award",

@@ -34,8 +34,8 @@
             48
         ],
         "next": [
-            "headhunt_recruit_done",
-            "headhunt_recruit_undone"
+            "headhunt_recruit_undone",
+            "headhunt_recruit_done"
         ],
         "post_wait_freezes": 300
     },
@@ -48,7 +48,7 @@
             145,
             53
         ],
-        "threshold": 0.95,
+        "threshold": 0.97,
         "action": "Click",
         "next": [
             "confrim_free_headhunt"
@@ -66,8 +66,8 @@
         ],
         "action": "Click",
         "next": [
-            "headhunt_recruit_done",
-            "headhunt_recruit_undone"
+            "headhunt_recruit_undone",
+            "headhunt_recruit_done"
         ],
         "post_wait_freezes": 300
     },
@@ -80,7 +80,7 @@
             134,
             53
         ],
-        "threshold": 0.95,
+        "threshold": 0.97,
         "action": "Click",
         "next": [
             "back_main_screen_and_stop"
@@ -106,12 +106,13 @@
         "recognition": "TemplateMatch",
         "template": "Headhunt/free_recruit.png",
         "roi": [
-            731,
-            550,
-            235,
+            927,
+            528,
+            58,
             55
         ],
         "action": "Click",
+        "next": "confrim_headhunt_recruit",
         "post_wait_freezes": 300
     },
     "confrim_headhunt_recruit": {

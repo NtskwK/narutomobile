@@ -284,7 +284,9 @@
         "next": [
             "confirm_naruto_club_sign"
         ],
-        "interrupt": [],
+        "interrupt": [
+            "naruto_club_sign"
+        ],
         "post_wait_freezes": 1000
     },
     "confirm_naruto_club_sign": {

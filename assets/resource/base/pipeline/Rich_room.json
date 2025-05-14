@@ -10,10 +10,10 @@
     },
     "rich_room_entry": {
         "next": [
+            "rich_room_undone",
             "rich_room_done"
         ],
         "interrupt": [
-            "rich_room_undone",
             "swipe_for_right_entries"
         ]
     },
@@ -23,7 +23,7 @@
             "Rich_room/rich_room_done_night.png",
             "Rich_room/rich_room_done_day.png"
         ],
-        "threshold": 0.95,
+        "threshold": 0.9,
         "next": [
             "back_main_screen_and_stop"
         ]
@@ -34,7 +34,7 @@
             "Rich_room/rich_room_undone_night.png",
             "Rich_room/rich_room_undone_day.png"
         ],
-        "threshold": 0.95,
+        "threshold": 0.9,
         "action": "Click",
         "next": [
             "challenge_rich_room"

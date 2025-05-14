@@ -96,6 +96,14 @@
         {
             "name": "月签到和活动",
             "entry": "activity"
+        },
+        {
+            "name": "任务集会所(beta)",
+            "entry": "mission_office"
+        },
+        {
+            "name": "刷体力(beta)",
+            "entry": "mission_office"
         }
     ],
     "option": {
