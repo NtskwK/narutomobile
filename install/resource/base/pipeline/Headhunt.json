@@ -1,0 +1,132 @@
+{
+    "headhunt": {
+        "next": [
+            "headhunt_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "headhunt_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/headhunt_entry.png",
+        "roi": [
+            1195,
+            132,
+            52,
+            45
+        ],
+        "action": "Click",
+        "next": [
+            "no_free_headhunt",
+            "free_headhunt_waiting"
+        ],
+        "interrupt": [],
+        "post_wait_freezes": 500
+    },
+    "no_free_headhunt": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/no_free_headhunt.png",
+        "roi": [
+            667,
+            553,
+            148,
+            48
+        ],
+        "next": [
+            "headhunt_recruit_undone",
+            "headhunt_recruit_done"
+        ],
+        "post_wait_freezes": 300
+    },
+    "free_headhunt_waiting": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/free_headhunt.png",
+        "roi": [
+            668,
+            553,
+            145,
+            53
+        ],
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "confrim_free_headhunt"
+        ],
+        "post_wait_freezes": 500
+    },
+    "confrim_free_headhunt": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/confirm_free_headhunt.png",
+        "roi": [
+            300,
+            525,
+            197,
+            70
+        ],
+        "action": "Click",
+        "next": [
+            "headhunt_recruit_undone",
+            "headhunt_recruit_done"
+        ],
+        "post_wait_freezes": 300
+    },
+    "headhunt_recruit_done": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/recruit_done.png",
+        "roi": [
+            36,
+            306,
+            134,
+            53
+        ],
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "headhunt_recruit_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/recruit_undone.png",
+        "roi": [
+            34,
+            290,
+            137,
+            69
+        ],
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "headhunt_recruit"
+        ],
+        "post_wait_freezes": 300
+    },
+    "headhunt_recruit": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/free_recruit.png",
+        "roi": [
+            927,
+            528,
+            58,
+            55
+        ],
+        "action": "Click",
+        "next": "confrim_headhunt_recruit",
+        "post_wait_freezes": 300
+    },
+    "confrim_headhunt_recruit": {
+        "recognition": "TemplateMatch",
+        "template": "Headhunt/confirm_free_headhunt.png",
+        "roi": [
+            430,
+            523,
+            202,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    }
+}

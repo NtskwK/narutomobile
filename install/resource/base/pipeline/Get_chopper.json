@@ -1,0 +1,89 @@
+{
+    "get_chopper": {
+        "next": [
+            "get_chopper_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "get_chopper_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Get_chopper/chopper.png",
+        "roi": [
+            601,
+            26,
+            42,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "start_chooper"
+        ],
+        "interrupt": [
+            "check_chopper_done"
+        ],
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 200
+    },
+    "start_chooper": {
+        "recognition": "OCR",
+        "expected": [
+            "免费一次",
+            "免费一",
+            "免费",
+            "免"
+        ],
+        "roi": [
+            648,
+            563,
+            129,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "check_chopper_done"
+        ],
+        "interrupt": [
+            "start_chooper"
+        ]
+    },
+    "check_chopper_done": {
+        "recognition": "OCR",
+        "expected": [
+            "0",
+            "10",
+            "招财",
+            "招",
+            "财"
+        ],
+        "roi": [
+            648,
+            563,
+            129,
+            48
+        ],
+        "next": [
+            "close_chooper"
+        ],
+        "pre_wait_freezes": 200
+    },
+    "close_chooper": {
+        "recognition": "TemplateMatch",
+        "template": "Get_chopper/x.png",
+        "roi": [
+            1026,
+            79,
+            115,
+            78
+        ],
+        "action": "Click",
+        "next": [
+            "check_main_screen_and_stop"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ],
+        "post_wait_freezes": 300
+    }
+}

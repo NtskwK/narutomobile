@@ -1,0 +1,115 @@
+{
+    "give_energy": {
+        "next": [
+            "energy_entry"
+        ],
+        "interrupt": [
+            "give_energy_done",
+            "back_main_screen"
+        ]
+    },
+    "energy_entry": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Give_energy/give_energy.png"
+        ],
+        "roi": [
+            35,
+            195,
+            34,
+            28
+        ],
+        "action": "Click",
+        "next": [
+            "sent_energy"
+        ],
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 200
+    },
+    "give_energy_done": {
+        "recognition": "TemplateMatch",
+        "template": "Give_energy/give_energy_done.png",
+        "roi": [
+            34,
+            192,
+            46,
+            29
+        ],
+        "action": "StopTask"
+    },
+    "sent_energy": {
+        "recognition": "OCR",
+        "expected": [
+            "一键赠送",
+            "赠送",
+            "送",
+            "一键"
+        ],
+        "roi": [
+            346,
+            571,
+            131,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "get_energy"
+        ]
+    },
+    "get_energy": {
+        "recognition": "OCR",
+        "expected": [
+            "一键领取",
+            "键领取",
+            "领取",
+            "一键",
+            "取"
+        ],
+        "roi": [
+            519,
+            575,
+            134,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_get_energy"
+        ],
+        "interrupt": [
+            "close_energy"
+        ],
+        "post_wait_freezes": 500
+    },
+    "confirm_get_energy": {
+        "recognition": "OCR",
+        "expected": [
+            "确认",
+            "确",
+            "认"
+        ],
+        "action": "Click",
+        "next": [
+            "close_energy"
+        ],
+        "post_wait_freezes": 200
+    },
+    "close_energy": {
+        "recognition": "TemplateMatch",
+        "template": "Give_energy/x.png",
+        "roi": [
+            1046,
+            86,
+            99,
+            83
+        ],
+        "action": "Click",
+        "next": [
+            "close_announcement",
+            "check_main_screen_and_stop"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ],
+        "post_wait_freezes": 300
+    }
+}

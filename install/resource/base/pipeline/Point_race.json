@@ -1,0 +1,73 @@
+{
+    "point_race": {
+        "next": [
+            "point_race_entry"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries",
+            "back_main_screen"
+        ]
+    },
+    "point_race_entry": {
+        "next": [
+            "point_race_done",
+            "point_race_undone"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries"
+        ]
+    },
+    "point_race_done": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "NULL.png"
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": [
+            "check_main_screen_and_stop"
+        ]
+    },
+    "point_race_undone": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Point_race/point_race_undone.png",
+            "Point_race/point_race_undone_day.png"
+        ],
+        "threshold": 0.5,
+        "action": "Click",
+        "next": [
+            "get_point_race_award"
+        ]
+    },
+    "get_point_race_award": {
+        "recognition": "TemplateMatch",
+        "template": "Point_race/get_award.png",
+        "roi": [
+            668,
+            23,
+            131,
+            66
+        ],
+        "action": "Click",
+        "next": [
+            "get_point_race_award1"
+        ],
+        "post_wait_freezes": 300
+    },
+    "get_point_race_award1": {
+        "recognition": "TemplateMatch",
+        "template": "Point_race/get_award.png",
+        "roi": [
+            668,
+            23,
+            131,
+            66
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    }
+}

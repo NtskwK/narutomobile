@@ -1,0 +1,139 @@
+{
+    "use_energy": {
+        "next": [
+            "use_energy_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "use_energy_entry": {
+        "recognition": "OCR",
+        "expected": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "roi": [
+            451,
+            29,
+            26,
+            31
+        ],
+        "next": [
+            "use_energy_by_ninjia_piece"
+        ]
+    },
+    "use_energy_by_ninjia_piece": {
+        "recognition": "TemplateMatch",
+        "template": "Use_energy/adventure.png",
+        "roi": [
+            1111,
+            586,
+            107,
+            91
+        ],
+        "next": [
+            "elite_entry"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "elite_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Use_energy/elite.png",
+        "roi": [
+            191,
+            2,
+            61,
+            140
+        ],
+        "action": "Click",
+        "next": [
+            "use_energy_ez_sweep_entry"
+        ],
+        "post_wait_freezes": 300
+    },
+    "use_energy_ez_sweep_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Use_energy/ez_sweep.png",
+        "roi": [
+            700,
+            599,
+            123,
+            104
+        ],
+        "action": "Click",
+        "next": [
+            "use_energy_ez_sweep"
+        ],
+        "post_wait_freezes": 300
+    },
+    "use_energy_ez_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Use_energy/sweep_button.png",
+        "roi": [
+            953,
+            564,
+            164,
+            64
+        ],
+        "action": "Click",
+        "next": [
+            "use_energy_confirm_ez_sweep"
+        ],
+        "post_wait_freezes": 300
+    },
+    "use_energy_confirm_ez_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Use_energy/confirm_sweep.png",
+        "roi": [
+            422,
+            415,
+            197,
+            72
+        ],
+        "action": "Click",
+        "next": [
+            "use_energy_not_enough_sign"
+        ],
+        "interrupt": [
+            "use_energy_Clicker"
+        ]
+    },
+    "use_energy_Clicker": {
+        "action": "Click",
+        "roi": [
+            835,
+            186,
+            77,
+            63
+        ]
+    },
+    "use_energy_not_enough_sign": {
+        "recognition": "TemplateMatch",
+        "template": "Use_energy/energy_not_enough.png",
+        "roi": [
+            558,
+            186,
+            357,
+            63
+        ],
+        "action": "Click",
+        "target": [
+            835,
+            186,
+            77,
+            63
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    }
+}

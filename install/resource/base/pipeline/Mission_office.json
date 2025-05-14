@@ -1,0 +1,562 @@
+{
+    "mission_office": {
+        "next": [
+            "mission_office_undone",
+            "mission_office_done"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries",
+            "back_main_screen"
+        ]
+    },
+    "mission_office_done": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/mission_office_done_day.png",
+        "threshold": 0.97,
+        "action": "StopTask"
+    },
+    "mission_office_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/mission_office_undone_day.png",
+        "threshold": 0.97,
+        "next": [
+            "check_no_mission_office_award"
+        ],
+        "interrupt": [
+            "get_mission_office_award"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "check_no_mission_office_award": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/mission_office_award.png",
+        "roi": [
+            609,
+            170,
+            368,
+            37
+        ],
+        "threshold": 0.8,
+        "inverse": true,
+        "next": [
+            "mission_office_get_mision"
+        ]
+    },
+    "get_mission_office_award": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/mission_office_award.png",
+        "roi": [
+            609,
+            170,
+            368,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_mission_office_award"
+        ],
+        "interrupt": [
+            "celebrate_mission_office_award"
+        ],
+        "post_wait_freezes": 200
+    },
+    "confirm_mission_office_award": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/confirm.png",
+        "roi": [
+            411,
+            412,
+            210,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "check_no_mission_office_award"
+        ],
+        "interrupt": [
+            "get_mission_office_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "celebrate_mission_office_award": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/celebrate.png",
+        "roi": [
+            493,
+            135,
+            281,
+            69
+        ],
+        "action": "Click",
+        "next": [
+            "check_no_mission_office_award"
+        ],
+        "interrupt": [
+            "get_mission_office_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "mission_office_get_mision": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/main_page_masked.png",
+        "roi": [
+            1,
+            75,
+            1279,
+            523
+        ],
+        "next": [
+            "mission_office_a_mission",
+            "mission_office_b_mission",
+            "mission_office_c_mission",
+            "mission_office_solo_mission"
+        ]
+    },
+    "mission_office_a_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/a_mission_undone_masked.png",
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "next": [
+            "tack_mission_office_a_mission"
+        ],
+        "post_wait_freezes": 500
+    },
+    "tack_mission_office_a_mission": {
+        "next": [
+            "selece_a_for_mission_1"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_1",
+            "selece_s_for_mission_1",
+            "selece_c_for_mission_1"
+        ]
+    },
+    "mission_office_b_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_mission_undone_masked.png",
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "next": [
+            "tack_mission_office_b_mission"
+        ],
+        "post_wait_freezes": 500
+    },
+    "tack_mission_office_b_mission": {
+        "next": [
+            "selece_a_for_mission_1"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_1",
+            "selece_s_for_mission_1",
+            "selece_c_for_mission_1"
+        ]
+    },
+    "mission_office_c_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/c_mission_undone_masked.png",
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "next": [
+            "tack_mission_office_c_mission"
+        ],
+        "post_wait_freezes": 500
+    },
+    "tack_mission_office_c_mission": {
+        "next": [
+            "selece_a_for_mission_1"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_1",
+            "selece_s_for_mission_1",
+            "selece_c_for_mission_1"
+        ]
+    },
+    "mission_office_solo_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/solo_mission_undone_masked.png",
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "next": [
+            "tack_mission_office_solo_mission"
+        ],
+        "post_wait_freezes": 500
+    },
+    "tack_mission_office_solo_mission": {
+        "next": [
+            "selece_a_for_mission"
+        ],
+        "interrupt": [
+            "selece_s_for_mission",
+            "selece_b_for_mission",
+            "selece_c_for_mission"
+        ]
+    },
+    "selece_s_for_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/s_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_a_for_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/a_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_b_for_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_c_for_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/c_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_s_for_mission_1": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/s_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_2"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_2",
+            "selece_c_for_mission_2",
+            "selece_s_for_mission_2"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_a_for_mission_1": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/a_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_2"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_2",
+            "selece_c_for_mission_2",
+            "selece_s_for_mission_2"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_b_for_mission_1": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_2"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_2",
+            "selece_c_for_mission_2",
+            "selece_s_for_mission_2"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_c_for_mission_1": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/c_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_2"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_2",
+            "selece_c_for_mission_2",
+            "selece_s_for_mission_2"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_s_for_mission_2": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/s_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_3"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_3",
+            "selece_c_for_mission_3",
+            "selece_s_for_mission_3"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_a_for_mission_2": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/a_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_3"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_3",
+            "selece_c_for_mission_3",
+            "selece_s_for_mission_3"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_b_for_mission_2": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_3"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_3",
+            "selece_c_for_mission_3",
+            "selece_s_for_mission_3"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_c_for_mission_2": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/c_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "selece_a_for_mission_3"
+        ],
+        "interrupt": [
+            "selece_b_for_mission_3",
+            "selece_c_for_mission_3",
+            "selece_s_for_mission_3"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_s_for_mission_3": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/s_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_a_for_mission_3": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/a_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_b_for_mission_3": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "selece_c_for_mission_3": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/c_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "take_mission_office_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/take_mission.png",
+        "roi": [
+            1109,
+            580,
+            110,
+            96
+        ],
+        "action": "Click",
+        "next": [
+            "mission_office_get_mision"
+        ],
+        "interrupt": [
+            "back_main_screen_and_stop"
+        ],
+        "post_wait_freezes": 200
+    }
+}

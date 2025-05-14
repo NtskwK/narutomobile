@@ -1,0 +1,391 @@
+{
+    "ninjia_book": {
+        "next": [
+            "ninjia_book_entry"
+        ]
+    },
+    "ninjia_book_entry": {
+        "next": [
+            "ninjia_book_undone",
+            "ninjia_book_done"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "ninjia_book_done": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/ninjia_book_done_masked.png",
+        "roi": [
+            1204,
+            412,
+            53,
+            39
+        ],
+        "threshold": 0.92,
+        "green_mask": true,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "ninjia_book_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/ninjia_book_undone_masked.png",
+        "roi": [
+            1205,
+            412,
+            63,
+            39
+        ],
+        "threshold": 0.92,
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "ninjia_book_share"
+        ],
+        "post_wait_freezes": 800
+    },
+    "ninjia_book_share": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/ninjia_book_share.png",
+        "roi": [
+            897,
+            162,
+            167,
+            58
+        ],
+        "action": "Click",
+        "next": [
+            "ninjia_book_share_to_qq"
+        ],
+        "post_wait_freezes": 1500
+    },
+    "ninjia_book_share_to_qq": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/share_icon.png",
+        "roi": [
+            1125,
+            580,
+            34,
+            53
+        ],
+        "action": "Click",
+        "next": [
+            "close_ninjia_book_share"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "close_ninjia_book_share": {
+        "recognition": "OCR",
+        "expected": [
+            "关闭",
+            "关",
+            "闭"
+        ],
+        "roi": [
+            10,
+            42,
+            58,
+            37
+        ],
+        "action": "Click",
+        "next": [
+            "ninjia_book_mission_done",
+            "ninjia_book_mission_undone"
+        ],
+        "post_wait_freezes": 2000
+    },
+    "ninjia_book_mission_done": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/mission_done.png",
+        "roi": [
+            544,
+            77,
+            80,
+            42
+        ],
+        "threshold": 0.94,
+        "next": [
+            "ninjia_book_liveness_done",
+            "ninjia_book_liveness_undone"
+        ],
+        "post_wait_freezes": 100
+    },
+    "ninjia_book_mission_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/mission_undone.png",
+        "roi": [
+            534,
+            77,
+            88,
+            37
+        ],
+        "threshold": 0.94,
+        "next": [
+            "ninjia_book_mission_award"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100
+    },
+    "ninjia_book_mission_award": {
+        "next": [
+            "check_no_ninjia_book_mission_award"
+        ],
+        "interrupt": [
+            "get_ninjia_book_mission_award",
+            "close_ninjia_book_level_up_page"
+        ]
+    },
+    "close_ninjia_book_level_up_page": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/level_up_page.png",
+        "roi": [
+            445,
+            553,
+            169,
+            58
+        ],
+        "next": "ninjia_book_mission_award",
+        "action": "Click"
+    },
+    "check_no_ninjia_book_mission_award": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/mission_award_waiting.png",
+        "roi": [
+            670,
+            544,
+            107,
+            50
+        ],
+        "threshold": 0.9,
+        "inverse": true,
+        "next": [
+            "close_ninjia_book_level_up_page"
+        ],
+        "interrupt": [
+            "get_ninjia_book_mission_award",
+            "ninjia_book_liveness_done",
+            "ninjia_book_liveness_undone"
+        ]
+    },
+    "get_ninjia_book_mission_award": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/mission_award_waiting.png",
+        "roi": [
+            670,
+            544,
+            107,
+            50
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "post_wait_freezes": 200
+    },
+    "ninjia_book_liveness_done": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/liveness_done.png",
+        "roi": [
+            702,
+            78,
+            66,
+            45
+        ],
+        "threshold": 0.9,
+        "next": [
+            "ninjia_book_leaderboard_done",
+            "ninjia_book_leaderboard_undone"
+        ],
+        "post_wait_freezes": 500
+    },
+    "ninjia_book_liveness_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/liveness_undone.png",
+        "roi": [
+            690,
+            77,
+            77,
+            40
+        ],
+        "threshold": 0.9,
+        "next": [
+            "ninjia_book_liveness_award"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "ninjia_book_liveness_award": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/liveness_waiting.png"
+        ],
+        "roi": [
+            468,
+            284,
+            727,
+            151
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "close_ninjia_book_level_up_page_when_liveness"
+        ],
+        "interrupt": [
+            "ninjia_book_leaderboard_done",
+            "ninjia_book_leaderboard_undone"
+        ],
+        "post_wait_freezes": 500
+    },
+    "close_ninjia_book_level_up_page_when_liveness": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/level_up_page.png",
+        "roi": [
+            445,
+            553,
+            169,
+            58
+        ],
+        "next": [
+            "ninjia_book_leaderboard_done",
+            "ninjia_book_leaderboard_undone"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200
+    },
+    "ninjia_book_leaderboard_done": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/leaderboard_done.png",
+        "roi": [
+            982,
+            77,
+            77,
+            37
+        ],
+        "threshold": 0.9,
+        "next": [
+            "ninjia_book_award_undone"
+        ]
+    },
+    "ninjia_book_leaderboard_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/leaderboard_undone.png",
+        "roi": [
+            982,
+            77,
+            77,
+            37
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": [
+            "like_ninjia_book_leaderboard"
+        ]
+    },
+    "like_ninjia_book_leaderboard": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/thumb.png",
+        "roi": [
+            1136,
+            197,
+            96,
+            335
+        ],
+        "green_mask": true,
+        "next": [
+            "close_ninjia_book_level_up_page_when_like"
+        ],
+        "interrupt": [
+            "ninjia_book_award_undone"
+        ]
+    },
+    "close_ninjia_book_level_up_page_when_like": {
+        "recognition": "TemplateMatch",
+        "template": "Ninjia_book/level_up_page.png",
+        "roi": [
+            445,
+            553,
+            169,
+            58
+        ],
+        "next": [
+            "ninjia_book_award_done",
+            "ninjia_book_award_undone"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200
+    },
+    "ninjia_book_award_done": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/ninjia_book_award_done1.png",
+            "Ninjia_book/ninjia_book_award_done.png"
+        ],
+        "roi": [
+            401,
+            77,
+            77,
+            36
+        ],
+        "threshold": 0.9,
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "action": "Click"
+    },
+    "ninjia_book_award_undone": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/ninjia_book_award_undone.png",
+            "Ninjia_book/ninjia_book_award_undone_1.png"
+        ],
+        "roi": [
+            404,
+            65,
+            86,
+            55
+        ],
+        "threshold": 0.9,
+        "next": [
+            "check_no_ninjia_book_award"
+        ],
+        "interrupt": [
+            "get_ninjia_book_award",
+            "back_main_screen_and_stop"
+        ],
+        "post_wait_freezes": 500,
+        "action": "Click"
+    },
+    "check_no_ninjia_book_award": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/chopper_waiting.png",
+            "Ninjia_book/fame_waiting.png",
+            "Ninjia_book/gold_waiting.png"
+        ],
+        "roi": [
+            501,
+            241,
+            650,
+            411
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "inverse": true
+    },
+    "get_ninjia_book_award": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/chopper_waiting.png",
+            "Ninjia_book/fame_waiting.png",
+            "Ninjia_book/gold_waiting.png"
+        ],
+        "roi": [
+            501,
+            241,
+            650,
+            411
+        ],
+        "action": "Click"
+    }
+}

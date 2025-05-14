@@ -1,0 +1,838 @@
+{
+    "test": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": [
+            "test1",
+            "test2"
+        ],
+        "interrupt": [
+            "test3",
+            "test4"
+        ]
+    },
+    "test1": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": [
+            "test3",
+            "test1"
+        ]
+    },
+    "test2": {
+        "recognition": "DirectHit",
+        "action": "DoNothing"
+    },
+    "test3": {
+        "recognition": "DirectHit",
+        "action": "DoNothing"
+    },
+    "test4": {
+        "recognition": "DirectHit",
+        "action": "DoNothing"
+    },
+    "close_notification": {
+        "next": [
+            "system_pack",
+            "settings",
+            "app_noti_settings",
+            "notification",
+            "close_noti",
+            "esc_setting"
+        ]
+    },
+    "system_pack": {
+        "recognition": "TemplateMatch",
+        "template": "test/test1.png",
+        "action": "Click"
+    },
+    "settings": {
+        "recognition": "TemplateMatch",
+        "template": "test/test1.png",
+        "action": "Click"
+    },
+    "app_noti_settings": {
+        "recognition": "TemplateMatch",
+        "template": "test/test3.png",
+        "action": "Click"
+    },
+    "notification": {
+        "recognition": "TemplateMatch",
+        "template": "test/test4.png",
+        "action": "Click"
+    },
+    "close_noti": {
+        "recognition": "TemplateMatch",
+        "template": "test/test5.png",
+        "action": "Click"
+    },
+    "esc_setting": {
+        "recognition": "TemplateMatch",
+        "template": "ico.png",
+        "action": "Click",
+        "next": "esc_setting",
+        "inverse": true
+    },
+    "打开火影": {
+        "recognition": "TemplateMatch",
+        "template": "ico.png",
+        "action": "Click",
+        "next": "进入游戏",
+        "post_delay": 25000
+    },
+    "进入游戏": {
+        "next": [
+            "开始游戏"
+        ],
+        "interrupt": [
+            "同意协议",
+            "安卓qq"
+        ]
+    },
+    "开始游戏": {
+        "recognition": "OCR",
+        "expected": "开始游戏",
+        "action": "Click",
+        "next": "进入主界面",
+        "post_delay": 15000
+    },
+    "同意协议": {
+        "recognition": "TemplateMatch",
+        "template": "uncheck.png",
+        "action": "Click",
+        "next": "安卓qq"
+    },
+    "安卓qq": {
+        "recognition": "TemplateMatch",
+        "template": "anqq.png",
+        "roi": [
+            946,
+            507,
+            248,
+            71
+        ],
+        "action": "Click",
+        "next": "同意登录",
+        "post_wait_freezes": 500
+    },
+    "同意登录": {
+        "recognition": "TemplateMatch",
+        "template": "agree.png",
+        "action": "Click",
+        "next": "同意信息",
+        "post_wait_freezes": 500
+    },
+    "同意信息": {
+        "recognition": "OCR",
+        "expected": "同意",
+        "action": "Click"
+    },
+    "进入主界面": {
+        "next": [
+            "主界面"
+        ],
+        "interrupt": [
+            "关闭公告",
+            "关闭忍者展示",
+            "周签到"
+        ]
+    },
+    "主界面": {
+        "recognition": "TemplateMatch",
+        "rate_limit": 1000,
+        "template": "main.png",
+        "action": "DoNothing"
+    },
+    "关闭公告": {
+        "recognition": "TemplateMatch",
+        "template": "x.png",
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "关闭忍者展示": {
+        "recognition": "TemplateMatch",
+        "template": "x2.png",
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "周签到": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "招财": {
+        "recognition": "TemplateMatch",
+        "template": "chopper.png",
+        "action": "Click",
+        "next": [
+            "进行招财"
+        ],
+        "post_wait_freezes": 500
+    },
+    "进行招财": {
+        "recognition": "OCR",
+        "expected": "免费一次",
+        "action": "Click",
+        "next": "进行招财1"
+    },
+    "进行招财1": {
+        "recognition": "OCR",
+        "expected": "免费一次",
+        "action": "Click",
+        "next": "关闭招财"
+    },
+    "关闭招财": {
+        "recognition": "TemplateMatch",
+        "template": "x.png",
+        "action": "Click"
+    },
+    "完成招财": {
+        "recognition": "TemplateMatch",
+        "template": "end_chopper.png",
+        "roi": [
+            183,
+            450,
+            129,
+            85
+        ],
+        "action": "Click"
+    },
+    "排行榜": {
+        "recognition": "TemplateMatch",
+        "template": "broad.png",
+        "action": "Click",
+        "next": "点赞"
+    },
+    "点赞": {
+        "recognition": "TemplateMatch",
+        "template": "thumb.png",
+        "action": "Click",
+        "next": "关闭排行榜"
+    },
+    "关闭排行榜": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click"
+    },
+    "试炼修行": {
+        "recognition": "TemplateMatch",
+        "template": "exam.png",
+        "action": "Click",
+        "next": [
+            "修行"
+        ]
+    },
+    "修行": {
+        "recognition": "TemplateMatch",
+        "template": "practice.png",
+        "roi": [
+            300,
+            108,
+            197,
+            441
+        ],
+        "action": "Click",
+        "next": "可以修行",
+        "interrupt": [
+            "可以扫荡"
+        ]
+    },
+    "可以修行": {
+        "recognition": "TemplateMatch",
+        "template": "can_practice.png",
+        "roi": [
+            411,
+            637,
+            172,
+            56
+        ],
+        "next": [
+            "重置修行"
+        ]
+    },
+    "重置修行": {
+        "recognition": "TemplateMatch",
+        "template": "reset_p.png",
+        "roi": [
+            702,
+            602,
+            131,
+            107
+        ],
+        "action": "Click",
+        "next": [
+            "确定修行"
+        ]
+    },
+    "确定修行": {
+        "recognition": "TemplateMatch",
+        "template": "confirm.png",
+        "action": "Click",
+        "next": "扫荡"
+    },
+    "扫荡": {
+        "recognition": "TemplateMatch",
+        "template": "sweep.png",
+        "action": "Click",
+        "next": "退出扫荡"
+    },
+    "退出扫荡": {
+        "recognition": "TemplateMatch",
+        "template": "x5.png",
+        "action": "Click"
+    },
+    "可以扫荡": {
+        "recognition": "TemplateMatch",
+        "template": "can_sweep.png",
+        "action": "Click",
+        "next": "扫荡"
+    },
+    "试炼生存": {
+        "recognition": "TemplateMatch",
+        "template": "exam.png",
+        "action": "Click",
+        "next": [
+            "生存"
+        ]
+    },
+    "生存": {
+        "recognition": "TemplateMatch",
+        "template": "survival.png",
+        "action": "Click",
+        "next": [
+            "生存领取"
+        ]
+    },
+    "生存领取": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "next": "生存扫荡"
+    },
+    "生存扫荡": {
+        "recognition": "OCR",
+        "expected": "开始扫荡",
+        "action": "Click",
+        "next": "生存准备"
+    },
+    "生存准备": {
+        "recognition": "OCR",
+        "expected": "准备就绪",
+        "action": "Click",
+        "next": "生存确定"
+    },
+    "生存确定": {
+        "recognition": "TemplateMatch",
+        "template": "confirm.png",
+        "action": "Click",
+        "next": "扫荡卷确定"
+    },
+    "扫荡卷确定": {
+        "recognition": "TemplateMatch",
+        "template": "confirm.png",
+        "action": "Click",
+        "next": "生存退出",
+        "post_delay": 25000
+    },
+    "生存退出": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click"
+    },
+    "送体力": {
+        "recognition": "TemplateMatch",
+        "template": "energe.png",
+        "action": "Click",
+        "next": [
+            "一键赠送"
+        ]
+    },
+    "一键赠送": {
+        "recognition": "TemplateMatch",
+        "template": "give.png",
+        "roi": [
+            324,
+            569,
+            170,
+            55
+        ],
+        "action": "Click",
+        "next": "一键领取"
+    },
+    "一键领取": {
+        "recognition": "TemplateMatch",
+        "template": "get.png",
+        "roi": [
+            506,
+            569,
+            162,
+            53
+        ],
+        "action": "Click",
+        "next": "一键领取确定"
+    },
+    "一键领取确定": {
+        "recognition": "TemplateMatch",
+        "template": "confirm.png",
+        "action": "Click",
+        "next": "送体力退出"
+    },
+    "送体力退出": {
+        "recognition": "TemplateMatch",
+        "template": "x.png",
+        "action": "Click"
+    },
+    "组织": {
+        "recognition": "TemplateMatch",
+        "template": "group.png",
+        "action": "Click",
+        "next": "组织玩法"
+    },
+    "组织玩法": {
+        "recognition": "OCR",
+        "expected": "玩法",
+        "action": "Click",
+        "next": "祈福入口"
+    },
+    "祈福入口": {
+        "recognition": "TemplateMatch",
+        "template": "goto.png",
+        "action": "Click",
+        "next": "昨日"
+    },
+    "昨日": {
+        "recognition": "TemplateMatch",
+        "template": "yesterday.png",
+        "action": "Click",
+        "next": "昨日奖励",
+        "interrupt": [
+            "祈福"
+        ]
+    },
+    "昨日奖励": {
+        "recognition": "TemplateMatch",
+        "template": "get2.png",
+        "action": "Click",
+        "next": "退出昨日"
+    },
+    "退出昨日": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click"
+    },
+    "祈福": {
+        "recognition": "TemplateMatch",
+        "template": "pray.png",
+        "action": "Click"
+    },
+    "领取祈福": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "next": "领取祈福1"
+    },
+    "领取祈福1": {
+        "recognition": "TemplateMatch",
+        "template": "praybox1.png",
+        "roi": [
+            1149,
+            361,
+            102,
+            99
+        ],
+        "action": "Click",
+        "next": "领取祈福2"
+    },
+    "领取祈福2": {
+        "recognition": "TemplateMatch",
+        "template": "praybox2.png",
+        "action": "Click",
+        "next": "领取祈福2.1"
+    },
+    "领取祈福2.1": {
+        "recognition": "TemplateMatch",
+        "template": "praybox2.1.png",
+        "action": "Click",
+        "next": "领取祈福3"
+    },
+    "领取祈福3": {
+        "recognition": "TemplateMatch",
+        "template": "praybox3.png",
+        "roi": [
+            1149,
+            151,
+            94,
+            85
+        ],
+        "action": "Click",
+        "next": "退出祈福"
+    },
+    "退出祈福": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click",
+        "next": "退出组织"
+    },
+    "退出组织": {
+        "recognition": "TemplateMatch",
+        "template": "quit_group.png",
+        "action": "Click"
+    },
+    "小队": {
+        "recognition": "TemplateMatch",
+        "template": "team.png",
+        "action": "Click",
+        "next": "组织助战"
+    },
+    "组织助战": {
+        "recognition": "TemplateMatch",
+        "template": "group_help.png",
+        "action": "Click",
+        "next": "我的助战"
+    },
+    "我的助战": {
+        "recognition": "TemplateMatch",
+        "template": "my_help.png",
+        "action": "Click",
+        "next": "领取助战奖励"
+    },
+    "领取助战奖励": {
+        "recognition": "TemplateMatch",
+        "template": "get3.png",
+        "action": "Click",
+        "next": "退出领取助战奖励"
+    },
+    "退出领取助战奖励": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click",
+        "next": "邀请"
+    },
+    "邀请": {
+        "recognition": "TemplateMatch",
+        "template": "invite.png",
+        "action": "Click",
+        "next": "开始小队"
+    },
+    "开始小队": {
+        "recognition": "TemplateMatch",
+        "template": "fight1.png",
+        "action": "Click",
+        "next": "组织助战1",
+        "post_delay": 90000
+    },
+    "组织助战1": {
+        "recognition": "TemplateMatch",
+        "template": "group_help.png",
+        "action": "Click",
+        "next": "邀请1"
+    },
+    "邀请1": {
+        "recognition": "TemplateMatch",
+        "template": "invite.png",
+        "action": "Click",
+        "next": "开始小队1"
+    },
+    "开始小队1": {
+        "recognition": "TemplateMatch",
+        "template": "fight1.png",
+        "action": "Click",
+        "post_delay": 90000,
+        "next": "退出小队"
+    },
+    "退出小队": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click"
+    },
+    "丰饶": {
+        "recognition": "TemplateMatch",
+        "template": "room.png",
+        "action": "Click",
+        "next": [
+            "挑战丰饶",
+            "fight"
+        ],
+        "interrupt": [
+            "退出丰饶"
+        ]
+    },
+    "挑战丰饶": {
+        "recognition": "TemplateMatch",
+        "template": "try_room.png",
+        "action": "Click"
+    },
+    "退出丰饶": {
+        "recognition": "TemplateMatch",
+        "template": "x4.png",
+        "action": "Click"
+    },
+    "normal-a": {
+        "recognition": "TemplateMatch",
+        "template": "normal-a.png",
+        "action": "Click",
+        "next": "fight"
+    },
+    "skill1": {
+        "recognition": "TemplateMatch",
+        "template": "pain_skill1.png",
+        "action": "Click",
+        "next": "skill2"
+    },
+    "skill2": {
+        "recognition": "TemplateMatch",
+        "template": "pain_skill2.png",
+        "action": "Click",
+        "next": "normal-a"
+    },
+    "活动": {
+        "recognition": "TemplateMatch",
+        "template": "activity.png",
+        "action": "Click",
+        "next": [
+            "拉面"
+        ]
+    },
+    "拉面": {
+        "recognition": "TemplateMatch",
+        "template": "noodles.png",
+        "action": "Click",
+        "next": [
+            "拉面1"
+        ],
+        "post_wait_freezes": 500
+    },
+    "拉面1": {
+        "recognition": "TemplateMatch",
+        "template": "noodles.png",
+        "action": "Click",
+        "next": [
+            "拉面2"
+        ],
+        "post_wait_freezes": 500
+    },
+    "拉面2": {
+        "recognition": "TemplateMatch",
+        "template": "noodles.png",
+        "action": "Click",
+        "next": [
+            "活动上滑"
+        ],
+        "post_wait_freezes": 500
+    },
+    "活动上滑": {
+        "post_delay": 200,
+        "action": "Swipe",
+        "begin": [
+            80,
+            700,
+            10,
+            10
+        ],
+        "end": [
+            80,
+            100,
+            10,
+            10
+        ],
+        "duration": 100,
+        "next": "月签到"
+    },
+    "月签到": {
+        "recognition": "FeatureMatch",
+        "template": "mouth_sign_in.png",
+        "roi": [
+            35,
+            512,
+            121,
+            40
+        ],
+        "action": "Click",
+        "next": "签到"
+    },
+    "签到": {
+        "recognition": "TemplateMatch",
+        "template": "sign.png",
+        "action": "Click"
+    },
+    "退出活动": {
+        "recognition": "TemplateMatch",
+        "template": "x.png",
+        "action": "Click"
+    },
+    "邮箱": {
+        "recognition": "TemplateMatch",
+        "template": "mailbox.png",
+        "roi": [
+            32,
+            265,
+            53,
+            37
+        ],
+        "action": "Click",
+        "next": "领取邮箱奖励",
+        "post_wait_freezes": 500
+    },
+    "领取邮箱奖励": {
+        "recognition": "TemplateMatch",
+        "template": "get.png",
+        "roi": [
+            367,
+            594,
+            164,
+            64
+        ],
+        "action": "Click",
+        "next": "退出邮箱",
+        "post_wait_freezes": 500
+    },
+    "退出邮箱": {
+        "recognition": "TemplateMatch",
+        "template": "x1.png",
+        "roi": [
+            1120,
+            78,
+            110,
+            80
+        ],
+        "action": "Click"
+    },
+    "刷体力": {
+        "recognition": "TemplateMatch",
+        "template": "adventure.png",
+        "roi": [
+            1077,
+            546,
+            183,
+            164
+        ],
+        "action": "Click",
+        "next": "精英副本",
+        "post_wait_freezes": 200
+    },
+    "精英副本": {
+        "recognition": "TemplateMatch",
+        "template": "elite_dungeon.png",
+        "roi": [
+            186,
+            0,
+            72,
+            143
+        ],
+        "action": "Click",
+        "next": "便捷扫荡",
+        "post_wait_freezes": 200
+    },
+    "便捷扫荡": {
+        "recognition": "TemplateMatch",
+        "template": "ez_sweep.png",
+        "roi": [
+            705,
+            596,
+            126,
+            109
+        ],
+        "action": "Click",
+        "next": "体力扫荡",
+        "post_wait_freezes": 300
+    },
+    "体力扫荡": {
+        "recognition": "FeatureMatch",
+        "template": "sweep.png",
+        "roi": [
+            955,
+            562,
+            164,
+            63
+        ],
+        "action": "Click",
+        "next": "继续扫荡",
+        "post_wait_freezes": 200
+    },
+    "继续扫荡": {
+        "recognition": "TemplateMatch",
+        "template": "keep_sweep.png",
+        "action": "Click",
+        "next": "退出体力扫荡",
+        "post_delay": 20000
+    },
+    "退出体力扫荡": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "next": "退出冒险"
+    },
+    "退出冒险": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click",
+        "next": "退出冒险1"
+    },
+    "退出冒险1": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click"
+    },
+    "积分赛": {
+        "post_delay": 200,
+        "action": "Swipe",
+        "begin": [
+            200,
+            200,
+            10,
+            10
+        ],
+        "end": [
+            900,
+            200,
+            10,
+            10
+        ],
+        "duration": 100,
+        "next": "打开积分赛"
+    },
+    "打开积分赛": {
+        "recognition": "TemplateMatch",
+        "template": "point_race.png",
+        "roi": [
+            531,
+            143,
+            50,
+            90
+        ],
+        "action": "Click",
+        "next": "领取积分赛"
+    },
+    "领取积分赛": {
+        "recognition": "TemplateMatch",
+        "template": "point.png",
+        "roi": [
+            520,
+            334,
+            243,
+            83
+        ],
+        "action": "Click",
+        "next": "领取积分赛1"
+    },
+    "领取积分赛1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "next": "领取积分赛2"
+    },
+    "领取积分赛2": {
+        "recognition": "TemplateMatch",
+        "template": "point1.png",
+        "roi": [
+            520,
+            334,
+            243,
+            83
+        ],
+        "action": "Click",
+        "next": "退出积分赛"
+    },
+    "退出积分赛": {
+        "recognition": "TemplateMatch",
+        "template": "x3.png",
+        "action": "Click"
+    }
+}

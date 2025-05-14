@@ -1,0 +1,251 @@
+{
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb"
+        },
+        {
+            "name": "桌面端",
+            "type": "Win32",
+            "win32": {
+                "class_regex": ".*",
+                "window_regex": "Visual Studio"
+            }
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource/base"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "进入火影",
+            "entry": "start_up",
+            "option": [
+                "等待加载时间选择",
+                "账号属性"
+            ]
+        },
+        {
+            "name": "开始游戏",
+            "entry": "start_game"
+        },
+        {
+            "name": "招财",
+            "entry": "get_chopper"
+        },
+        {
+            "name": "排行榜",
+            "entry": "leaderboard"
+        },
+        {
+            "name": "送体力",
+            "entry": "give_energy"
+        },
+        {
+            "name": "每日分享",
+            "entry": "share"
+        },
+        {
+            "name": "火影情报社",
+            "entry": "naruto_club"
+        },
+        {
+            "name": "组织",
+            "entry": "group"
+        },
+        {
+            "name": "邮箱",
+            "entry": "mail"
+        },
+        {
+            "name": "积分赛",
+            "entry": "point_race"
+        },
+        {
+            "name": "试炼",
+            "entry": "practice_place",
+            "option": [
+                "不做修行",
+                "等待生存扫荡时间选择"
+            ]
+        },
+        {
+            "name": "丰饶",
+            "entry": "rich_room"
+        },
+        {
+            "name": "小队突袭",
+            "entry": "team_dash",
+            "option": [
+                "等待自动战斗时间选择"
+            ]
+        },
+        {
+            "name": "忍法帖",
+            "entry": "ninjia_book"
+        },
+        {
+            "name": "免费招募",
+            "entry": "headhunt"
+        },
+        {
+            "name": "月签到和活动",
+            "entry": "activity"
+        },
+        {
+            "name": "任务集会所(beta)",
+            "entry": "mission_office"
+        },
+        {
+            "name": "刷体力(beta)",
+            "entry": "mission_office"
+        }
+    ],
+    "option": {
+        "加载时间选择": {
+            "cases": [
+                {
+                    "name": "加载时间25s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 25000
+                        }
+                    }
+                },
+                {
+                    "name": "加载时间20s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 20000
+                        }
+                    }
+                },
+                {
+                    "name": "加载时间10s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 10000
+                        }
+                    }
+                },
+                {
+                    "name": "加载时间30s",
+                    "pipeline_override": {
+                        "click_icon": {
+                            "post_delay": 30000
+                        }
+                    }
+                }
+            ]
+        },
+        "账号属性": {
+            "cases": [
+                {
+                    "name": "安卓QQ",
+                    "pipeline_override": {
+                        "account_type": {
+                            "next": "android_qq"
+                        },
+                        "try_share": {
+                            "next": "share_to_qq_friend"
+                        },
+                        "naruto_club_entry": {
+                            "next": "click_qq_icon"
+                        }
+                    }
+                }
+            ]
+        },
+        "不做修行": {
+            "cases": [
+                {
+                    "name": "做修行",
+                    "pipeline_override": {
+                        "train_road": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "不做修行",
+                    "pipeline_override": {
+                        "train_road": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "等待生存扫荡时间选择": {
+            "cases": [
+                {
+                    "name": "等待20秒",
+                    "pipeline_override": {
+                        "survival_challenge_sweep_ticket_confirm": {
+                            "post_delay": 20000
+                        }
+                    }
+                },
+                {
+                    "name": "等待30秒",
+                    "pipeline_override": {
+                        "survival_challenge_sweep_ticket_confirm": {
+                            "post_delay": 30000
+                        }
+                    }
+                },
+                {
+                    "name": "等待40秒",
+                    "pipeline_override": {
+                        "survival_challenge_sweep_ticket_confirm": {
+                            "post_delay": 40000
+                        }
+                    }
+                }
+            ]
+        },
+        "等待自动战斗时间选择": {
+            "cases": [
+                {
+                    "name": "等待60秒",
+                    "pipeline_override": {
+                        "team_dash_auto_fight1": {
+                            "post_delay": 60000
+                        },
+                        "team_dash_auto_fight2": {
+                            "post_delay": 60000
+                        }
+                    }
+                },
+                {
+                    "name": "等待45秒",
+                    "pipeline_override": {
+                        "team_dash_auto_fight1": {
+                            "post_delay": 45000
+                        },
+                        "team_dash_auto_fight2": {
+                            "post_delay": 45000
+                        }
+                    }
+                },
+                {
+                    "name": "等待90秒",
+                    "pipeline_override": {
+                        "team_dash_auto_fight1": {
+                            "post_delay": 90000
+                        },
+                        "team_dash_auto_fight2": {
+                            "post_delay": 90000
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "version": "v0.0.1"
+}

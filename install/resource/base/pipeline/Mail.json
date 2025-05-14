@@ -1,0 +1,54 @@
+{
+    "mail": {
+        "next": [
+            "mail_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "mail_entry": {
+        "next": [
+            "mail_done"
+        ],
+        "interrupt": [
+            "open_mail"
+        ]
+    },
+    "mail_done": {
+        "recognition": "TemplateMatch",
+        "template": "Mail/mail_done.png",
+        "threshold": 0.9,
+        "next": [
+            "stoptask"
+        ]
+    },
+    "stoptask": {
+        "action": "StopTask"
+    },
+    "open_mail": {
+        "recognition": "TemplateMatch",
+        "template": "Mail/mail_wait.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "get_mail_award"
+        ],
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 200
+    },
+    "get_mail_award": {
+        "recognition": "TemplateMatch",
+        "template": "Mail/get_mail_award.png",
+        "roi": [
+            362,
+            594,
+            170,
+            66
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    }
+}

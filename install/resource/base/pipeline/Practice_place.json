@@ -1,0 +1,356 @@
+{
+    "practice_place": {
+        "next": [
+            "practice_place_entry"
+        ],
+        "interrupt": [
+            "swipe_for_right_entries",
+            "back_main_screen"
+        ]
+    },
+    "practice_place_entry": {
+        "next": [
+            "practice_place_done"
+        ],
+        "interrupt": [
+            "practice_place_undone"
+        ]
+    },
+    "practice_place_done": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Practice_place/practice_place_done_night.png",
+            "Practice_place/practice_place_done_day.png"
+        ],
+        "threshold": 0.98,
+        "next": [
+            "check_main_screen_and_stop"
+        ]
+    },
+    "practice_place_undone": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Practice_place/practice_place_undone_night.png",
+            "Practice_place/practice_place_undone_day.png"
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": [
+            "train_road",
+            "survival_challenge"
+        ],
+        "post_wait_freezes": 500
+    },
+    "train_road": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road.png",
+        "roi": [
+            292,
+            105,
+            208,
+            454
+        ],
+        "next": [
+            "train_road_entry"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "enabled": true
+    },
+    "train_road_entry": {
+        "next": [
+            "train_road_award",
+            "train_road_unreset",
+            "train_road_done"
+        ]
+    },
+    "train_road_award": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_award.png",
+        "roi": [
+            817,
+            431,
+            170,
+            64
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_train_road_award"
+        ],
+        "post_wait_freezes": 400
+    },
+    "confirm_train_road_award": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/confirm_train_road_award.png",
+        "roi": [
+            461,
+            121,
+            335,
+            96
+        ],
+        "action": "Click",
+        "next": [
+            "close_train_road"
+        ],
+        "post_wait_freezes": 500
+    },
+    "train_road_unreset": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_unreset.png",
+        "roi": [
+            406,
+            592,
+            428,
+            126
+        ],
+        "threshold": 0.96,
+        "next": [
+            "train_road_reset"
+        ],
+        "post_wait_freezes": 400
+    },
+    "train_road_reset": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_reset.png",
+        "roi": [
+            737,
+            624,
+            83,
+            56
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_train_road_reset"
+        ],
+        "post_wait_freezes": 500
+    },
+    "confirm_train_road_reset": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/confirm_train_road_reset.png",
+        "roi": [
+            532,
+            409,
+            205,
+            83
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_train_road_sweep"
+        ],
+        "post_wait_freezes": 300
+    },
+    "confirm_train_road_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/confirm_train_road_sweep.png",
+        "roi": [
+            557,
+            513,
+            164,
+            61
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "train_road_done": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_done.png",
+        "roi": [
+            409,
+            591,
+            545,
+            124
+        ],
+        "threshold": 0.95,
+        "next": [
+            "close_train_road"
+        ],
+        "post_wait_freezes": 200
+    },
+    "close_train_road": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_x.png",
+        "roi": [
+            1173,
+            0,
+            96,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge"
+        ]
+    },
+    "survival_challenge": {
+        "next": [
+            "survival_challenge_entry"
+        ],
+        "interrupt": [
+            "swipe_for_right_entries",
+            "back_main_screen"
+        ]
+    },
+    "survival_challenge_entry": {
+        "next": [
+            "practice_place_done"
+        ],
+        "interrupt": [
+            "survival_challenge_undone"
+        ]
+    },
+    "survival_challenge_undone": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Practice_place/practice_place_undone_night.png",
+            "Practice_place/practice_place_undone_day.png"
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": [
+            "to_survival_challenge"
+        ],
+        "post_wait_freezes": 500
+    },
+    "to_survival_challenge": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge.png",
+        "roi": [
+            780,
+            105,
+            208,
+            452
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_yesterday_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "survival_challenge_yesterday_award": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_yesterday_award.png",
+        "roi": [
+            628,
+            13,
+            140,
+            82
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_reset"
+        ]
+    },
+    "survival_challenge_reset": {
+        "next": [
+            "survival_challenge_reset_done"
+        ],
+        "interrupt": [
+            "survival_challenge_reset_undone"
+        ]
+    },
+    "survival_challenge_reset_done": {
+        "recognition": "OCR",
+        "expected": [
+            "0"
+        ],
+        "roi": [
+            564,
+            605,
+            34,
+            42
+        ],
+        "next": [
+            "survival_challenge_sweep"
+        ]
+    },
+    "survival_challenge_reset_undone": {
+        "recognition": "OCR",
+        "expected": [
+            "1"
+        ],
+        "roi": [
+            564,
+            605,
+            34,
+            42
+        ],
+        "next": [
+            "survival_challenge_sweep"
+        ]
+    },
+    "survival_challenge_sweep": {
+        "next": [
+            "start_survival_challenge_sweep"
+        ]
+    },
+    "start_survival_challenge_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_sweep.png",
+        "roi": [
+            706,
+            594,
+            129,
+            110
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_sweep_ready"
+        ],
+        "interrupt": [
+            "survival_challenge_done"
+        ],
+        "post_wait_freezes": 300
+    },
+    "survival_challenge_done": {
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "survival_challenge_sweep_ready": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_sweep_ready.png",
+        "roi": [
+            535,
+            548,
+            205,
+            77
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_sweep_confirm"
+        ],
+        "post_wait_freezes": 200
+    },
+    "survival_challenge_sweep_confirm": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_sweep_confirm.png",
+        "roi": [
+            535,
+            415,
+            205,
+            74
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_sweep_ticket_confirm"
+        ],
+        "post_wait_freezes": 200
+    },
+    "survival_challenge_sweep_ticket_confirm": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_sweep_ticket_confirm.png",
+        "roi": [
+            418,
+            415,
+            205,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "post_wait_freezes": 200,
+        "post_delay": 30000
+    }
+}

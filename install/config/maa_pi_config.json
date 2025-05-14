@@ -1,0 +1,30 @@
+{
+    "adb": {
+        "adb_path": "D:/soft/mumu模拟器/MuMu Player 12/shell/adb.exe",
+        "address": "127.0.0.1:16384",
+        "config": {
+            "extras": {
+                "mumu": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "D:/soft/mumu模拟器/MuMu Player 12"
+                }
+            }
+        }
+    },
+    "controller": {
+        "name": "安卓端"
+    },
+    "gpu": -1,
+    "resource": "官服",
+    "task": [
+        {
+            "name": "火影情报社",
+            "option": [
+            ]
+        }
+    ],
+    "win32": {
+        "_placeholder": 0
+    }
+}

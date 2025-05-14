@@ -1,0 +1,76 @@
+{
+    "leaderboard": {
+        "next": [
+            "leaderboard_entry"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries",
+            "back_main_screen"
+        ]
+    },
+    "swipe_for_left_entries": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/practice_place.png",
+        "threshold": 0.9,
+        "action": "Swipe",
+        "begin": [
+            150,
+            150,
+            50,
+            50
+        ],
+        "end": [
+            850,
+            150,
+            50,
+            50
+        ]
+    },
+    "leaderboard_entry": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Leaderboard/board.png",
+            "Leaderboard/board_day.png"
+        ],
+        "threshold": 0.2,
+        "roi": [
+            213,
+            150,
+            42,
+            85
+        ],
+        "action": "Click",
+        "next": [
+            "click_thumb"
+        ],
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 100
+    },
+    "click_thumb": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/thumb.png",
+        "action": "Click",
+        "next": [
+            "close_board"
+        ]
+    },
+    "close_board": {
+        "recognition": "TemplateMatch",
+        "template": "Leaderboard/x.png",
+        "roi": [
+            1173,
+            0,
+            94,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "close_announcement",
+            "check_main_screen_and_stop"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ],
+        "post_wait_freezes": 200
+    }
+}

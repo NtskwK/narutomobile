@@ -1,0 +1,478 @@
+{
+    "group": {
+        "next": [
+            "group_entry"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries",
+            "back_main_screen"
+        ]
+    },
+    "group_entry": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Group/group.png",
+            "Group/group_day.png"
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "group_gameplay_done",
+            "group_gameplay_undone"
+        ],
+        "interrupt": [
+            "back_main_screen_and_stop"
+        ],
+        "pre_wait_freezes": 500,
+        "post_delay": 1000
+    },
+    "group_gameplay_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_gameplay_undone.png",
+        "roi": [
+            88,
+            393,
+            80,
+            66
+        ],
+        "action": "Click",
+        "next": [
+            "check_selected_group_gameplay"
+        ],
+        "threshold": 0.9,
+        "interrupt": [
+            "group_gameplay_undone"
+        ],
+        "post_wait_freezes": 300
+    },
+    "group_gameplay_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_gameplay_done.png",
+        "roi": [
+            85,
+            393,
+            101,
+            69
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "check_selected_group_gameplay": {
+        "recognition": "TemplateMatch",
+        "template": "Group/selected_group_gameplay.png",
+        "roi": [
+            80,
+            417,
+            93,
+            48
+        ],
+        "action": "DoNothing",
+        "next": [
+            "check_group_pray_undone",
+            "check_group_pray_done"
+        ],
+        "interrupt": [],
+        "post_wait_freezes": 300
+    },
+    "check_group_pray_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/selected_group_gameplay_done_button.png",
+        "roi": [
+            237,
+            567,
+            175,
+            75
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "close_group_pray",
+        "post_wait_freezes": 1000
+    },
+    "check_group_pray_undone": {
+        "recognition": "TemplateMatch",
+        "threshold": 0.99,
+        "template": "Group/group_pray_undone.png",
+        "action": "DoNothing",
+        "next": [
+            "group_pray_undone"
+        ]
+    },
+    "group_pray_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/selected_group_gameplay_undone_button.png",
+        "action": "Click",
+        "next": [
+            "chopper_group_pray"
+        ],
+        "post_wait_freezes": 300
+    },
+    "chopper_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/chopper_pray.png",
+        "roi": [
+            476,
+            542,
+            200,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_chopper_group_pray",
+            "award"
+        ],
+        "interrupt": [
+            "close_chopper_group_pray"
+        ]
+    },
+    "close_chopper_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/confirm_chopper_pray_done.png",
+        "roi": [
+            535,
+            412,
+            199,
+            77
+        ],
+        "action": "Click"
+    },
+    "confirm_chopper_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/confirm_group_pray.png",
+        "roi": [
+            534,
+            151,
+            506,
+            284
+        ],
+        "action": "Click",
+        "next": "award",
+        "pre_wait_freezes": 300,
+        "post_wait_freezes": 300
+    },
+    "award": {
+        "next": [
+            "check_no_yesterday_award"
+        ],
+        "interrupt": [
+            "yesterday_award_entry"
+        ]
+    },
+    "check_no_yesterday_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/yesterday_award.png",
+        "action": "DoNothing",
+        "inverse": true,
+        "next": [
+            "first_group_award_done"
+        ],
+        "interrupt": [
+            "first_group_award"
+        ]
+    },
+    "first_group_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/first_box_done.png",
+        "roi": [
+            1153,
+            370,
+            88,
+            83
+        ],
+        "threshold": 0.95,
+        "next": "second_group_award_entry"
+    },
+    "first_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/first_box_wait.png",
+        "roi": [
+            1154,
+            374,
+            85,
+            80
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "second_group_award_entry",
+        "interrupt": [
+            "second_group_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "second_group_award_entry": {
+        "next": [
+            "second_group_award_done"
+        ],
+        "interrupt": [
+            "second_group_award"
+        ]
+    },
+    "second_group_award_done": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Group/second_box_done_1.png",
+            "Group/second_box_done.png",
+            "Group/second_box_done_2.png"
+        ],
+        "roi": [
+            1161,
+            261,
+            85,
+            78
+        ],
+        "threshold": 0.98,
+        "next": "third_group_award_entry"
+    },
+    "second_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/second_box_wait.png",
+        "roi": [
+            1166,
+            268,
+            77,
+            66
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "second_group_award_box",
+        "post_wait_freezes": 300
+    },
+    "second_group_award_box": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_red_packet.png",
+        "roi": [
+            585,
+            181,
+            102,
+            80
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "close_second_group_award_box",
+        "post_wait_freezes": 300
+    },
+    "close_second_group_award_box": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_red_packet_text.png",
+        "roi": [
+            555,
+            124,
+            170,
+            48
+        ],
+        "action": "Click",
+        "target_offset": [
+            300,
+            0,
+            -60,
+            0
+        ],
+        "post_wait_freezes": 300,
+        "next": "third_group_award_done",
+        "interrupt": "third_group_award"
+    },
+    "third_group_award_entry": {
+        "next": "third_group_award_done",
+        "interrupt": "third_group_award"
+    },
+    "third_group_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/third_box_done.png",
+        "roi": [
+            1147,
+            151,
+            88,
+            75
+        ],
+        "threshold": 0.95,
+        "next": "close_group_pray"
+    },
+    "third_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/third_box_wait.png",
+        "roi": [
+            1153,
+            154,
+            88,
+            83
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": "close_group_pray"
+    },
+    "close_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_x.png",
+        "roi": [
+            1171,
+            0,
+            99,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "pursuit_dawn_organization"
+        ],
+        "post_wait_freezes": 500
+    },
+    "pursuit_dawn_organization": {
+        "next": [
+            "pursuit_dawn_organization_done",
+            "pursuit_dawn_organization_undone"
+        ],
+        "interrupt": [
+            "back_main_screen",
+            "pursuit_dawn_organization_entry"
+        ]
+    },
+    "pursuit_dawn_organization_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_done.png",
+        "roi": [
+            98,
+            162,
+            137,
+            205
+        ],
+        "threshold": 0.95,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "pursuit_dawn_organization_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_undone.png",
+        "roi": [
+            101,
+            170,
+            134,
+            186
+        ],
+        "action": "Click",
+        "threshold": 0.95,
+        "next": [
+            "pursuit_dawn_organization_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "pursuit_dawn_organization_award": {
+        "next": [
+            "pursuit_dawn_organization_award_done",
+            "pursuit_dawn_organization_award_undone"
+        ]
+    },
+    "pursuit_dawn_organization_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_done.png",
+        "roi": [
+            677,
+            606,
+            61,
+            58
+        ],
+        "threshold": 0.97,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "pursuit_dawn_organization_award_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_undone.png",
+        "roi": [
+            676,
+            606,
+            64,
+            56
+        ],
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "to_pursuit_dawn_organization_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "to_pursuit_dawn_organization_award": {
+        "next": [
+            "check_no_pursuit_dawn_organization_award"
+        ],
+        "interrupt": [
+            "get_pursuit_dawn_organization_award"
+        ]
+    },
+    "get_pursuit_dawn_organization_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_waiting.png",
+        "action": "Click",
+        "post_wait_freezes": 200
+    },
+    "check_no_pursuit_dawn_organization_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_award_waiting.png",
+        "inverse": true,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "pursuit_dawn_organization_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_entry_group.png",
+        "action": "Click",
+        "next": [
+            "pursuit_dawn_organization_entry_button"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "pursuit_dawn_organization_entry_button": {
+        "recognition": "TemplateMatch",
+        "template": "Group/dawn_organization_entry_group_button.png",
+        "action": "Click",
+        "next": [
+            "pursuit_dawn_organization"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "yesterday_award_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Group/yesterday_award.png",
+        "action": "Click",
+        "roi": [
+            390,
+            132,
+            107,
+            93
+        ],
+        "next": [
+            "yesterday_award_done"
+        ],
+        "interrupt": [
+            "get_yesterday_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "yesterday_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/get_yesterday_award.png",
+        "inverse": true,
+        "next": [
+            "close_yesterday_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "get_yesterday_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/get_yesterday_award.png",
+        "action": "Click",
+        "post_wait_freezes": 100
+    },
+    "close_yesterday_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/yesterday_award_done.png",
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "check_no_yesterday_award"
+        ]
+    }
+}

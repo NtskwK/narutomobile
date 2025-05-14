@@ -1,0 +1,210 @@
+{
+    "team_dash": {
+        "next": [
+            "team_dash_entry"
+        ],
+        "interrupt": [
+            "swipe_for_right_entries",
+            "back_main_screen"
+        ]
+    },
+    "team_dash_entry": {
+        "next": [
+            "team_dash_undone",
+            "team_dash_done"
+        ],
+        "interrupt": [
+            "swipe_for_right_entries",
+            "back_main_screen"
+        ]
+    },
+    "team_dash_done": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_done_night.png",
+        "threshold": 0.9,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "team_dash_undone": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Team_dash/team_dash_undone_night.png",
+            "Team_dash/team_dash_undone_day.png"
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "team_dash_group_help_undone"
+        ],
+        "post_wait_freezes": 500
+    },
+    "team_dash_group_help_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_group_help_undone.png",
+        "roi": [
+            990,
+            602,
+            72,
+            64
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_my_help_done",
+            "team_dash_my_help_undone"
+        ],
+        "post_wait_freezes": 500
+    },
+    "team_dash_my_help_done": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_my_help_done.png",
+        "roi": [
+            859,
+            594,
+            77,
+            91
+        ],
+        "threshold": 0.96,
+        "next": [
+            "team_dash_invite"
+        ],
+        "post_wait_freezes": 500
+    },
+    "team_dash_my_help_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_my_help_undone.png",
+        "roi": [
+            852,
+            605,
+            75,
+            83
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_my_help_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "team_dash_my_help_award": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_my_help_award.png",
+        "roi": [
+            613,
+            554,
+            110,
+            55
+        ],
+        "action": "Click",
+        "next": [
+            "close_my_help"
+        ],
+        "post_wait_freezes": 500
+    },
+    "close_my_help": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/my_help_x.png",
+        "roi": [
+            1175,
+            0,
+            99,
+            77
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_invite"
+        ],
+        "post_wait_freezes": 500
+    },
+    "team_dash_invite": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_invite.png",
+        "roi": [
+            352,
+            153,
+            93,
+            91
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_remin_2",
+            "team_dash_remin_1",
+            "team_dash_remin_0"
+        ],
+        "post_wait_freezes": 300
+    },
+    "team_dash_remin_2": {
+        "recognition": "OCR",
+        "expected": [
+            "2"
+        ],
+        "roi": [
+            722,
+            618,
+            29,
+            34
+        ],
+        "next": [
+            "team_dash_auto_fight1"
+        ]
+    },
+    "team_dash_auto_fight1": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/auto_fight.png",
+        "roi": [
+            1138,
+            572,
+            107,
+            107
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_remin_1"
+        ],
+        "post_delay": 60000
+    },
+    "team_dash_remin_1": {
+        "recognition": "OCR",
+        "expected": [
+            "1"
+        ],
+        "roi": [
+            722,
+            618,
+            29,
+            34
+        ],
+        "next": [
+            "team_dash_auto_fight2"
+        ]
+    },
+    "team_dash_auto_fight2": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/auto_fight.png",
+        "roi": [
+            1138,
+            572,
+            107,
+            107
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_remin_0"
+        ],
+        "post_delay": 60000
+    },
+    "team_dash_remin_0": {
+        "recognition": "OCR",
+        "expected": [
+            "0"
+        ],
+        "roi": [
+            722,
+            618,
+            29,
+            34
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "liveness_award": {
+        "next": [
+            "liveness_award_entry"
+        ]
+    },
+    "liveness_award_entry": {
+        "next": [
+            "liveness_award_undone"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "liveness_award_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/liveness_award_undone_masked.png",
+        "roi": [
+            1194,
+            314,
+            72,
+            66
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "liveness_award_done",
+            "check_no_liveness_award"
+        ],
+        "interrupt": [
+            "get_liveness_award"
+        ],
+        "post_wait_freezes": 500
+    },
+    "liveness_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/award_box_done.png",
+        "roi": [
+            435,
+            496,
+            816,
+            107
+        ],
+        "next": [
+            "weekly_liveness_award_done"
+        ]
+    },
+    "check_no_liveness_award": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Liveness_award/award_box_10.png",
+            "Liveness_award/award_box_40.png",
+            "Liveness_award/award_box_80.png",
+            "Liveness_award/award_box_100.png"
+        ],
+        "roi": [
+            419,
+            507,
+            824,
+            96
+        ],
+        "next": [
+            "weekly_liveness_award_done"
+        ],
+        "inverse": true,
+        "post_wait_freezes": 500,
+        "threshold": 0.4
+    },
+    "get_liveness_award": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Liveness_award/award_box_10.png",
+            "Liveness_award/award_box_40.png",
+            "Liveness_award/award_box_80.png",
+            "Liveness_award/award_box_100.png"
+        ],
+        "roi": [
+            419,
+            507,
+            824,
+            96
+        ],
+        "threshold": 0.4,
+        "post_wait_freezes": 500,
+        "action": "Click"
+    },
+    "weekly_liveness_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/weekly_award.png",
+        "roi": [
+            1098,
+            654,
+            167,
+            50
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    }
+}

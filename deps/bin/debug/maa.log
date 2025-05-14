@@ -1,0 +1,54 @@
+[2025-05-01 23:39:39.517][DBG][Px7244][Tx24646][Logger] ----------------------------- 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] MAA Process Start 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] Version v4.1.0 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] Built at Apr 23 2025 11:53:35 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] Windows x64 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] Working D:/flie/project/NM/narotomobile/deps/bin 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] Logging D:/flie/project/NM/narotomobile/deps/bin/debug/maa.log 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Logger] ----------------------------- 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L33][MaaNS::GlobalOptionMgr::set_log_dir] | leave, 2ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 2ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 2ms 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=2] [value=00007FFA951DA079] [val_size=1] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=2] [value=00007FFA951DA079] [val_size=1] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L47][MaaNS::GlobalOptionMgr::set_save_draw] | enter 
+[2025-05-01 23:39:39.518][INF][Px7244][Tx24646][GlobalOptionMgr.cpp][L56][MaaNS::GlobalOptionMgr::set_save_draw] Set save draw [save_draw_=false] 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L47][MaaNS::GlobalOptionMgr::set_save_draw] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=3] [value=00007FFA951DA07A] [val_size=1] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=3] [value=00007FFA951DA07A] [val_size=1] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L79][MaaNS::GlobalOptionMgr::set_recording] | enter 
+[2025-05-01 23:39:39.518][INF][Px7244][Tx24646][GlobalOptionMgr.cpp][L88][MaaNS::GlobalOptionMgr::set_recording] Set recording [recording_=false] 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L79][MaaNS::GlobalOptionMgr::set_recording] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=4] [value=00007FFA951DA07C] [val_size=4] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=4] [value=00007FFA951DA07C] [val_size=4] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L95][MaaNS::GlobalOptionMgr::set_stdout_level] | enter 
+[2025-05-01 23:39:39.518][INF][Px7244][Tx24646][GlobalOptionMgr.cpp][L104][MaaNS::GlobalOptionMgr::set_stdout_level] Set log stdout level [level=2] 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L95][MaaNS::GlobalOptionMgr::set_stdout_level] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=5] [value=00007FFA951DA080] [val_size=1] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=5] [value=00007FFA951DA080] [val_size=1] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionMgr.cpp][L63][MaaNS::GlobalOptionMgr::set_show_hit_draw] | enter 
+[2025-05-01 23:39:39.518][INF][Px7244][Tx24646][GlobalOptionMgr.cpp][L72][MaaNS::GlobalOptionMgr::set_show_hit_draw] Set show_hit_draw [show_hit_draw_=false] 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L63][MaaNS::GlobalOptionMgr::set_show_hit_draw] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][GlobalOptionConfig.cpp][L83][MaaNS::ToolkitNS::GlobalOptionConfig::apply_option] [bret=true] 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionConfig.cpp][L67][MaaNS::ToolkitNS::GlobalOptionConfig::apply_option] | leave, 2ms 
+[2025-05-01 23:39:39.518][TRC][Px7244][Tx24646][GlobalOptionConfig.cpp][L17][MaaNS::ToolkitNS::GlobalOptionConfig::init] | leave, 4ms 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][interactor.cpp][L121][Interactor::Interactor] [user_path_=D:/flie/project/NM/narotomobile/deps/bin] 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][interactor.cpp][L126][Interactor::load] [resource_path=D:/flie/project/NM/narotomobile/deps/bin] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Configurator.cpp][L14][MaaNS::ProjectInterfaceNS::Configurator::load] [resource_dir=D:/flie/project/NM/narotomobile/deps/bin] [user_dir=D:/flie/project/NM/narotomobile/deps/bin] | enter 
+[2025-05-01 23:39:39.518][DBG][Px7244][Tx24646][Parser.cpp][L12][MaaNS::ProjectInterfaceNS::Parser::parse_interface] [path=D:/flie/project/NM/narotomobile/deps/bin/interface.json] | enter 
+[2025-05-01 23:39:39.519][ERR][Px7244][Tx24646][Parser.cpp][L16][MaaNS::ProjectInterfaceNS::Parser::parse_interface] failed to parse D:/flie/project/NM/narotomobile/deps/bin/interface.json 
+[2025-05-01 23:39:39.522][TRC][Px7244][Tx24646][Parser.cpp][L12][MaaNS::ProjectInterfaceNS::Parser::parse_interface] | leave, 3ms 
+[2025-05-01 23:39:39.522][ERR][Px7244][Tx24646][Configurator.cpp][L18][MaaNS::ProjectInterfaceNS::Configurator::load] Failed to parse interface.json 
+[2025-05-01 23:39:39.522][TRC][Px7244][Tx24646][Configurator.cpp][L14][MaaNS::ProjectInterfaceNS::Configurator::load] | leave, 3ms 
+[2025-05-01 23:39:41.950][TRC][Px7244][Tx24646][interactor.cpp][L126][Interactor::load] | leave, 2431ms 
+[2025-05-01 23:39:41.955][DBG][Px7244][Tx24646][Logger] ----------------------------- 
+[2025-05-01 23:39:41.955][DBG][Px7244][Tx24646][Logger] Close log 
+[2025-05-01 23:39:41.955][DBG][Px7244][Tx24646][Logger] ----------------------------- 

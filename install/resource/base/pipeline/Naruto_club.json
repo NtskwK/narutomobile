@@ -1,0 +1,827 @@
+{
+    "naruto_club": {
+        "next": [
+            "naruto_club_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "naruto_club_entry": {
+        "next": [
+            "click_club_icon"
+        ],
+        "interrupt": [
+            "naruto_club_entry"
+        ]
+    },
+    "click_club_icon": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_icon.png",
+        "roi": [
+            37,
+            328,
+            39,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "surf_post"
+        ],
+        "post_wait_freezes": 3000
+    },
+    "surf_post": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/surf_post.png",
+        "roi": [
+            381,
+            50,
+            129,
+            94
+        ],
+        "action": "Click",
+        "next": [
+            "club_like_mission"
+        ],
+        "post_wait_freezes": 500
+    },
+    "club_like_mission": {
+        "next": [
+            "first_like"
+        ],
+        "interrupt": [
+            "cancel_club_follow",
+            "swipe_for_club_like"
+        ]
+    },
+    "cancel_club_follow": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/cancel_follow.png",
+        "roi": [
+            677,
+            372,
+            107,
+            50
+        ],
+        "action": "Click"
+    },
+    "first_like": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_like.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "next": "second_like",
+        "interrupt": [
+            "cancel_club_follow",
+            "swipe_for_club_like"
+        ],
+        "pre_wait_freezes": 1000,
+        "post_wait_freezes": 1000,
+        "post_delay": 1000
+    },
+    "swipe_for_club_like": {
+        "action": "Swipe",
+        "begin": [
+            900,
+            600,
+            100,
+            50
+        ],
+        "end": [
+            900,
+            500,
+            100,
+            50
+        ]
+    },
+    "second_like": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_like.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "post_wait_freezes": 1000,
+        "post_delay": 1000,
+        "next": "third_like",
+        "interrupt": [
+            "cancel_club_follow",
+            "swipe_for_club_like"
+        ]
+    },
+    "third_like": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_like.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "post_wait_freezes": 1000,
+        "post_delay": 1000,
+        "next": "fourth_like",
+        "interrupt": [
+            "cancel_club_follow",
+            "swipe_for_club_like"
+        ]
+    },
+    "fourth_like": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_like.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "post_wait_freezes": 1000,
+        "post_delay": 1000,
+        "next": "close_surf_post"
+    },
+    "close_surf_post": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/back_button.png",
+        "roi": [
+            59,
+            5,
+            75,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "scroll"
+        ],
+        "post_wait_freezes": 500
+    },
+    "scroll": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/scroll.png",
+        "roi": [
+            1154,
+            263,
+            56,
+            72
+        ],
+        "action": "Click",
+        "next": [
+            "close_scroll"
+        ],
+        "post_wait_freezes": 500,
+        "post_delay": 1000
+    },
+    "close_scroll": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/back_button_2.png",
+        "roi": [
+            1029,
+            0,
+            112,
+            55
+        ],
+        "action": "Click",
+        "next": [
+            "ninja_station"
+        ],
+        "post_wait_freezes": 500
+    },
+    "ninja_station": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/ninja_station.png",
+        "roi": [
+            271,
+            0,
+            118,
+            55
+        ],
+        "action": "Click",
+        "next": [
+            "close_ninja_station"
+        ],
+        "post_wait_freezes": 7000
+    },
+    "close_ninja_station": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/recommendation.png",
+        "roi": [
+            166,
+            0,
+            115,
+            55
+        ],
+        "action": "Click",
+        "next": [
+            "village_entry"
+        ],
+        "post_wait_freezes": 500
+    },
+    "village_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/village_entry.png",
+        "roi": [
+            1151,
+            423,
+            61,
+            82
+        ],
+        "action": "Click",
+        "post_wait_freezes": 400,
+        "next": [
+            "close_village_entry"
+        ]
+    },
+    "close_village_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/main_page.png",
+        "roi": [
+            1154,
+            95,
+            61,
+            74
+        ],
+        "action": "Click",
+        "next": [
+            "benefit_station"
+        ],
+        "post_wait_freezes": 500
+    },
+    "benefit_station": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/benefit_station.png",
+        "roi": [
+            735,
+            221,
+            61,
+            83
+        ],
+        "action": "Click",
+        "next": [
+            "naruto_club_sign"
+        ],
+        "interrupt": [
+            "sign_done"
+        ],
+        "post_wait_freezes": 500
+    },
+    "sign_done": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/sign_done.png",
+        "roi": [
+            581,
+            73,
+            83,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "feed_pig"
+        ],
+        "post_wait_freezes": 500
+    },
+    "naruto_club_sign": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/sign.png",
+        "roi": [
+            579,
+            73,
+            83,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_naruto_club_sign"
+        ],
+        "interrupt": [
+            "naruto_club_sign"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "confirm_naruto_club_sign": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/sign_now.png",
+        "roi": [
+            578,
+            528,
+            124,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "roger_naruto_club_sign"
+        ],
+        "pre_wait_freezes": 800,
+        "post_wait_freezes": 500
+    },
+    "roger_naruto_club_sign": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/i_known.png",
+        "roi": [
+            577,
+            551,
+            124,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "feed_pig"
+        ],
+        "post_wait_freezes": 500
+    },
+    "feed_pig": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/feed_pig.png",
+        "roi": [
+            1053,
+            320,
+            80,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "weekly_feed_pig"
+        ],
+        "interrupt": [
+            "feed_pig_done"
+        ],
+        "post_wait_freezes": 500
+    },
+    "weekly_feed_pig": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/feed.png",
+        "roi": [
+            543,
+            1137,
+            117,
+            77
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_feed_pig"
+        ],
+        "interrupt": "close_feed_pig",
+        "post_wait_freezes": 500
+    },
+    "feed_pig_done": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/feed_pig_done.png",
+        "roi": [
+            544,
+            1138,
+            120,
+            77
+        ],
+        "action": "Click",
+        "next": [
+            "close_feed_pig"
+        ],
+        "post_wait_freezes": 500
+    },
+    "confirm_feed_pig": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/comfirm_feed_pig.png",
+        "roi": [
+            263,
+            693,
+            189,
+            62
+        ],
+        "action": "Click",
+        "next": [
+            "close_feed_pig"
+        ],
+        "post_wait_freezes": 500
+    },
+    "close_feed_pig": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/feed_pig_x.png",
+        "roi": [
+            631,
+            17,
+            72,
+            62
+        ],
+        "action": "Click",
+        "next": [
+            "check_club_mission_done"
+        ],
+        "post_wait_freezes": 500
+    },
+    "check_club_mission_done": {
+        "next": [
+            "club_third_award_done"
+        ],
+        "interrupt": [
+            "swipe_for_mission"
+        ]
+    },
+    "swipe_for_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/mission.png",
+        "roi": [
+            78,
+            338,
+            102,
+            43
+        ],
+        "action": "Swipe",
+        "begin": [
+            320,
+            600,
+            100,
+            50
+        ],
+        "end": [
+            320,
+            100,
+            100,
+            50
+        ],
+        "next": [
+            "gold_helper"
+        ],
+        "pre_wait_freezes": 1000,
+        "post_wait_freezes": 500
+    },
+    "gold_helper": {
+        "next": [
+            "gold_helper_undone",
+            "gold_helper_wait",
+            "gold_helper_done"
+        ]
+    },
+    "gold_helper_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/gold_helper.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "target_offset": [
+            500,
+            10,
+            -500,
+            -10
+        ],
+        "next": [
+            "close_gold_helper"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "gold_helper_wait": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/gold_helper_wait.png",
+        "next": [
+            "swipe_for_club_submit"
+        ],
+        "threshold": 0.95
+    },
+    "gold_helper_done": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/gold_helper_done.png",
+        "next": [
+            "swipe_for_club_submit"
+        ],
+        "threshold": 0.95
+    },
+    "close_gold_helper": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/gold_helper_x.png",
+        "roi": [
+            628,
+            35,
+            58,
+            47
+        ],
+        "action": "Click",
+        "next": [
+            "swipe_for_club_submit"
+        ]
+    },
+    "swipe_for_club_submit": {
+        "roi": [
+            78,
+            338,
+            102,
+            43
+        ],
+        "action": "Swipe",
+        "begin": [
+            320,
+            100,
+            100,
+            50
+        ],
+        "end": [
+            320,
+            600,
+            100,
+            50
+        ],
+        "next": [
+            "keep_club_submit"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "keep_club_submit": {
+        "next": [
+            "check_club_all_submit"
+        ],
+        "interrupt": [
+            "club_submit"
+        ]
+    },
+    "check_club_all_submit": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/mission_submit.png",
+        "threshold": 0.7,
+        "next": [
+            "club_award"
+        ],
+        "inverse": true
+    },
+    "club_submit": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/mission_submit.png",
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "start_qq": {
+        "action": "StartApp",
+        "package": "com.tencent.mobileqq",
+        "post_delay": 1000
+    },
+    "club_award": {
+        "next": [
+            "club_first_award_done"
+        ],
+        "interrupt": [
+            "club_first_award"
+        ]
+    },
+    "club_first_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_first_award_done.png",
+        "roi": [
+            261,
+            396,
+            78,
+            52
+        ],
+        "next": [
+            "club_second_award_done"
+        ],
+        "interrupt": [
+            "club_second_award"
+        ],
+        "threshold": 0.9,
+        "pre_wait_freezes": 300,
+        "post_wait_freezes": 300
+    },
+    "club_first_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/first_award.png",
+        "roi": [
+            231,
+            385,
+            140,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_club_first_award"
+        ],
+        "pre_wait_freezes": 300,
+        "post_wait_freezes": 300
+    },
+    "confirm_club_first_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/confirm_club_first_award.png",
+        "roi": [
+            658,
+            390,
+            121,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "roger_club_first_award"
+        ],
+        "post_wait_freezes": 300,
+        "post_delay": 5000
+    },
+    "roger_club_first_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/roger_club_first_award.png",
+        "roi": [
+            579,
+            441,
+            124,
+            53
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "club_second_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/second_award.png",
+        "roi": [
+            426,
+            385,
+            75,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_club_second_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "confirm_club_second_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/confirm_club_second_award.png",
+        "roi": [
+            579,
+            428,
+            124,
+            52
+        ],
+        "action": "Click",
+        "next": [
+            "roger_club_second_award"
+        ],
+        "interrupt": [
+            "club_second_award_done"
+        ],
+        "post_wait_freezes": 300
+    },
+    "roger_club_second_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/roger_club_first_award.png",
+        "roi": [
+            578,
+            428,
+            123,
+            52
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "club_second_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_second_award_done.png",
+        "roi": [
+            429,
+            399,
+            69,
+            48
+        ],
+        "next": [
+            "club_third_award_done"
+        ],
+        "interrupt": [
+            "club_third_award"
+        ],
+        "threshold": 0.9,
+        "post_wait_freezes": 300
+    },
+    "club_third_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/third_award.png",
+        "roi": [
+            556,
+            386,
+            75,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_club_third_award"
+        ],
+        "post_wait_freezes": 800
+    },
+    "confirm_club_third_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/confirm_club_first_award.png",
+        "roi": [
+            658,
+            390,
+            121,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "roger_club_third_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "roger_club_third_award": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/roger_club_second_award.png",
+        "roi": [
+            579,
+            441,
+            124,
+            53
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "club_third_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/club_third_award_done.png",
+        "roi": [
+            556,
+            396,
+            78,
+            53
+        ],
+        "threshold": 0.9,
+        "next": [
+            "close_naruto_club"
+        ],
+        "post_wait_freezes": 300
+    },
+    "close_naruto_club": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/close_club_button.png",
+        "roi": [
+            1142,
+            0,
+            77,
+            58
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
+    "check_in_qq": {
+        "recognition": "OCR",
+        "expected": [
+            "QQ",
+            "Q"
+        ],
+        "roi": [
+            810,
+            314,
+            151,
+            90
+        ],
+        "next": [
+            "swipe_for_naruto_club"
+        ]
+    },
+    "swipe_for_naruto_club": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            150,
+            113,
+            50,
+            50
+        ],
+        "end": [
+            150,
+            550,
+            50,
+            50
+        ],
+        "next": [
+            "click_naruto_club_icon"
+        ],
+        "pre_wait_freezes": 200,
+        "post_wait_freezes": 500
+    },
+    "click_naruto_club_icon": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/naruto_club_icon.png",
+        "action": "Click",
+        "next": [
+            "close_naruto_club_AD"
+        ],
+        "post_delay": 4000
+    },
+    "close_naruto_club_AD": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/ad_x_masked.png",
+        "action": "Click",
+        "green_mask": true
+    },
+    "click_qq_icon": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/qq_icon.png",
+        "action": "Click",
+        "pre_wait_freezes": 200,
+        "post_wait_freezes": 500
+    },
+    "shut_naruto": {
+        "action": "StopApp",
+        "package": "com.tencent.KiHan"
+    },
+    "shut_qq": {
+        "action": "StopApp",
+        "package": "com.tencent.mobileqq"
+    },
+    "restart_qq": {
+        "action": "StopApp",
+        "package": "com.tencent.mobileqq",
+        "next": [
+            "start_qq"
+        ]
+    },
+    "shut_wechat": {
+        "action": "StopApp",
+        "package": "com.tencent.mm"
+    }
+}

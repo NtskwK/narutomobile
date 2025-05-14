@@ -1,0 +1,196 @@
+{
+    "share": {
+        "next": [
+            "close_announcement",
+            "share_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "share_entry": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Startgame/main.png"
+        ],
+        "roi": [
+            392,
+            26,
+            39,
+            31
+        ],
+        "action": "Click",
+        "target": [
+            54,
+            32,
+            69,
+            47
+        ],
+        "next": [
+            "try_share"
+        ],
+        "interrupt": [
+            "share_entry",
+            "share_to_qq_friend"
+        ],
+        "pre_wait_freezes": 500
+    },
+    "try_share": {
+        "recognition": "TemplateMatch",
+        "template": "Share/share_button.png",
+        "roi": [
+            994,
+            114,
+            102,
+            52
+        ],
+        "action": "Click",
+        "next": [
+            "share_to_qq_friend"
+        ],
+        "interrupt": [
+            "close_weekly_ninjia_title"
+        ],
+        "pre_wait_freezes": 200,
+        "post_wait_freezes": 200
+    },
+    "share_to_qq_friend": {
+        "recognition": "OCR",
+        "expected": [
+            "发给好友",
+            "发给好",
+            "给好友",
+            "发给",
+            "好友",
+            "给好",
+            "好",
+            "友"
+        ],
+        "roi": [
+            1161,
+            670,
+            93,
+            39
+        ],
+        "next": [
+            "close_qq_friend_share"
+        ],
+        "action": "Click",
+        "pre_wait_freezes": 200,
+        "post_wait_freezes": 400
+    },
+    "close_qq_friend_share": {
+        "recognition": "OCR",
+        "expected": [
+            "关闭",
+            "关",
+            "闭"
+        ],
+        "roi": [
+            11,
+            35,
+            59,
+            42
+        ],
+        "action": "Click",
+        "next": [
+            "check_main_screen_and_stop"
+        ]
+    },
+    "back_main_screen": {
+        "next": [
+            "check_main_screen"
+        ],
+        "interrupt": [
+            "close_home_page_mini_program",
+            "close_chat",
+            "close_new_ninjia_page",
+            "close_qq_friend_share",
+            "weekly_sign",
+            "keep_close_x",
+            "unagreement",
+            "agreement",
+            "start_game"
+        ]
+    },
+    "close_weekly_ninjia_title": {
+        "recognition": "TemplateMatch",
+        "template": "Share/weekly_ninjia_title.png",
+        "roi": [
+            319,
+            629,
+            203,
+            80
+        ],
+        "action": "Click"
+    },
+    "back_main_screen_and_stop": {
+        "next": [
+            "check_main_screen_and_stop"
+        ],
+        "interrupt": [
+            "close_home_page_mini_program",
+            "close_chat",
+            "close_new_ninjia_page",
+            "close_qq_friend_share",
+            "weekly_sign",
+            "keep_close_x",
+            "unagreement",
+            "agreement",
+            "start_game"
+        ]
+    },
+    "close_chat": {
+        "recognition": "TemplateMatch",
+        "template": "Share/chat_close_button.png",
+        "roi": [
+            807,
+            295,
+            53,
+            104
+        ],
+        "action": "Click"
+    },
+    "keep_close_x": {
+        "next": [
+            "check_no_x"
+        ],
+        "interrupt": [
+            "click_x",
+            "close_headhunt_end_announcement",
+            "keep_close_x"
+        ]
+    },
+    "check_no_x": {
+        "recognition": "TemplateMatch",
+        "template": "Share/green_masked_x.png",
+        "action": "DoNothing",
+        "green_mask": true,
+        "inverse": true,
+        "threshold": 0.5,
+        "next": [
+            "check_main_screen_and_stop"
+        ],
+        "pre_wait_freezes": 200
+    },
+    "click_x": {
+        "recognition": "TemplateMatch",
+        "template": "Share/green_masked_x.png",
+        "action": "Click",
+        "green_mask": true,
+        "threshold": 0.5,
+        "post_wait_freezes": 500
+    },
+    "close_home_page_mini_program": {
+        "recognition": "TemplateMatch",
+        "template": "mini_program_x.png",
+        "roi": [
+            1143,
+            0,
+            74,
+            58
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    }
+}

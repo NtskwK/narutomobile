@@ -1,0 +1,121 @@
+{
+    "start_up": {
+        "next": [
+            "start_naruto"
+        ],
+        "interrupt": [
+            "unagreement",
+            "agreement"
+        ]
+    },
+    "start_naruto": {
+        "action": "StartApp",
+        "package": "com.tencent.KiHan",
+        "next": [
+            "check_start_game"
+        ],
+        "interrupt": [
+            "unagreement",
+            "agreement",
+            "click_icon"
+        ],
+        "post_delay": 30000
+    },
+    "click_icon": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/icon.png",
+        "action": "Click",
+        "next": [
+            "check_start_game"
+        ],
+        "interrupt": [
+            "unagreement",
+            "agreement",
+            "click_icon"
+        ],
+        "post_delay": 30000
+    },
+    "check_start_game": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/start_game.png",
+        "roi": [
+            487,
+            570,
+            294,
+            75
+        ],
+        "action": "StopTask"
+    },
+    "unagreement": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/uncheck.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": "account_type"
+    },
+    "agreement": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/check.png",
+        "threshold": 0.97,
+        "action": "DoNothing",
+        "next": "account_type"
+    },
+    "account_type": {
+        "next": "android_qq"
+    },
+    "android_qq": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/android_qq.png",
+        "roi": [
+            946,
+            507,
+            248,
+            71
+        ],
+        "action": "Click",
+        "next": "agree_log_in",
+        "interrupt": "check_start_game",
+        "post_wait_freezes": 100
+    },
+    "agree_log_in": {
+        "recognition": "OCR",
+        "expected": "同意",
+        "roi": [
+            612,
+            531,
+            58,
+            37
+        ],
+        "action": "Click",
+        "next": "agree_info",
+        "post_wait_freezes": 100
+    },
+    "agree_info": {
+        "recognition": "OCR",
+        "expected": "同意",
+        "roi": [
+            615,
+            512,
+            50,
+            34
+        ],
+        "action": "Click",
+        "next": [
+            "check_start_game"
+        ],
+        "interrupt": [
+            "agreement",
+            "restart_naruto",
+            "click_icon"
+        ],
+        "pre_wait_freezes": 100,
+        "post_wait_freezes": 2000
+    },
+    "restart_naruto": {
+        "action": "StopApp",
+        "package": "com.tencent.KiHan",
+        "next": [
+            "click_icon"
+        ]
+    }
+}
