@@ -103,11 +103,11 @@
         },
         {
             "name": "刷体力(beta)",
-            "entry": "mission_office"
+            "entry": "use_energy"
         }
     ],
     "option": {
-        "加载时间选择": {
+        "等待加载时间选择": {
             "cases": [
                 {
                     "name": "加载时间25s",

@@ -204,6 +204,38 @@
             34
         ],
         "next": [
+            "close_team_desh"
+        ]
+    },
+    "close_team_desh": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/x.png",
+        "roi": [
+            1177,
+            0,
+            96,
+            85
+        ],
+        "action": "Click",
+        "next": [
+            "close_team_desh_out_team_sign"
+        ],
+        "interrupt": [
+            "back_main_screen_and_stop"
+        ],
+        "post_wait_freezes": 200
+    },
+    "close_team_desh_out_team_sign": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/confirm_quit_team.png",
+        "roi": [
+            535,
+            418,
+            205,
+            74
+        ],
+        "action": "Click",
+        "next": [
             "back_main_screen_and_stop"
         ]
     }

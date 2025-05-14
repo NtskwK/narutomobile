@@ -110,27 +110,27 @@
     "use_energy_Clicker": {
         "action": "Click",
         "roi": [
-            835,
-            186,
-            77,
-            63
+            712,
+            322,
+            107,
+            83
         ]
     },
     "use_energy_not_enough_sign": {
         "recognition": "TemplateMatch",
         "template": "Use_energy/energy_not_enough.png",
         "roi": [
-            558,
-            186,
-            357,
-            63
+            555,
+            183,
+            360,
+            66
         ],
         "action": "Click",
         "target": [
-            835,
-            186,
-            77,
-            63
+            827,
+            183,
+            93,
+            69
         ],
         "next": [
             "back_main_screen_and_stop"
