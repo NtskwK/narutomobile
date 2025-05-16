@@ -84,10 +84,10 @@
             "Activity/monthly_sign_undone_activity.png"
         ],
         "roi": [
-            24,
-            423,
-            148,
-            58
+            0,
+            345,
+            174,
+            155
         ],
         "threshold": 0.95,
         "action": "Click",
@@ -102,10 +102,10 @@
             "Activity/monthly_sign_done_activity.png"
         ],
         "roi": [
-            24,
-            423,
-            148,
-            66
+            0,
+            345,
+            174,
+            155
         ],
         "threshold": 0.95,
         "next": [

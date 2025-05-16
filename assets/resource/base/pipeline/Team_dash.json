@@ -175,7 +175,25 @@
         ],
         "next": [
             "team_dash_auto_fight2"
+        ],
+        "interrupt": [
+            "team_dash_group_help_entry"
         ]
+    },
+    "team_dash_group_help_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_group_help.png",
+        "roi": [
+            973,
+            629,
+            63,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "team_dash_invite"
+        ],
+        "post_delay": 200
     },
     "team_dash_auto_fight2": {
         "recognition": "TemplateMatch",

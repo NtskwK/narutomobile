@@ -103,18 +103,7 @@
         "next": [
             "use_energy_not_enough_sign"
         ],
-        "interrupt": [
-            "use_energy_Clicker"
-        ]
-    },
-    "use_energy_Clicker": {
-        "action": "Click",
-        "roi": [
-            712,
-            322,
-            107,
-            83
-        ]
+        "post_delay": 5000
     },
     "use_energy_not_enough_sign": {
         "recognition": "TemplateMatch",

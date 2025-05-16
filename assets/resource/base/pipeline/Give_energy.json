@@ -11,14 +11,15 @@
     "energy_entry": {
         "recognition": "TemplateMatch",
         "template": [
-            "Give_energy/give_energy.png"
+            "Give_energy/give_energy_undone_masked.png"
         ],
         "roi": [
-            35,
-            195,
-            34,
-            28
+            29,
+            186,
+            59,
+            55
         ],
+        "green_mask": true,
         "action": "Click",
         "next": [
             "sent_energy"
@@ -28,13 +29,14 @@
     },
     "give_energy_done": {
         "recognition": "TemplateMatch",
-        "template": "Give_energy/give_energy_done.png",
+        "template": "Give_energy/give_energy_done_masked.png",
         "roi": [
-            34,
-            192,
-            46,
-            29
+            27,
+            181,
+            63,
+            61
         ],
+        "green_mask": true,
         "action": "StopTask"
     },
     "sent_energy": {

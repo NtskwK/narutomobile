@@ -24,7 +24,7 @@
             "Practice_place/practice_place_done_night.png",
             "Practice_place/practice_place_done_day.png"
         ],
-        "threshold": 0.97,
+        "threshold": 0.95,
         "next": [
             "check_main_screen_and_stop"
         ]
@@ -35,7 +35,7 @@
             "Practice_place/practice_place_undone_night.png",
             "Practice_place/practice_place_undone_day.png"
         ],
-        "threshold": 0.97,
+        "threshold": 0.95,
         "action": "Click",
         "next": [
             "train_road",
@@ -195,11 +195,10 @@
     },
     "survival_challenge_entry": {
         "next": [
+            "survival_challenge_undone",
             "practice_place_done"
         ],
-        "interrupt": [
-            "survival_challenge_undone"
-        ]
+        "interrupt": []
     },
     "survival_challenge_undone": {
         "recognition": "TemplateMatch",

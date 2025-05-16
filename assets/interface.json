@@ -104,6 +104,10 @@
         {
             "name": "刷体力(beta)",
             "entry": "use_energy"
+        },
+        {
+            "name": "活跃宝箱(beta)",
+            "entry": "liveness_award"
         }
     ],
     "option": {

@@ -19,7 +19,41 @@
     "resource": "官服",
     "task": [
         {
-            "name": "火影情报社",
+            "name": "小队突袭",
+            "option": [
+                {
+                    "name": "等待自动战斗时间选择",
+                    "value": "等待60秒"
+                }
+            ]
+        },
+        {
+            "name": "忍法帖",
+            "option": [
+            ]
+        },
+        {
+            "name": "免费招募",
+            "option": [
+            ]
+        },
+        {
+            "name": "月签到和活动",
+            "option": [
+            ]
+        },
+        {
+            "name": "任务集会所(beta)",
+            "option": [
+            ]
+        },
+        {
+            "name": "刷体力(beta)",
+            "option": [
+            ]
+        },
+        {
+            "name": "活跃宝箱(beta)",
             "option": [
             ]
         }

@@ -35,12 +35,12 @@
             "Startgame/main_green_masked.png"
         ],
         "roi": [
-            16,
+            11,
             0,
-            1264,
+            1269,
             720
         ],
-        "threshold": 0.94,
+        "threshold": 0.95,
         "action": "StopTask",
         "green_mask": true,
         "pre_wait_freezes": 4000
@@ -51,12 +51,12 @@
             "Startgame/main_green_masked.png"
         ],
         "roi": [
-            16,
+            11,
             0,
-            1264,
+            1269,
             720
         ],
-        "threshold": 0.94,
+        "threshold": 0.95,
         "action": "DoNothing",
         "green_mask": true,
         "pre_wait_freezes": 500

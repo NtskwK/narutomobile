@@ -11,13 +11,13 @@
     "share_entry": {
         "recognition": "TemplateMatch",
         "template": [
-            "Startgame/main.png"
+            "Startgame/main_green_masked.png"
         ],
         "roi": [
-            392,
-            26,
-            39,
-            31
+            11,
+            0,
+            1269,
+            720
         ],
         "action": "Click",
         "target": [
@@ -26,6 +26,7 @@
             69,
             47
         ],
+        "green_mask": true,
         "next": [
             "try_share"
         ],
@@ -169,7 +170,7 @@
         "inverse": true,
         "threshold": 0.5,
         "next": [
-            "check_main_screen_and_stop"
+            "check_main_screen"
         ],
         "pre_wait_freezes": 200
     },
@@ -183,7 +184,7 @@
     },
     "close_home_page_mini_program": {
         "recognition": "TemplateMatch",
-        "template": "mini_program_x.png",
+        "template": "Share/mini_program_x.png",
         "roi": [
             1143,
             0,

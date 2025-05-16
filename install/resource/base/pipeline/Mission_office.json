@@ -1,8 +1,8 @@
 {
     "mission_office": {
         "next": [
-            "mission_office_undone",
-            "mission_office_done"
+            "mission_office_done",
+            "mission_office_undone"
         ],
         "interrupt": [
             "swipe_for_left_entries",
@@ -16,6 +16,7 @@
             "Mission_office/mission_office_done_night.png"
         ],
         "threshold": 0.97,
+        "post_wait_freezes": 500,
         "action": "StopTask"
     },
     "mission_office_undone": {
@@ -47,6 +48,9 @@
         "inverse": true,
         "next": [
             "mission_office_get_mision"
+        ],
+        "interrupt": [
+            "celebrate_mission_office_award"
         ]
     },
     "get_mission_office_award": {
@@ -78,6 +82,7 @@
         ],
         "action": "Click",
         "next": [
+            "celebrate_mission_office_award",
             "check_no_mission_office_award"
         ],
         "interrupt": [
@@ -559,11 +564,25 @@
         ],
         "action": "Click",
         "next": [
+            "take_mission_done",
             "mission_office_get_mision"
         ],
         "interrupt": [
             "back_main_screen_and_stop"
         ],
         "post_wait_freezes": 200
+    },
+    "take_mission_done": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/main_page_done.png",
+        "roi": [
+            1098,
+            211,
+            141,
+            339
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
     }
 }

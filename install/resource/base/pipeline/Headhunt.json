@@ -21,18 +21,11 @@
             "no_free_headhunt",
             "free_headhunt_waiting"
         ],
-        "interrupt": [],
-        "post_wait_freezes": 500
+        "interrupt": []
     },
     "no_free_headhunt": {
         "recognition": "TemplateMatch",
         "template": "Headhunt/no_free_headhunt.png",
-        "roi": [
-            667,
-            553,
-            148,
-            48
-        ],
         "next": [
             "headhunt_recruit_undone",
             "headhunt_recruit_done"
@@ -42,12 +35,6 @@
     "free_headhunt_waiting": {
         "recognition": "TemplateMatch",
         "template": "Headhunt/free_headhunt.png",
-        "roi": [
-            668,
-            553,
-            145,
-            53
-        ],
         "threshold": 0.97,
         "action": "Click",
         "next": [

@@ -147,8 +147,10 @@
     },
     "peace": {
         "recognition": "TemplateMatch",
-        "template": "Rich_room/normal_attack_masked.png",
-        "green_mask": true,
+        "template": [
+            "Rich_room/normal_attack.png",
+            "Rich_room/normal_attack_1.png"
+        ],
         "action": "Swipe",
         "threshold": 0.5,
         "inverse": true,
