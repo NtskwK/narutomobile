@@ -88,6 +88,9 @@
         "next": [
             "use_energy_confirm_ez_sweep"
         ],
+        "interrupt": [
+            "use_energy_not_enough_sign"
+        ],
         "post_wait_freezes": 300
     },
     "use_energy_confirm_ez_sweep": {
