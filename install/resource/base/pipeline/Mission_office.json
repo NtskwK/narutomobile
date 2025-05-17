@@ -47,7 +47,7 @@
         "threshold": 0.8,
         "inverse": true,
         "next": [
-            "mission_office_get_mision"
+            "mission_office_get_mission"
         ],
         "interrupt": [
             "celebrate_mission_office_award"
@@ -108,7 +108,7 @@
         ],
         "post_wait_freezes": 500
     },
-    "mission_office_get_mision": {
+    "mission_office_get_mission": {
         "recognition": "TemplateMatch",
         "template": "Mission_office/main_page_masked.png",
         "roi": [
@@ -122,8 +122,128 @@
             "mission_office_a_mission",
             "mission_office_b_mission",
             "mission_office_c_mission",
-            "mission_office_solo_mission"
+            "mission_office_solo_mission",
+            "mission_office_relation_mission"
         ]
+    },
+    "mission_office_relation_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/relation_mission_undone_masked.png",
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "next": [
+            "take_mission_office_relation_mission"
+        ],
+        "post_wait_freezes": 500
+    },
+    "take_mission_office_relation_mission": {
+        "next": [
+            "select_b_for_relation_mission"
+        ],
+        "interrupt": [
+            "select_c_for_relation_mission",
+            "select_a_for_relation_mission",
+            "select_s_for_relation_mission"
+        ]
+    },
+    "select_s_for_relation_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/s_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "select_relation_ninjia_for_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_a_for_relation_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/a_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "select_relation_ninjia_for_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_b_for_relation_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "select_relation_ninjia_for_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_c_for_relation_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/c_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "select_relation_ninjia_for_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_relation_ninjia_for_mission": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Mission_office/relation_ring_masked_0.png",
+            "Mission_office/relation_ring_masked_1.png",
+            "Mission_office/relation_ring_masked_2.png",
+            "Mission_office/relation_ring_masked_3.png"
+        ],
+        "roi": [
+            821,
+            97,
+            417,
+            417
+        ],
+        "green_mask": true,
+        "threshold": 0.7,
+        "action": "Click",
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
     },
     "mission_office_a_mission": {
         "recognition": "TemplateMatch",
@@ -565,7 +685,7 @@
         "action": "Click",
         "next": [
             "take_mission_done",
-            "mission_office_get_mision"
+            "mission_office_get_mission"
         ],
         "interrupt": [
             "back_main_screen_and_stop"
