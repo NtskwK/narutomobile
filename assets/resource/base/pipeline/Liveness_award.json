@@ -41,6 +41,7 @@
             816,
             107
         ],
+        "threshold": 0.95,
         "next": [
             "weekly_liveness_award_done"
         ]
@@ -80,7 +81,7 @@
             824,
             96
         ],
-        "threshold": 0.4,
+        "threshold": 0.9,
         "post_wait_freezes": 500,
         "action": "Click"
     },
