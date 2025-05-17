@@ -119,12 +119,36 @@
         ],
         "green_mask": true,
         "next": [
+            "mission_office_Sharingan_mission",
             "mission_office_a_mission",
             "mission_office_b_mission",
             "mission_office_c_mission",
             "mission_office_solo_mission",
             "mission_office_relation_mission"
         ]
+    },
+    "mission_office_Sharingan_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/Sharingan_mission_undone_masked.png",
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.8,
+        "green_mask": true,
+        "next": [
+            "select_ninjia_for_mission_by_frame"
+        ],
+        "post_wait_freezes": 500
     },
     "mission_office_relation_mission": {
         "recognition": "TemplateMatch",
@@ -264,11 +288,11 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_a_mission"
+            "take_mission_office_3_man_mission"
         ],
         "post_wait_freezes": 500
     },
-    "take_mission_office_a_mission": {
+    "take_mission_office_3_man_mission": {
         "next": [
             "select_a_for_mission_1"
         ],
@@ -297,19 +321,9 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_b_mission"
+            "take_mission_office_3_man_mission"
         ],
         "post_wait_freezes": 500
-    },
-    "take_mission_office_b_mission": {
-        "next": [
-            "select_a_for_mission_1"
-        ],
-        "interrupt": [
-            "select_b_for_mission_1",
-            "select_s_for_mission_1",
-            "select_c_for_mission_1"
-        ]
     },
     "mission_office_c_mission": {
         "recognition": "TemplateMatch",
@@ -330,19 +344,9 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_c_mission"
+            "take_mission_office_3_man_mission"
         ],
         "post_wait_freezes": 500
-    },
-    "take_mission_office_c_mission": {
-        "next": [
-            "select_a_for_mission_1"
-        ],
-        "interrupt": [
-            "select_b_for_mission_1",
-            "select_s_for_mission_1",
-            "select_c_for_mission_1"
-        ]
     },
     "mission_office_solo_mission": {
         "recognition": "TemplateMatch",
@@ -666,6 +670,60 @@
             431,
             414
         ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_ninjia_for_mission_by_frame": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/ninjia_frame_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "select_ninjia_for_mission_by_frame_1"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_ninjia_for_mission_by_frame_1": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/ninjia_frame_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "order_by": "Vertical",
+        "action": "Click",
+        "green_mask": true,
+        "index": 1,
+        "next": [
+            "select_ninjia_for_mission_by_frame_2"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_ninjia_for_mission_by_frame_2": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/ninjia_frame_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "order_by": "Vertical",
+        "index": 2,
         "action": "Click",
         "green_mask": true,
         "next": [
