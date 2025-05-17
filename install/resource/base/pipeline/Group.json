@@ -142,10 +142,10 @@
         "recognition": "TemplateMatch",
         "template": "Group/confirm_group_pray.png",
         "roi": [
-            534,
-            151,
-            506,
-            284
+            498,
+            140,
+            273,
+            58
         ],
         "action": "Click",
         "next": "group_award",

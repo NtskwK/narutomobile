@@ -98,15 +98,15 @@
             "entry": "activity"
         },
         {
-            "name": "任务集会所(beta)",
+            "name": "任务集会所(beta,目前只能处理ABC和单人任务)",
             "entry": "mission_office"
         },
         {
-            "name": "刷体力(beta)",
+            "name": "刷体力(beta,目前只能刷忍者碎片)",
             "entry": "use_energy"
         },
         {
-            "name": "活跃宝箱(beta)",
+            "name": "活跃宝箱(beta,有概率失败)",
             "entry": "liveness_award"
         }
     ],

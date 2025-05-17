@@ -103,11 +103,11 @@
             "check_main_screen"
         ],
         "interrupt": [
+            "weekly_sign",
             "close_home_page_mini_program",
             "close_chat",
             "close_new_ninjia_page",
             "close_qq_friend_share",
-            "weekly_sign",
             "keep_close_x",
             "unagreement",
             "agreement",
@@ -130,11 +130,11 @@
             "check_main_screen_and_stop"
         ],
         "interrupt": [
+            "weekly_sign",
             "close_home_page_mini_program",
             "close_chat",
             "close_new_ninjia_page",
             "close_qq_friend_share",
-            "weekly_sign",
             "keep_close_x",
             "unagreement",
             "agreement",

@@ -33,7 +33,7 @@
             "get_mission_office_award"
         ],
         "action": "Click",
-        "post_wait_freezes": 300
+        "post_wait_freezes": 500
     },
     "check_no_mission_office_award": {
         "recognition": "TemplateMatch",
