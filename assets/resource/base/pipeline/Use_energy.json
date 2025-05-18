@@ -10,6 +10,7 @@
     "use_energy_entry": {
         "recognition": "OCR",
         "expected": [
+            "0",
             "1",
             "2",
             "3",
@@ -20,11 +21,12 @@
             "8",
             "9"
         ],
+        "inverse": true,
         "roi": [
-            451,
-            29,
-            26,
-            31
+            411,
+            23,
+            58,
+            37
         ],
         "next": [
             "use_energy_by_ninjia_piece"

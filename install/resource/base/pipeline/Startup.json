@@ -2,10 +2,6 @@
     "start_up": {
         "next": [
             "start_naruto"
-        ],
-        "interrupt": [
-            "unagreement",
-            "agreement"
         ]
     },
     "start_naruto": {
@@ -15,11 +11,32 @@
             "check_start_game"
         ],
         "interrupt": [
+            "close_teenager_page",
             "unagreement",
             "agreement",
             "click_icon"
         ],
         "post_delay": 30000
+    },
+    "close_teenager_page": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/teenager_page.png",
+        "roi": [
+            1080,
+            0,
+            93,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "check_start_game"
+        ],
+        "interrupt": [
+            "unagreement",
+            "agreement",
+            "click_icon"
+        ],
+        "pre_wait_freezes": 500
     },
     "click_icon": {
         "recognition": "TemplateMatch",
