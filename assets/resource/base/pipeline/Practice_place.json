@@ -64,6 +64,23 @@
             "train_road_award",
             "train_road_unreset",
             "train_road_done"
+        ],
+        "interrupt": [
+            "train_road_sweeping"
+        ]
+    },
+    "train_road_sweeping": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_award_sweeping.png",
+        "roi": [
+            1169,
+            0,
+            104,
+            85
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge"
         ]
     },
     "train_road_award": {

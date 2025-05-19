@@ -90,8 +90,8 @@
         ],
         "action": "Click",
         "next": [
-            "ninjia_book_mission_done",
-            "ninjia_book_mission_undone"
+            "ninjia_book_mission_undone",
+            "ninjia_book_mission_done"
         ],
         "post_wait_freezes": 2000
     },
@@ -106,8 +106,8 @@
         ],
         "threshold": 0.94,
         "next": [
-            "ninjia_book_liveness_done",
-            "ninjia_book_liveness_undone"
+            "ninjia_book_liveness_undone",
+            "ninjia_book_liveness_done"
         ],
         "post_wait_freezes": 100
     },
@@ -152,10 +152,10 @@
         "recognition": "TemplateMatch",
         "template": "Ninjia_book/mission_award_waiting.png",
         "roi": [
-            670,
-            544,
-            107,
-            50
+            365,
+            534,
+            732,
+            75
         ],
         "threshold": 0.9,
         "inverse": true,
@@ -164,19 +164,13 @@
         ],
         "interrupt": [
             "get_ninjia_book_mission_award",
-            "ninjia_book_liveness_done",
-            "ninjia_book_liveness_undone"
+            "ninjia_book_liveness_undone",
+            "ninjia_book_liveness_done"
         ]
     },
     "get_ninjia_book_mission_award": {
         "recognition": "TemplateMatch",
         "template": "Ninjia_book/mission_award_waiting.png",
-        "roi": [
-            670,
-            544,
-            107,
-            50
-        ],
         "threshold": 0.9,
         "action": "Click",
         "post_wait_freezes": 200
@@ -192,8 +186,8 @@
         ],
         "threshold": 0.9,
         "next": [
-            "ninjia_book_leaderboard_done",
-            "ninjia_book_leaderboard_undone"
+            "ninjia_book_leaderboard_undone",
+            "ninjia_book_leaderboard_done"
         ],
         "post_wait_freezes": 500
     },
@@ -230,8 +224,8 @@
             "close_ninjia_book_level_up_page_when_liveness"
         ],
         "interrupt": [
-            "ninjia_book_leaderboard_done",
-            "ninjia_book_leaderboard_undone"
+            "ninjia_book_leaderboard_undone",
+            "ninjia_book_leaderboard_done"
         ],
         "post_wait_freezes": 500
     },
@@ -245,8 +239,8 @@
             58
         ],
         "next": [
-            "ninjia_book_leaderboard_done",
-            "ninjia_book_leaderboard_undone"
+            "ninjia_book_leaderboard_undone",
+            "ninjia_book_leaderboard_done"
         ],
         "action": "Click",
         "post_wait_freezes": 200
@@ -269,10 +263,10 @@
         "recognition": "TemplateMatch",
         "template": "Ninjia_book/leaderboard_undone.png",
         "roi": [
-            982,
+            979,
             77,
             77,
-            37
+            48
         ],
         "threshold": 0.9,
         "action": "Click",
@@ -290,7 +284,7 @@
             96,
             335
         ],
-        "green_mask": true,
+        "action": "Click",
         "next": [
             "close_ninjia_book_level_up_page_when_like"
         ],
@@ -308,8 +302,8 @@
             58
         ],
         "next": [
-            "ninjia_book_award_done",
-            "ninjia_book_award_undone"
+            "ninjia_book_award_undone",
+            "ninjia_book_award_done"
         ],
         "action": "Click",
         "post_wait_freezes": 200

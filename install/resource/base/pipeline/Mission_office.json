@@ -265,7 +265,55 @@
         "threshold": 0.7,
         "action": "Click",
         "next": [
+            "take_mission_office_mission_covered",
             "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "take_mission_office_mission_covered": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/take_mission_covered.png",
+        "roi": [
+            1117,
+            588,
+            102,
+            75
+        ],
+        "threshold": 0.99999,
+        "action": "Click",
+        "next": [
+            "mission_office_unselect_ninjia_for_relation"
+        ]
+    },
+    "mission_office_unselect_ninjia_for_relation": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/unselect_ninjia_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "select_other_b_for_relation_mission"
+        ]
+    },
+    "select_other_b_for_relation_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/b_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "order_by": "Vertical",
+        "next": [
+            "select_relation_ninjia_for_mission"
         ],
         "post_wait_freezes": 200
     },

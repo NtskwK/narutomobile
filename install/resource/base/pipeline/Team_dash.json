@@ -53,6 +53,9 @@
             "team_dash_my_help_done",
             "team_dash_my_help_undone"
         ],
+        "interrupt": [
+            "team_dash_group_help_undone"
+        ],
         "post_wait_freezes": 500
     },
     "team_dash_my_help_done": {

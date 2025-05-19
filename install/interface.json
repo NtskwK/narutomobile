@@ -86,10 +86,6 @@
             ]
         },
         {
-            "name": "忍法帖",
-            "entry": "ninjia_book"
-        },
-        {
             "name": "免费招募",
             "entry": "headhunt"
         },
@@ -104,6 +100,10 @@
         {
             "name": "刷体力(beta,目前只能刷忍者碎片)",
             "entry": "use_energy"
+        },
+        {
+            "name": "忍法帖",
+            "entry": "ninjia_book"
         },
         {
             "name": "活跃宝箱(beta,有概率失败)",

@@ -48,7 +48,7 @@
         "next": [
             "fight"
         ],
-        "post_wait_freezes": 500
+        "post_wait_freezes": 1000
     },
     "swipe_for_right_entries": {
         "recognition": "TemplateMatch",
@@ -192,7 +192,7 @@
         "green_mask": true,
         "action": "Swipe",
         "threshold": 0.9,
-        "duration": 15000,
+        "duration": 7000,
         "next": [
             "fight_roll"
         ],
