@@ -1,0 +1,224 @@
+{
+    "easy_helper": {
+        "next": [
+            "easy_helper_entry"
+        ]
+    },
+    "easy_helper_entry": {
+        "next": [
+            "easy_helper_undone",
+            "easy_helper_done"
+        ],
+        "interrupt": [
+            "stoptask"
+        ]
+    },
+    "easy_helper_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/easy_helper_undone_masked.png",
+        "roi": [
+            1120,
+            115,
+            53,
+            34
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "easy_helper_one_key"
+        ]
+    },
+    "easy_helper_done": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/easy_helper_done_masked.png",
+        "roi": [
+            1115,
+            115,
+            58,
+            39
+        ],
+        "green_mask": true,
+        "next": [
+            "stoptask"
+        ]
+    },
+    "easy_helper_one_key": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/easy_helper_one_key_button.png",
+        "roi": [
+            1196,
+            550,
+            42,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_easy_helper_one_key"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "confirm_easy_helper_one_key": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/confirm_easy_helper_one_key_button.png",
+        "roi": [
+            934,
+            455,
+            88,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "easy_helper_log_on_award_undone",
+            "easy_helper_log_on_award_done"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_log_on_award_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/log_on_award_undone.png",
+        "roi": [
+            583,
+            37,
+            81,
+            48
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "get_easy_helper_log_on_award"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_log_on_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/log_on_award_done.png",
+        "roi": [
+            592,
+            37,
+            72,
+            45
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "easy_helper_privilege_undone"
+        ],
+        "post_wait_freezes": 100
+    },
+    "get_easy_helper_log_on_award": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/log_on_award.png",
+        "roi": [
+            405,
+            537,
+            104,
+            58
+        ],
+        "action": "Click",
+        "next": [
+            "easy_helper_privilege_undone",
+            "easy_helper_privilege_done"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_privilege_done": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/easy_helper_privilege_done.png",
+        "roi": [
+            784,
+            37,
+            58,
+            48
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "easy_helper_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_privilege_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/easy_helper_privilege_undone.png",
+        "roi": [
+            784,
+            37,
+            58,
+            48
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "easy_helper_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_sweep": {
+        "next": [
+            "check_no_easy_helper_sweep"
+        ],
+        "interrupt": [
+            "get_easy_helper_sweep"
+        ]
+    },
+    "check_no_easy_helper_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/sweep.png",
+        "roi": [
+            889,
+            501,
+            55,
+            39
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "inverse": true,
+        "next": [],
+        "post_wait_freezes": 100
+    },
+    "get_easy_helper_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/sweep.png",
+        "roi": [
+            889,
+            501,
+            55,
+            39
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "easy_helper_back_to_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_back_to_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/back_to_sweep.png",
+        "roi": [
+            29,
+            642,
+            159,
+            58
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "easy_helper_celebrate_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_celebrate_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/celebrate_sweep.png",
+        "roi": [
+            502,
+            146,
+            273,
+            58
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "post_wait_freezes": 100
+    }
+}
