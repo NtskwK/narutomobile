@@ -55,6 +55,39 @@
         "next": [
             "confirm_easy_helper_one_key"
         ],
+        "interrupt": [
+            "easy_helper_no_gold_sweep"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "easy_helper_gold_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/use_gold.png",
+        "roi": [
+            414,
+            416,
+            202,
+            69
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_easy_helper_one_key"
+        ],
+        "post_wait_freezes": 1000
+    },
+    "easy_helper_no_gold_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/no_gold.png",
+        "roi": [
+            650,
+            414,
+            205,
+            74
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_easy_helper_one_key"
+        ],
         "post_wait_freezes": 1000
     },
     "confirm_easy_helper_one_key": {
@@ -68,10 +101,29 @@
         ],
         "action": "Click",
         "next": [
+            "confirm_easy_helper_one_key_done"
+        ],
+        "interrupt": [
+            "confirm_easy_helper_one_key"
+        ],
+        "post_wait_freezes": 500
+    },
+    "confirm_easy_helper_one_key_done": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/easy_helper_one_key_button.png",
+        "roi": [
+            1196,
+            550,
+            42,
+            50
+        ],
+        "action": "Click",
+        "threshold": 0.99999,
+        "next": [
             "easy_helper_log_on_award_undone",
             "easy_helper_log_on_award_done"
         ],
-        "post_wait_freezes": 100
+        "post_wait_freezes": 1000
     },
     "easy_helper_log_on_award_undone": {
         "recognition": "TemplateMatch",
@@ -101,7 +153,8 @@
         "threshold": 0.85,
         "action": "Click",
         "next": [
-            "easy_helper_privilege_undone"
+            "easy_helper_privilege_undone",
+            "easy_helper_privilege_done"
         ],
         "post_wait_freezes": 100
     },
@@ -125,9 +178,9 @@
         "recognition": "TemplateMatch",
         "template": "Easy_helper/easy_helper_privilege_done.png",
         "roi": [
-            784,
+            778,
             37,
-            58,
+            64,
             48
         ],
         "threshold": 0.85,
@@ -170,10 +223,12 @@
             55,
             39
         ],
-        "threshold": 0.85,
+        "threshold": 0.9,
         "action": "Click",
         "inverse": true,
-        "next": [],
+        "next": [
+            "easy_helper_team_dash_sweep"
+        ],
         "post_wait_freezes": 100
     },
     "get_easy_helper_sweep": {
@@ -189,6 +244,9 @@
         "action": "Click",
         "next": [
             "easy_helper_back_to_sweep"
+        ],
+        "interrupt": [
+            "easy_helper_celebrate_sweep"
         ],
         "post_wait_freezes": 100
     },
@@ -218,6 +276,78 @@
             58
         ],
         "threshold": 0.85,
+        "action": "Click",
+        "post_wait_freezes": 100
+    },
+    "easy_helper_team_dash_sweep": {
+        "next": [
+            "check_no_easy_helper_team_dash_sweep"
+        ],
+        "interrupt": [
+            "get_easy_helper_team_dash_sweep"
+        ]
+    },
+    "check_no_easy_helper_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/team_dash_undone.png",
+        "roi": [
+            1220,
+            501,
+            50,
+            42
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "inverse": true,
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "post_wait_freezes": 100
+    },
+    "get_easy_helper_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/team_dash_undone.png",
+        "roi": [
+            1220,
+            501,
+            50,
+            42
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "confrim_easy_helper_team_dash_sweep"
+        ],
+        "interrupt": [
+            "easy_helper_back_to_team_dash_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "confrim_easy_helper_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/team_dash_no_gold.png",
+        "roi": [
+            661,
+            414,
+            197,
+            72
+        ],
+        "action": "Click",
+        "next": [
+            "easy_helper_back_to_team_dash_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "easy_helper_back_to_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/back_to_sweep.png",
+        "roi": [
+            29,
+            642,
+            159,
+            58
+        ],
+        "threshold": 0.35,
         "action": "Click",
         "post_wait_freezes": 100
     }

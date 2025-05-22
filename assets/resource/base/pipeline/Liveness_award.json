@@ -61,6 +61,7 @@
             96
         ],
         "next": [
+            "weekly_liveness_award_undone",
             "weekly_liveness_award_done"
         ],
         "inverse": true,
@@ -84,6 +85,35 @@
         "threshold": 0.9,
         "post_wait_freezes": 500,
         "action": "Click"
+    },
+    "weekly_liveness_award_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/weekly_award_undone.png",
+        "roi": [
+            1219,
+            650,
+            50,
+            55
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_weekly_liveness_award"
+        ],
+        "post_wait_freezes": 100
+    },
+    "confirm_weekly_liveness_award": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/confirm_weekly_award.png",
+        "roi": [
+            597,
+            431,
+            91,
+            58
+        ],
+        "action": "Click",
+        "next": [
+            "back_main_screen_and_stop"
+        ]
     },
     "weekly_liveness_award_done": {
         "recognition": "TemplateMatch",

@@ -35,6 +35,10 @@
             "entry": "start_game"
         },
         {
+            "name": "轻松助手",
+            "entry": "easy_helper"
+        },
+        {
             "name": "招财",
             "entry": "get_chopper"
         },

@@ -226,7 +226,8 @@
         ],
         "next": [
             "close_team_desh"
-        ]
+        ],
+        "post_wait_freezes": 1000
     },
     "close_team_desh": {
         "recognition": "TemplateMatch",

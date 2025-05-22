@@ -10,8 +10,8 @@
     },
     "point_race_entry": {
         "next": [
-            "point_race_done",
-            "point_race_undone"
+            "point_race_undone",
+            "point_race_done"
         ],
         "interrupt": [
             "swipe_for_left_entries"
