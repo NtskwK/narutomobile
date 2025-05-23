@@ -1,0 +1,160 @@
+{
+    "hundred_ninjia": {
+        "next": [
+            "hundred_ninjia_entry"
+        ],
+        "interrupt": [
+            "hundred_ninjia_match",
+            "back_main_screen"
+        ]
+    },
+    "hundred_ninjia_entry": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Hundred_ninjia/deul_entry_night.png"
+        ],
+        "roi": [
+            90,
+            254,
+            1093,
+            151
+        ],
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_more_game_entry"
+        ],
+        "post_wait_freezes": 200
+    },
+    "hundred_ninjia_more_game_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/more_game_entry.png",
+        "roi": [
+            953,
+            605,
+            145,
+            53
+        ],
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_icon"
+        ],
+        "post_wait_freezes": 200
+    },
+    "hundred_ninjia_icon": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/entry.png",
+        "roi": [
+            688,
+            159,
+            243,
+            450
+        ],
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_match"
+        ],
+        "post_wait_freezes": 200
+    },
+    "hundred_ninjia_match": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/match.png",
+        "roi": [
+            1169,
+            602,
+            75,
+            66
+        ],
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_selcet_ninjia"
+        ],
+        "post_delay": 26000
+    },
+    "hundred_ninjia_selcet_ninjia": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/select_ninjia_masked.png",
+        "roi": [
+            82,
+            406,
+            1120,
+            213
+        ],
+        "threshold": [
+            0.6
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_confirm_selcet_ninjia"
+        ]
+    },
+    "hundred_ninjia_confirm_selcet_ninjia": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/confrim_ninjia.png",
+        "roi": [
+            538,
+            634,
+            197,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_check_fight"
+        ],
+        "interrupt": [
+            "wait_5_second"
+        ]
+    },
+    "hundred_ninjia_check_fight": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/fight.png",
+        "roi": [
+            1106,
+            561,
+            66,
+            64
+        ],
+        "next": [
+            "hundred_ninjia_check_no_fight"
+        ],
+        "interrupt": [
+            "hundred_ninjia_check_fight",
+            "wait_5_second"
+        ]
+    },
+    "wait_5_second": {
+        "post_delay": 5000
+    },
+    "hundred_ninjia_check_no_fight": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/fight.png",
+        "roi": [
+            1106,
+            561,
+            66,
+            64
+        ],
+        "inverse": true,
+        "next": [
+            "hundred_ninjia_confirm_game_over"
+        ],
+        "interrupt": [
+            "wait_5_second"
+        ]
+    },
+    "hundred_ninjia_confirm_game_over": {
+        "recognition": "TemplateMatch",
+        "template": "Hundred_ninjia/confrim_gg.png",
+        "roi": [
+            650,
+            613,
+            200,
+            69
+        ],
+        "action": "Click",
+        "next": [
+            "hundred_ninjia_match"
+        ],
+        "post_delay": 4000
+    }
+}
