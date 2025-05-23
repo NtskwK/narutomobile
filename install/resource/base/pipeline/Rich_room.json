@@ -80,6 +80,9 @@
     "fighting": {
         "next": [
             "click_skill1"
+        ],
+        "interrupt": [
+            "peace"
         ]
     },
     "clicker_skill1": {

@@ -152,7 +152,10 @@
     },
     "mission_office_relation_mission": {
         "recognition": "TemplateMatch",
-        "template": "Mission_office/relation_mission_undone_masked.png",
+        "template": [
+            "Mission_office/teacher_mission_undone_masked.png",
+            "Mission_office/relation_mission_undone_masked.png"
+        ],
         "roi": [
             517,
             197,

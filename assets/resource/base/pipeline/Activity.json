@@ -81,13 +81,14 @@
     "mouthly_sign_undone": {
         "recognition": "TemplateMatch",
         "template": [
+            "Activity/monthly_sign_undone.png",
             "Activity/monthly_sign_undone_activity.png"
         ],
         "roi": [
             0,
-            345,
-            174,
-            155
+            197,
+            176,
+            523
         ],
         "threshold": 0.95,
         "action": "Click",
@@ -99,13 +100,14 @@
     "mouthly_sign_done": {
         "recognition": "TemplateMatch",
         "template": [
+            "Activity/monthly_sign_done.png",
             "Activity/monthly_sign_done_activity.png"
         ],
         "roi": [
             0,
-            345,
-            174,
-            155
+            197,
+            176,
+            523
         ],
         "threshold": 0.95,
         "next": [
