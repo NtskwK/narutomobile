@@ -2,10 +2,6 @@
     "team_dash": {
         "next": [
             "team_dash_entry"
-        ],
-        "interrupt": [
-            "swipe_for_right_entries",
-            "back_main_screen"
         ]
     },
     "team_dash_entry": {
@@ -21,6 +17,7 @@
     "team_dash_done": {
         "recognition": "TemplateMatch",
         "template": "Team_dash/team_dash_done_night.png",
+        "green_mask": true,
         "threshold": 0.9,
         "next": [
             "back_main_screen_and_stop"
@@ -29,9 +26,9 @@
     "team_dash_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Team_dash/team_dash_undone_night.png",
             "Team_dash/team_dash_undone_day.png"
         ],
+        "green_mask": true,
         "threshold": 0.9,
         "action": "Click",
         "next": [

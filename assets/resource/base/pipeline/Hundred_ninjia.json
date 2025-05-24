@@ -19,6 +19,7 @@
             1093,
             151
         ],
+        "green_mask": true,
         "action": "Click",
         "next": [
             "hundred_ninjia_more_game_entry"

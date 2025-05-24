@@ -1,8 +1,8 @@
 {
     "mission_office": {
         "next": [
-            "mission_office_done",
-            "mission_office_undone"
+            "mission_office_undone",
+            "mission_office_done"
         ],
         "interrupt": [
             "swipe_for_left_entries",
@@ -12,20 +12,20 @@
     "mission_office_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "Mission_office/mission_office_done_day.png",
-            "Mission_office/mission_office_done_night.png"
+            "Mission_office/mission_office_done.png"
         ],
-        "threshold": 0.97,
+        "green_mask": true,
+        "threshold": 0.9,
         "post_wait_freezes": 500,
         "action": "StopTask"
     },
     "mission_office_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Mission_office/mission_office_undone_day.png",
             "Mission_office/mission_office_undone_night.png"
         ],
-        "threshold": 0.97,
+        "threshold": 0.9,
+        "green_mask": true,
         "next": [
             "check_no_mission_office_award"
         ],

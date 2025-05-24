@@ -12,6 +12,7 @@
         "recognition": "TemplateMatch",
         "template": "Leaderboard/practice_place.png",
         "threshold": 0.9,
+        "green_mask": true,
         "action": "Swipe",
         "begin": [
             150,
@@ -29,16 +30,10 @@
     "leaderboard_entry": {
         "recognition": "TemplateMatch",
         "template": [
-            "Leaderboard/board.png",
-            "Leaderboard/board_day.png"
+            "Leaderboard/board.png"
         ],
-        "threshold": 0.2,
-        "roi": [
-            213,
-            150,
-            42,
-            85
-        ],
+        "threshold": 0.9,
+        "green_mask": true,
         "action": "Click",
         "next": [
             "click_thumb"

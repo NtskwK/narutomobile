@@ -20,9 +20,10 @@
     "point_race_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "NULL.png"
+            "Point_race/point_race_done.png"
         ],
-        "threshold": 0.98,
+        "green_mask": true,
+        "threshold": 0.9,
         "action": "Click",
         "next": [
             "check_main_screen_and_stop"
@@ -31,10 +32,10 @@
     "point_race_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Point_race/point_race_undone.png",
-            "Point_race/point_race_undone_day.png"
+            "Point_race/point_race_undone.png"
         ],
-        "threshold": 0.5,
+        "green_mask": true,
+        "threshold": 0.9,
         "action": "Click",
         "next": [
             "get_point_race_award"

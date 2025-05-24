@@ -20,10 +20,10 @@
     "rich_room_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "Rich_room/rich_room_done_night.png",
-            "Rich_room/rich_room_done_day.png"
+            "Rich_room/rich_room_done_night.png"
         ],
-        "threshold": 0.9,
+        "green_mask": true,
+        "threshold": 0.92,
         "next": [
             "back_main_screen_and_stop"
         ]
@@ -31,10 +31,10 @@
     "rich_room_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Rich_room/rich_room_undone_night.png",
-            "Rich_room/rich_room_undone_day.png"
+            "Rich_room/rich_room_undone_night.png"
         ],
-        "threshold": 0.9,
+        "green_mask": true,
+        "threshold": 0.92,
         "action": "Click",
         "next": [
             "challenge_rich_room"
@@ -55,6 +55,7 @@
         "template": [
             "Rich_room/ninja_drama.png"
         ],
+        "green_mask": true,
         "action": "Swipe",
         "begin": [
             850,

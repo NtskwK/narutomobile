@@ -104,11 +104,11 @@
         ],
         "interrupt": [
             "weekly_sign",
+            "keep_close_x",
             "close_home_page_mini_program",
             "close_chat",
             "close_new_ninjia_page",
             "close_qq_friend_share",
-            "keep_close_x",
             "unagreement",
             "agreement",
             "start_game"
@@ -131,11 +131,11 @@
         ],
         "interrupt": [
             "weekly_sign",
+            "keep_close_x",
             "close_home_page_mini_program",
             "close_chat",
             "close_new_ninjia_page",
             "close_qq_friend_share",
-            "keep_close_x",
             "unagreement",
             "agreement",
             "start_game"

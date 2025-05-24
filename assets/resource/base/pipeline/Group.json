@@ -11,8 +11,7 @@
     "group_entry": {
         "recognition": "TemplateMatch",
         "template": [
-            "Group/group.png",
-            "Group/group_day.png"
+            "Group/group.png"
         ],
         "threshold": 0.9,
         "action": "Click",
@@ -23,6 +22,7 @@
         "interrupt": [
             "back_main_screen_and_stop"
         ],
+        "green_mask": true,
         "pre_wait_freezes": 500,
         "post_delay": 1500
     },
@@ -422,7 +422,8 @@
     },
     "pursuit_dawn_organization_entry": {
         "recognition": "TemplateMatch",
-        "template": "Group/dawn_organization_entry_group.png",
+        "template": "Group/group.png",
+        "green_mask": true,
         "action": "Click",
         "next": [
             "pursuit_dawn_organization_entry_button"
