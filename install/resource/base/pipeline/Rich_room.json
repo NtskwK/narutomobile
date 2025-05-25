@@ -72,6 +72,19 @@
             50
         ]
     },
+    "peace": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Rich_room/normal_attack.png",
+            "Rich_room/normal_attack_1.png"
+        ],
+        "action": "Swipe",
+        "threshold": 0.5,
+        "inverse": true,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
+    },
     "fight": {
         "next": [
             "peace"
@@ -126,7 +139,7 @@
             "clicker_normal_attack"
         ],
         "interrupt": [
-            " peace"
+            "peace"
         ]
     },
     "clicker_normal_attack": {
@@ -146,19 +159,6 @@
         "duration": 15000,
         "next": [
             "clicker_skill1"
-        ]
-    },
-    "peace": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Rich_room/normal_attack.png",
-            "Rich_room/normal_attack_1.png"
-        ],
-        "action": "Swipe",
-        "threshold": 0.5,
-        "inverse": true,
-        "next": [
-            "back_main_screen_and_stop"
         ]
     },
     "click_skill1": {
