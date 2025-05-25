@@ -46,9 +46,11 @@
         "template": "Rich_room/challenge.png",
         "action": "Click",
         "next": [
-            "fight"
+            "fighting"
         ],
-        "post_wait_freezes": 1000
+        "interrupt": [
+            "challenge_rich_room"
+        ]
     },
     "swipe_for_right_entries": {
         "recognition": "TemplateMatch",
@@ -122,6 +124,9 @@
         "duration": 200,
         "next": [
             "clicker_normal_attack"
+        ],
+        "interrupt": [
+            " peace"
         ]
     },
     "clicker_normal_attack": {
