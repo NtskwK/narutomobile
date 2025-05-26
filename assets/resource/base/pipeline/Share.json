@@ -31,6 +31,7 @@
             "try_share"
         ],
         "interrupt": [
+            "close_weekly_ninjia_title",
             "share_entry",
             "share_to_qq_friend"
         ],
@@ -75,6 +76,9 @@
         ],
         "next": [
             "close_qq_friend_share"
+        ],
+        "interrupt": [
+            "close_weekly_ninjia_title"
         ],
         "action": "Click",
         "pre_wait_freezes": 200,
@@ -122,6 +126,9 @@
             629,
             203,
             80
+        ],
+        "next": [
+            "try_share"
         ],
         "action": "Click"
     },
