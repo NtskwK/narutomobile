@@ -52,3 +52,206 @@
 [2025-05-01 23:39:41.955][DBG][Px7244][Tx24646][Logger] ----------------------------- 
 [2025-05-01 23:39:41.955][DBG][Px7244][Tx24646][Logger] Close log 
 [2025-05-01 23:39:41.955][DBG][Px7244][Tx24646][Logger] ----------------------------- 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] ----------------------------- 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] MAA Process Start 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] Version v4.1.0 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] Built at Apr 23 2025 11:53:35 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] Windows x64 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] Working D:/file/project/NM/narutomobile/install 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] Logging D:/file/project/NM/narutomobile/install/debug/maa.log 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Logger] ----------------------------- 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L33][MaaNS::GlobalOptionMgr::set_log_dir] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 1ms 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=2] [value=00007FF9E5DDA079] [val_size=1] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=2] [value=00007FF9E5DDA079] [val_size=1] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L47][MaaNS::GlobalOptionMgr::set_save_draw] | enter 
+[2025-05-26 20:17:30.562][INF][Px11984][Tx36760][GlobalOptionMgr.cpp][L56][MaaNS::GlobalOptionMgr::set_save_draw] Set save draw [save_draw_=false] 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L47][MaaNS::GlobalOptionMgr::set_save_draw] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=3] [value=00007FF9E5DDA07A] [val_size=1] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=3] [value=00007FF9E5DDA07A] [val_size=1] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L79][MaaNS::GlobalOptionMgr::set_recording] | enter 
+[2025-05-26 20:17:30.562][INF][Px11984][Tx36760][GlobalOptionMgr.cpp][L88][MaaNS::GlobalOptionMgr::set_recording] Set recording [recording_=false] 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L79][MaaNS::GlobalOptionMgr::set_recording] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=4] [value=00007FF9E5DDA07C] [val_size=4] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=4] [value=00007FF9E5DDA07C] [val_size=4] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L95][MaaNS::GlobalOptionMgr::set_stdout_level] | enter 
+[2025-05-26 20:17:30.562][INF][Px11984][Tx36760][GlobalOptionMgr.cpp][L104][MaaNS::GlobalOptionMgr::set_stdout_level] Set log stdout level [level=2] 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L95][MaaNS::GlobalOptionMgr::set_stdout_level] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] [key=5] [value=00007FF9E5DDA080] [val_size=1] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] [key=5] [value=00007FF9E5DDA080] [val_size=1] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionMgr.cpp][L63][MaaNS::GlobalOptionMgr::set_show_hit_draw] | enter 
+[2025-05-26 20:17:30.562][INF][Px11984][Tx36760][GlobalOptionMgr.cpp][L72][MaaNS::GlobalOptionMgr::set_show_hit_draw] Set show_hit_draw [show_hit_draw_=false] 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L63][MaaNS::GlobalOptionMgr::set_show_hit_draw] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionMgr.cpp][L10][MaaNS::GlobalOptionMgr::set_option] | leave, 0ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][MaaFramework.cpp][L159][MaaSetGlobalOption] | leave, 0ms 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][GlobalOptionConfig.cpp][L83][MaaNS::ToolkitNS::GlobalOptionConfig::apply_option] [bret=true] 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionConfig.cpp][L67][MaaNS::ToolkitNS::GlobalOptionConfig::apply_option] | leave, 1ms 
+[2025-05-26 20:17:30.562][TRC][Px11984][Tx36760][GlobalOptionConfig.cpp][L17][MaaNS::ToolkitNS::GlobalOptionConfig::init] | leave, 2ms 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][interactor.cpp][L121][Interactor::Interactor] [user_path_=D:/file/project/NM/narutomobile/install] 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][interactor.cpp][L126][Interactor::load] [resource_path=D:/file/project/NM/narutomobile/install] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Configurator.cpp][L14][MaaNS::ProjectInterfaceNS::Configurator::load] [resource_dir=D:/file/project/NM/narutomobile/install] [user_dir=D:/file/project/NM/narutomobile/install] | enter 
+[2025-05-26 20:17:30.562][DBG][Px11984][Tx36760][Parser.cpp][L12][MaaNS::ProjectInterfaceNS::Parser::parse_interface] [path=D:/file/project/NM/narutomobile/install/interface.json] | enter 
+[2025-05-26 20:17:30.563][INF][Px11984][Tx36760][Parser.cpp][L56][MaaNS::ProjectInterfaceNS::Parser::parse_interface] Interface Version: [data.version=v0.0.1] 
+[2025-05-26 20:17:30.563][TRC][Px11984][Tx36760][Parser.cpp][L12][MaaNS::ProjectInterfaceNS::Parser::parse_interface] | leave, 0ms 
+[2025-05-26 20:17:30.563][DBG][Px11984][Tx36760][Parser.cpp][L62][MaaNS::ProjectInterfaceNS::Parser::parse_config] [path=D:/file/project/NM/narutomobile/install/config/maa_pi_config.json] | enter 
+[2025-05-26 20:17:30.563][DBG][Px11984][Tx36760][Parser.cpp][L76][MaaNS::ProjectInterfaceNS::Parser::parse_config] [json={
+    "adb": {
+        "adb_path": "D:/soft/mumu模拟器/MuMu Player 12/shell/adb.exe",
+        "address": "127.0.0.1:16384",
+        "config": {
+            "extras": {
+                "mumu": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "D:/soft/mumu模拟器/MuMu Player 12"
+                }
+            }
+        }
+    },
+    "controller": {
+        "name": "安卓端"
+    },
+    "gpu": -1,
+    "resource": "官服",
+    "task": [
+        {
+            "name": "进入火影",
+            "option": [
+                {
+                    "name": "等待加载时间选择",
+                    "value": "加载时间25s"
+                },
+                {
+                    "name": "账号属性",
+                    "value": "安卓QQ"
+                }
+            ]
+        },
+        {
+            "name": "开始游戏",
+            "option": [
+            ]
+        },
+        {
+            "name": "轻松助手",
+            "option": [
+            ]
+        },
+        {
+            "name": "招财",
+            "option": [
+            ]
+        },
+        {
+            "name": "排行榜",
+            "option": [
+            ]
+        },
+        {
+            "name": "送体力",
+            "option": [
+            ]
+        },
+        {
+            "name": "每日分享",
+            "option": [
+            ]
+        },
+        {
+            "name": "火影情报社",
+            "option": [
+            ]
+        },
+        {
+            "name": "组织",
+            "option": [
+            ]
+        },
+        {
+            "name": "邮箱",
+            "option": [
+            ]
+        },
+        {
+            "name": "积分赛",
+            "option": [
+            ]
+        },
+        {
+            "name": "试炼",
+            "option": [
+                {
+                    "name": "不做修行",
+                    "value": "做修行"
+                },
+                {
+                    "name": "等待生存扫荡时间选择",
+                    "value": "等待30秒"
+                }
+            ]
+        },
+        {
+            "name": "丰饶",
+            "option": [
+            ]
+        },
+        {
+            "name": "小队突袭",
+            "option": [
+                {
+                    "name": "等待自动战斗时间选择",
+                    "value": "等待45秒"
+                }
+            ]
+        },
+        {
+            "name": "免费招募",
+            "option": [
+            ]
+        },
+        {
+            "name": "月签到和活动",
+            "option": [
+            ]
+        },
+        {
+            "name": "任务集会所(beta,目前只能处理ABC和单人任务)",
+            "option": [
+            ]
+        },
+        {
+            "name": "刷体力(beta,目前只能刷忍者碎片)",
+            "option": [
+            ]
+        },
+        {
+            "name": "忍法帖",
+            "option": [
+            ]
+        },
+        {
+            "name": "活跃宝箱(beta,有概率失败)",
+            "option": [
+            ]
+        }
+    ],
+    "win32": {
+        "_placeholder": 0
+    }
+}] | enter 
+[2025-05-26 20:17:30.563][TRC][Px11984][Tx36760][Parser.cpp][L76][MaaNS::ProjectInterfaceNS::Parser::parse_config] | leave, 0ms 
+[2025-05-26 20:17:30.563][TRC][Px11984][Tx36760][Parser.cpp][L62][MaaNS::ProjectInterfaceNS::Parser::parse_config] | leave, 0ms 
+[2025-05-26 20:17:30.563][TRC][Px11984][Tx36760][Configurator.cpp][L14][MaaNS::ProjectInterfaceNS::Configurator::load] | leave, 0ms 
+[2025-05-26 20:17:30.563][DBG][Px11984][Tx36760][Configurator.cpp][L41][MaaNS::ProjectInterfaceNS::Configurator::check_configuration] | enter 
+[2025-05-26 20:17:30.563][TRC][Px11984][Tx36760][Configurator.cpp][L41][MaaNS::ProjectInterfaceNS::Configurator::check_configuration] | leave, 0ms 
+[2025-05-26 20:17:30.563][TRC][Px11984][Tx36760][interactor.cpp][L126][Interactor::load] | leave, 0ms 
+[2025-05-26 20:17:32.446][DBG][Px11984][Tx39941][Logger] ----------------------------- 
+[2025-05-26 20:17:32.446][DBG][Px11984][Tx39941][Logger] Close log 
+[2025-05-26 20:17:32.446][DBG][Px11984][Tx39941][Logger] ----------------------------- 
