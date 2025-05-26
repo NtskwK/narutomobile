@@ -1,4 +1,10 @@
 {
+    "name": "火影MAA",
+    "version": "v0.0.1",
+    "mirrorchyan_rid": "项目ID(从Mirror酱下载的必要字段)",
+    "mirrorchyan_multiplatform": false,
+    "url": "https://github.com/duorua/narutomobile",
+    "custom_title": "火影MAA[mirror酱显现]",
     "controller": [
         {
             "name": "安卓端",
@@ -25,50 +31,61 @@
         {
             "name": "进入火影",
             "entry": "start_up",
+            "check": true,
             "option": [
-                "等待加载时间选择",
+                "加载时间选择",
                 "账号属性"
             ]
         },
         {
             "name": "开始游戏",
-            "entry": "start_game"
+            "entry": "start_game",
+            "check": true
         },
         {
             "name": "轻松助手",
-            "entry": "easy_helper"
+            "entry": "easy_helper",
+            "check": true
         },
         {
             "name": "招财",
-            "entry": "get_chopper"
+            "entry": "get_chopper",
+            "check": true
         },
         {
             "name": "排行榜",
-            "entry": "leaderboard"
+            "entry": "leaderboard",
+            "check": true
         },
         {
             "name": "送体力",
-            "entry": "give_energy"
+            "entry": "give_energy",
+            "check": true
         },
         {
             "name": "每日分享",
-            "entry": "share"
+            "entry": "share",
+            "check": true
         },
         {
             "name": "火影情报社",
-            "entry": "naruto_club"
+            "entry": "naruto_club",
+            "check": true
         },
         {
             "name": "组织",
-            "entry": "group"
+            "entry": "group",
+            "check": true
         },
         {
             "name": "邮箱",
-            "entry": "mail"
+            "entry": "mail",
+            "check": true
         },
         {
             "name": "积分赛",
-            "entry": "point_race"
+            "entry": "point_race",
+            "check": true
         },
         {
             "name": "试炼",
@@ -76,42 +93,51 @@
             "option": [
                 "不做修行",
                 "等待生存扫荡时间选择"
-            ]
+            ],
+            "check": true
         },
         {
             "name": "丰饶",
-            "entry": "rich_room"
+            "entry": "rich_room",
+            "check": true
         },
         {
             "name": "小队突袭",
             "entry": "team_dash",
             "option": [
                 "等待自动战斗时间选择"
-            ]
-        },
-        {
-            "name": "免费招募",
-            "entry": "headhunt"
-        },
-        {
-            "name": "月签到和活动",
-            "entry": "activity"
-        },
-        {
-            "name": "任务集会所(beta,目前只能处理ABC和单人任务)",
-            "entry": "mission_office"
-        },
-        {
-            "name": "刷体力(beta,目前只能刷忍者碎片)",
-            "entry": "use_energy"
+            ],
+            "check": true
         },
         {
             "name": "忍法帖",
-            "entry": "ninjia_book"
+            "entry": "ninjia_book",
+            "check": true
         },
         {
-            "name": "活跃宝箱(beta,有概率失败)",
-            "entry": "liveness_award"
+            "name": "免费招募",
+            "entry": "headhunt",
+            "check": true
+        },
+        {
+            "name": "月签到和活动",
+            "entry": "activity",
+            "check": true
+        },
+        {
+            "name": "任务集会所(beta)",
+            "entry": "mission_office",
+            "check": true
+        },
+        {
+            "name": "刷体力(beta)",
+            "entry": "use_energy",
+            "check": true
+        },
+        {
+            "name": "活跃宝箱(beta)",
+            "entry": "liveness_award",
+            "check": true
         },
         {
             "name": "百忍大战",
@@ -119,20 +145,15 @@
         }
     ],
     "option": {
-        "等待加载时间选择": {
+        "加载时间选择": {
             "cases": [
-                {
-                    "name": "加载时间25s",
-                    "pipeline_override": {
-                        "click_icon": {
-                            "post_delay": 25000
-                        }
-                    }
-                },
                 {
                     "name": "加载时间20s",
                     "pipeline_override": {
                         "click_icon": {
+                            "post_delay": 20000
+                        },
+                        "start_naruto": {
                             "post_delay": 20000
                         }
                     }
@@ -142,6 +163,9 @@
                     "pipeline_override": {
                         "click_icon": {
                             "post_delay": 10000
+                        },
+                        "start_naruto": {
+                            "post_delay": 10000
                         }
                     }
                 },
@@ -149,6 +173,9 @@
                     "name": "加载时间30s",
                     "pipeline_override": {
                         "click_icon": {
+                            "post_delay": 30000
+                        },
+                        "start_naruto": {
                             "post_delay": 30000
                         }
                     }
@@ -160,6 +187,9 @@
                 {
                     "name": "安卓QQ",
                     "pipeline_override": {
+                        "start_naruto": {
+                            "package": "com.tencent.KiHan"
+                        },
                         "account_type": {
                             "next": "android_qq"
                         },
@@ -167,7 +197,13 @@
                             "next": "share_to_qq_friend"
                         },
                         "naruto_club_entry": {
-                            "next": "click_qq_icon"
+                            "next": "start_qq"
+                        },
+                        "shut_qq": {
+                            "package": "com.tencent.mobileqq"
+                        },
+                        "shut_wechat": {
+                            "package": "com.tencent.mm"
                         }
                     }
                 }
@@ -258,6 +294,5 @@
                 }
             ]
         }
-    },
-    "version": "v0.0.1"
+    }
 }
