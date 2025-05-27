@@ -112,10 +112,7 @@
             "close_home_page_mini_program",
             "close_chat",
             "close_new_ninjia_page",
-            "close_qq_friend_share",
-            "unagreement",
-            "agreement",
-            "start_game"
+            "close_qq_friend_share"
         ]
     },
     "close_weekly_ninjia_title": {
@@ -142,10 +139,7 @@
             "close_home_page_mini_program",
             "close_chat",
             "close_new_ninjia_page",
-            "close_qq_friend_share",
-            "unagreement",
-            "agreement",
-            "start_game"
+            "close_qq_friend_share"
         ]
     },
     "close_chat": {

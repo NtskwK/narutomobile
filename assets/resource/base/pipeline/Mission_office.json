@@ -172,7 +172,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_relation_mission"
+            "select_ninjia_for_relation_mission_by_frame"
         ],
         "post_wait_freezes": 500
     },
@@ -265,7 +265,7 @@
             417
         ],
         "green_mask": true,
-        "threshold": 0.7,
+        "order_by": "Score",
         "action": "Click",
         "next": [
             "take_mission_office_mission_covered",
@@ -301,7 +301,60 @@
         "action": "Click",
         "next": [
             "select_other_b_for_relation_mission"
+        ],
+        "interrupt": [
+            "left_swipe_for_relation_ninjia"
         ]
+    },
+    "left_swipe_for_relation_ninjia": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/take_mission.png",
+        "roi": [
+            1109,
+            580,
+            110,
+            96
+        ],
+        "action": "Swipe",
+        "begin": [
+            1158,
+            249,
+            61,
+            121
+        ],
+        "end": [
+            880,
+            262,
+            89,
+            99
+        ],
+        "duration": 200,
+        "post_wait_freezes": 500
+    },
+    "right_swipe_for_relation_ninjia": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/take_mission.png",
+        "roi": [
+            1109,
+            580,
+            110,
+            96
+        ],
+        "action": "Swipe",
+        "begin": [
+            880,
+            262,
+            89,
+            99
+        ],
+        "end": [
+            1158,
+            249,
+            61,
+            121
+        ],
+        "duration": 200,
+        "post_wait_freezes": 500
     },
     "select_other_b_for_relation_mission": {
         "recognition": "TemplateMatch",
@@ -317,6 +370,9 @@
         "order_by": "Vertical",
         "next": [
             "select_relation_ninjia_for_mission"
+        ],
+        "interrupt": [
+            "left_swipe_for_relation_ninjia"
         ],
         "post_wait_freezes": 200
     },
@@ -339,7 +395,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_3_man_mission"
+            "select_ninjia_for_mission_by_frame"
         ],
         "post_wait_freezes": 500
     },
@@ -372,7 +428,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_3_man_mission"
+            "select_ninjia_for_mission_by_frame"
         ],
         "post_wait_freezes": 500
     },
@@ -395,7 +451,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "take_mission_office_3_man_mission"
+            "select_ninjia_for_mission_by_frame"
         ],
         "post_wait_freezes": 500
     },
@@ -418,7 +474,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "tack_mission_office_solo_mission"
+            "select_ninjia_for_solo_mission_by_frame"
         ],
         "post_wait_freezes": 500
     },
@@ -721,6 +777,42 @@
             431,
             414
         ],
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_ninjia_for_relation_mission_by_frame": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/ninjia_frame_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "select_relation_ninjia_for_mission"
+        ],
+        "post_wait_freezes": 200
+    },
+    "select_ninjia_for_solo_mission_by_frame": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/ninjia_frame_masked.png",
+        "roi": [
+            824,
+            94,
+            431,
+            414
+        ],
+        "order_by": "Vertical",
+        "index": 0,
         "action": "Click",
         "green_mask": true,
         "next": [

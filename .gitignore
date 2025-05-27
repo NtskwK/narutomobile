@@ -449,3 +449,8 @@ tools/ImageCropper/**/*.png
 
 config
 debug
+debug/maa.log
+install/debug/maa.log
+install/debug/maa.log
+/install/debug
+/debug
