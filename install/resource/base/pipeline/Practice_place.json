@@ -37,7 +37,7 @@
             "train_road",
             "survival_challenge"
         ],
-        "post_wait_freezes": 500
+        "post_delay": 300
     },
     "train_road": {
         "recognition": "TemplateMatch",

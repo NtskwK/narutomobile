@@ -26,9 +26,25 @@
         ],
         "action": "Click",
         "next": [
+            "check_surf_post"
+        ],
+        "interrupt": [
             "surf_post"
         ],
-        "post_wait_freezes": 3000
+        "post_delay": 300
+    },
+    "check_surf_post": {
+        "recognition": "TemplateMatch",
+        "template": "Naruto_club/entry_post.png",
+        "roi": [
+            730,
+            0,
+            118,
+            58
+        ],
+        "next": [
+            "club_like_mission"
+        ]
     },
     "surf_post": {
         "recognition": "TemplateMatch",
@@ -40,9 +56,6 @@
             94
         ],
         "action": "Click",
-        "next": [
-            "club_like_mission"
-        ],
         "post_wait_freezes": 500
     },
     "club_like_mission": {

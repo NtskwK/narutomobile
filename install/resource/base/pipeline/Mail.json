@@ -28,7 +28,10 @@
     },
     "open_mail": {
         "recognition": "TemplateMatch",
-        "template": "Mail/mail_wait.png",
+        "template": [
+            "Mail/mail_wait.png",
+            "Mail/lingqi.png"
+        ],
         "threshold": 0.9,
         "action": "Click",
         "next": [

@@ -19,24 +19,6 @@
     "resource": "官服",
     "task": [
         {
-            "name": "进入火影",
-            "option": [
-                {
-                    "name": "加载时间选择",
-                    "value": "加载时间20s"
-                },
-                {
-                    "name": "账号属性",
-                    "value": "安卓QQ"
-                }
-            ]
-        },
-        {
-            "name": "开始游戏",
-            "option": [
-            ]
-        },
-        {
             "name": "轻松助手",
             "option": [
             ]

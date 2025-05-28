@@ -23,7 +23,6 @@
             "back_main_screen_and_stop"
         ],
         "green_mask": true,
-        "pre_wait_freezes": 500,
         "post_delay": 1500
     },
     "group_gameplay_undone": {
