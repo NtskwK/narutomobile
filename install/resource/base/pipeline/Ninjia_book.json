@@ -43,7 +43,7 @@
         "next": [
             "ninjia_book_share"
         ],
-        "post_delay": 300
+        "post_wait_freezes": 300
     },
     "ninjia_book_share": {
         "recognition": "TemplateMatch",

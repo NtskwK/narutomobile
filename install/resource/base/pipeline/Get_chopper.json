@@ -23,7 +23,7 @@
         "interrupt": [
             "check_chopper_done"
         ],
-        "post_delay": 300
+        "post_delay": 700
     },
     "start_chooper": {
         "recognition": "OCR",
