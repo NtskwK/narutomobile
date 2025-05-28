@@ -31,7 +31,7 @@
         "interrupt": [
             "surf_post"
         ],
-        "post_delay": 300
+        "post_wait_freezes": 300
     },
     "check_surf_post": {
         "recognition": "TemplateMatch",

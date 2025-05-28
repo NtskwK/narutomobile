@@ -38,7 +38,7 @@
         "next": [
             "click_thumb"
         ],
-        "post_delay": 300
+        "post_wait_freezes": 300
     },
     "click_thumb": {
         "recognition": "TemplateMatch",

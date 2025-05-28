@@ -24,7 +24,7 @@
         "next": [
             "sent_energy"
         ],
-        "post_delay": 300
+        "post_delay": 700
     },
     "give_energy_done": {
         "recognition": "TemplateMatch",

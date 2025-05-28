@@ -30,7 +30,7 @@
         "interrupt": [
             "get_liveness_award"
         ],
-        "post_delay": 300
+        "post_wait_freezes": 300
     },
     "liveness_award_done": {
         "recognition": "TemplateMatch",

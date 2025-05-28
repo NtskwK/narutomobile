@@ -27,7 +27,7 @@
         "next": [
             "easy_helper_one_key"
         ],
-        "post_delay": 300
+        "post_delay": 700
     },
     "easy_helper_done": {
         "recognition": "TemplateMatch",
