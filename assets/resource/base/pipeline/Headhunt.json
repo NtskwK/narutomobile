@@ -21,7 +21,8 @@
             "no_free_headhunt",
             "free_headhunt_waiting"
         ],
-        "interrupt": []
+        "interrupt": [],
+        "post_delay": 300
     },
     "no_free_headhunt": {
         "recognition": "TemplateMatch",

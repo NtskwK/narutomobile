@@ -35,7 +35,7 @@
             "share_entry",
             "share_to_qq_friend"
         ],
-        "pre_wait_freezes": 500
+        "post_delay": 300
     },
     "try_share": {
         "recognition": "TemplateMatch",
@@ -184,7 +184,7 @@
         "next": [
             "keep_close_x"
         ],
-        "post_delay": 300
+        "post_delay": 500
     },
     "close_home_page_mini_program": {
         "recognition": "TemplateMatch",

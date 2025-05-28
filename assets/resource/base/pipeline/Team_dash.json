@@ -34,7 +34,7 @@
         "next": [
             "team_dash_group_help_undone"
         ],
-        "post_wait_freezes": 500
+        "post_delay": 300
     },
     "team_dash_group_help_undone": {
         "recognition": "TemplateMatch",

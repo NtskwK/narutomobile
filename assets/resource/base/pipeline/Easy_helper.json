@@ -26,7 +26,8 @@
         "action": "Click",
         "next": [
             "easy_helper_one_key"
-        ]
+        ],
+        "post_delay": 300
     },
     "easy_helper_done": {
         "recognition": "TemplateMatch",
