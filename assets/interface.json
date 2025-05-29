@@ -97,11 +97,6 @@
             "check": true
         },
         {
-            "name": "丰饶",
-            "entry": "rich_room",
-            "check": true
-        },
-        {
             "name": "小队突袭",
             "entry": "team_dash",
             "option": [
@@ -132,6 +127,11 @@
         {
             "name": "刷体力(beta)",
             "entry": "use_energy",
+            "check": true
+        },
+	{
+            "name": "丰饶",
+            "entry": "rich_room",
             "check": true
         },
         {

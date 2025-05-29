@@ -65,8 +65,8 @@
             "weekly_liveness_award_done"
         ],
         "inverse": true,
-        "post_wait_freezes": 500,
-        "threshold": 0.4
+        "threshold": 0.9,
+        "post_wait_freezes": 500
     },
     "get_liveness_award": {
         "recognition": "TemplateMatch",
@@ -99,7 +99,10 @@
         "next": [
             "confirm_weekly_liveness_award"
         ],
-        "post_wait_freezes": 100
+        "interrupt": [
+            "weekly_liveness_award_undone"
+        ],
+        "post_wait_freezes": 300
     },
     "confirm_weekly_liveness_award": {
         "recognition": "TemplateMatch",
