@@ -184,6 +184,9 @@
         "next": [
             "keep_close_x"
         ],
+        "interrupt": [
+            "close_headhunt_end_announcement"
+        ],
         "post_delay": 500
     },
     "close_home_page_mini_program": {
