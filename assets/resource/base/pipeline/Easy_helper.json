@@ -140,6 +140,9 @@
         "next": [
             "get_easy_helper_log_on_award"
         ],
+        "interrupt": [
+            "easy_helper_log_on_award_undone"
+        ],
         "post_wait_freezes": 100
     },
     "easy_helper_log_on_award_done": {
@@ -244,9 +247,26 @@
         "threshold": 0.85,
         "action": "Click",
         "next": [
-            "easy_helper_back_to_sweep"
+            "check_easy_helper_back_to_sweep"
         ],
         "interrupt": [
+            "easy_helper_back_to_sweep",
+            "easy_helper_celebrate_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "check_easy_helper_back_to_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/back_to_sweep.png",
+        "roi": [
+            29,
+            642,
+            159,
+            58
+        ],
+        "threshold": 0.85,
+        "inverse": true,
+        "next": [
             "easy_helper_celebrate_sweep"
         ],
         "post_wait_freezes": 100
@@ -335,20 +355,39 @@
         ],
         "action": "Click",
         "next": [
+            "check_easy_helper_back_to_team_dash_sweep"
+        ],
+        "interrupt": [
             "easy_helper_back_to_team_dash_sweep"
+        ],
+        "post_wait_freezes": 100
+    },
+    "check_easy_helper_back_to_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/team_dash_back_to_sweep.png",
+        "roi": [
+            29,
+            642,
+            148,
+            67
+        ],
+        "threshold": 0.9,
+        "inverse": true,
+        "next": [
+            "back_main_screen_and_stop"
         ],
         "post_wait_freezes": 100
     },
     "easy_helper_back_to_team_dash_sweep": {
         "recognition": "TemplateMatch",
-        "template": "Easy_helper/back_to_sweep.png",
+        "template": "Easy_helper/team_dash_back_to_sweep.png",
         "roi": [
             29,
             642,
-            159,
-            58
+            148,
+            67
         ],
-        "threshold": 0.35,
+        "threshold": 0.9,
         "action": "Click",
         "post_wait_freezes": 100
     }
