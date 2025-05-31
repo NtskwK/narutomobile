@@ -118,7 +118,6 @@
             42,
             50
         ],
-        "action": "Click",
         "threshold": 0.99999,
         "next": [
             "easy_helper_log_on_award_undone",
@@ -267,7 +266,11 @@
         "threshold": 0.85,
         "inverse": true,
         "next": [
-            "easy_helper_celebrate_sweep"
+            "easy_helper_celebrate_sweep",
+            "easy_helper_sweep"
+        ],
+        "interrupt": [
+            "easy_helper_team_dash_sweep"
         ],
         "post_wait_freezes": 100
     },
@@ -374,7 +377,7 @@
         "threshold": 0.9,
         "inverse": true,
         "next": [
-            "back_main_screen_and_stop"
+            "easy_helper_team_dash_sweep"
         ],
         "post_wait_freezes": 100
     },
