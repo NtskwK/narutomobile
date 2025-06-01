@@ -12,6 +12,7 @@
         ],
         "interrupt": [
             "close_teenager_page",
+            "close_before_game_notice",
             "unagreement",
             "agreement",
             "click_icon"
@@ -32,11 +33,52 @@
             "check_start_game"
         ],
         "interrupt": [
+            "close_before_game_notice",
             "unagreement",
             "agreement",
             "click_icon"
         ],
         "pre_wait_freezes": 500
+    },
+    "close_before_game_notice": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/x.png",
+        "roi": [
+            1010,
+            53,
+            93,
+            77
+        ],
+        "action": "Click",
+        "next": [
+            "check_close_before_game_notice"
+        ],
+        "interrupt": [
+            "close_before_game_notice"
+        ],
+        "post_delay": 500
+    },
+    "check_close_before_game_notice": {
+        "recognition": "TemplateMatch",
+        "template": "Startup/x.png",
+        "roi": [
+            1010,
+            53,
+            93,
+            77
+        ],
+        "action": "Click",
+        "inverse": true,
+        "next": [
+            "check_start_game"
+        ],
+        "interrupt": [
+            "close_teenager_page",
+            "unagreement",
+            "agreement",
+            "click_icon"
+        ],
+        "post_delay": 500
     },
     "click_icon": {
         "recognition": "TemplateMatch",
@@ -66,14 +108,24 @@
     "unagreement": {
         "recognition": "TemplateMatch",
         "template": "Startup/uncheck.png",
-        "threshold": 0.97,
+        "roi": [
+            70,
+            583,
+            72,
+            69
+        ],
         "action": "Click",
         "next": "account_type"
     },
     "agreement": {
         "recognition": "TemplateMatch",
         "template": "Startup/check.png",
-        "threshold": 0.97,
+        "roi": [
+            70,
+            583,
+            72,
+            69
+        ],
         "action": "DoNothing",
         "next": "account_type"
     },
@@ -105,7 +157,7 @@
         ],
         "action": "Click",
         "next": "agree_info",
-        "post_wait_freezes": 100
+        "post_delay": 500
     },
     "agree_info": {
         "recognition": "OCR",
@@ -121,12 +173,12 @@
             "check_start_game"
         ],
         "interrupt": [
+            "close_before_game_notice",
             "agreement",
             "restart_naruto",
             "click_icon"
         ],
-        "pre_wait_freezes": 100,
-        "post_wait_freezes": 2000
+        "post_delay": 1500
     },
     "restart_naruto": {
         "action": "StopApp",
