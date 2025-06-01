@@ -23,7 +23,7 @@
             "Point_race/point_race_done.png"
         ],
         "green_mask": true,
-        "threshold": 0.9,
+        "threshold": 0.8,
         "action": "Click",
         "next": [
             "check_main_screen_and_stop"
@@ -35,11 +35,12 @@
             "Point_race/point_race_undone.png"
         ],
         "green_mask": true,
-        "threshold": 0.9,
+        "threshold": 0.8,
         "action": "Click",
         "next": [
             "get_point_race_award"
-        ]
+        ],
+        "post_wait_freezes": 300
     },
     "get_point_race_award": {
         "recognition": "TemplateMatch",

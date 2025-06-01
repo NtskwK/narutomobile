@@ -32,7 +32,7 @@
         "template": [
             "Leaderboard/board.png"
         ],
-        "threshold": 0.9,
+        "threshold": 0.8,
         "green_mask": true,
         "action": "Click",
         "next": [

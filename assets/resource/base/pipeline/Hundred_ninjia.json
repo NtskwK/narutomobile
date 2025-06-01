@@ -24,7 +24,7 @@
         "next": [
             "hundred_ninjia_more_game_entry"
         ],
-        "post_delay": 300
+        "post_wait_freezes": 300
     },
     "hundred_ninjia_more_game_entry": {
         "recognition": "TemplateMatch",
