@@ -461,3 +461,5 @@ install/debug/maa.log
 install/debug/maa.log
 /install
 /install/debug
+/.nicegui
+/debug

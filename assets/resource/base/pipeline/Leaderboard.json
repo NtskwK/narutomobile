@@ -10,8 +10,11 @@
     },
     "swipe_for_left_entries": {
         "recognition": "TemplateMatch",
-        "template": "Leaderboard/practice_place.png",
-        "threshold": 0.9,
+        "template": [
+            "Leaderboard/practice_place.png",
+            "Leaderboard/practice_place_summer.png"
+        ],
+        "threshold": 0.8,
         "green_mask": true,
         "action": "Swipe",
         "begin": [
