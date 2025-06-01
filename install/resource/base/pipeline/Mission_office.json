@@ -12,7 +12,8 @@
     "mission_office_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "Mission_office/mission_office_done.png"
+            "Mission_office/mission_office_done.png",
+            "Mission_office/mission_office_done_summer.png"
         ],
         "green_mask": true,
         "threshold": 0.8,
@@ -22,7 +23,8 @@
     "mission_office_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Mission_office/mission_office_undone_night.png"
+            "Mission_office/mission_office_undone_night.png",
+            "Mission_office/mission_office_undone_summer.png"
         ],
         "threshold": 0.8,
         "green_mask": true,

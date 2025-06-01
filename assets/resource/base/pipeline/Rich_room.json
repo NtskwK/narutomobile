@@ -23,7 +23,7 @@
             "Rich_room/rich_room_done_night.png"
         ],
         "green_mask": true,
-        "threshold": 0.8,
+        "threshold": 0.5,
         "next": [
             "back_main_screen_and_stop"
         ]
@@ -34,7 +34,7 @@
             "Rich_room/rich_room_undone_night.png"
         ],
         "green_mask": true,
-        "threshold": 0.8,
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "challenge_rich_room"
@@ -55,6 +55,7 @@
     "swipe_for_right_entries": {
         "recognition": "TemplateMatch",
         "template": [
+            "Group/group.png",
             "Rich_room/ninja_drama.png"
         ],
         "green_mask": true,

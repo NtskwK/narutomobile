@@ -17,7 +17,8 @@
     "practice_place_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "Practice_place/practice_place_done_day.png"
+            "Practice_place/practice_place_done_day.png",
+            "Practice_place/practice_place_done_day_summer.png"
         ],
         "green_mask": true,
         "threshold": 0.8,
@@ -28,7 +29,8 @@
     "practice_place_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Practice_place/practice_place_undone_day.png"
+            "Practice_place/practice_place_undone_day.png",
+            "Practice_place/practice_place_undone_day_summer.png"
         ],
         "green_mask": true,
         "threshold": 0.8,
@@ -216,7 +218,8 @@
     "survival_challenge_undone": {
         "recognition": "TemplateMatch",
         "template": [
-            "Practice_place/practice_place_undone_day.png"
+            "Practice_place/practice_place_done_day.png",
+            "Practice_place/practice_place_done_day_summer.png"
         ],
         "green_mask": true,
         "threshold": 0.9,
