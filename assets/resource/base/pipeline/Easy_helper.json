@@ -27,6 +27,21 @@
         "next": [
             "easy_helper_one_key"
         ],
+        "interrupt": [
+            "easy_helper_daily"
+        ],
+        "post_delay": 700
+    },
+    "easy_helper_daily": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/daily.png",
+        "roi": [
+            423,
+            37,
+            61,
+            50
+        ],
+        "action": "Click",
         "post_delay": 700
     },
     "easy_helper_done": {
@@ -266,11 +281,11 @@
         "threshold": 0.85,
         "inverse": true,
         "next": [
-            "easy_helper_celebrate_sweep",
             "easy_helper_sweep"
         ],
         "interrupt": [
-            "easy_helper_team_dash_sweep"
+            "easy_helper_celebrate_sweep",
+            "easy_helper_back_to_sweep"
         ],
         "post_wait_freezes": 100
     },
@@ -287,6 +302,9 @@
         "action": "Click",
         "next": [
             "easy_helper_celebrate_sweep"
+        ],
+        "interrupt": [
+            "check_easy_helper_back_to_sweep"
         ],
         "post_wait_freezes": 100
     },
