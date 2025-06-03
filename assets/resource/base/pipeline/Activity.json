@@ -101,6 +101,7 @@
         "recognition": "TemplateMatch",
         "template": [
             "Activity/monthly_sign_done.png",
+            "Activity/monthly_sign_done_1.png",
             "Activity/monthly_sign_done_activity.png"
         ],
         "roi": [
