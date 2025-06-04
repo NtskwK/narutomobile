@@ -267,7 +267,7 @@
             "easy_helper_back_to_sweep",
             "easy_helper_celebrate_sweep"
         ],
-        "post_wait_freezes": 100
+        "post_wait_freezes": 500
     },
     "check_easy_helper_back_to_sweep": {
         "recognition": "TemplateMatch",
@@ -381,7 +381,7 @@
         "interrupt": [
             "easy_helper_back_to_team_dash_sweep"
         ],
-        "post_wait_freezes": 100
+        "post_wait_freezes": 500
     },
     "check_easy_helper_back_to_team_dash_sweep": {
         "recognition": "TemplateMatch",
