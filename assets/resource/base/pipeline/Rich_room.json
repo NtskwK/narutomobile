@@ -20,7 +20,8 @@
     "rich_room_done": {
         "recognition": "TemplateMatch",
         "template": [
-            "Rich_room/rich_room_done_night.png"
+            "Rich_room/rich_room_done_night.png",
+            "Rich_room/rich_room_done_day.png"
         ],
         "green_mask": true,
         "threshold": 0.5,

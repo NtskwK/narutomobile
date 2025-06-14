@@ -11,10 +11,10 @@
         "recognition": "TemplateMatch",
         "template": "Get_chopper/chopper.png",
         "roi": [
-            593,
-            21,
-            56,
-            42
+            562,
+            0,
+            247,
+            91
         ],
         "action": "Click",
         "next": [

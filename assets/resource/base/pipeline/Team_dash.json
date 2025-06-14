@@ -119,10 +119,10 @@
         "recognition": "TemplateMatch",
         "template": "Team_dash/team_dash_invite.png",
         "roi": [
-            352,
-            153,
-            93,
-            91
+            351,
+            150,
+            106,
+            486
         ],
         "action": "Click",
         "next": [
