@@ -173,6 +173,9 @@
         "next": [
             "check_main_screen"
         ],
+        "interrupt": [
+            "weekly_sign"
+        ],
         "post_delay": 700
     },
     "click_x": {

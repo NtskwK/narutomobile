@@ -11,6 +11,7 @@
             "check_start_game"
         ],
         "interrupt": [
+            "agree_log_in",
             "close_teenager_page",
             "close_before_game_notice",
             "unagreement",
@@ -33,6 +34,7 @@
             "check_start_game"
         ],
         "interrupt": [
+            "agree_log_in",
             "close_before_game_notice",
             "unagreement",
             "agreement",
@@ -73,6 +75,7 @@
             "check_start_game"
         ],
         "interrupt": [
+            "agree_log_in",
             "close_teenager_page",
             "unagreement",
             "agreement",
@@ -88,6 +91,7 @@
             "check_start_game"
         ],
         "interrupt": [
+            "agree_log_in",
             "unagreement",
             "agreement",
             "click_icon"

@@ -17,10 +17,10 @@
         "recognition": "TemplateMatch",
         "template": "Easy_helper/easy_helper_undone_masked.png",
         "roi": [
-            1120,
-            115,
-            53,
-            34
+            1066,
+            1,
+            145,
+            533
         ],
         "green_mask": true,
         "action": "Click",
@@ -48,10 +48,10 @@
         "recognition": "TemplateMatch",
         "template": "Easy_helper/easy_helper_done_masked.png",
         "roi": [
-            1115,
-            115,
-            58,
-            39
+            1066,
+            1,
+            145,
+            533
         ],
         "green_mask": true,
         "next": [
