@@ -1,11 +1,85 @@
 {
     "point_race": {
         "next": [
-            "point_race_entry"
+            "point_race_in_center_enter",
+            "point_race_ac_entry"
         ],
         "interrupt": [
             "swipe_for_left_entries",
             "back_main_screen"
+        ]
+    },
+    "point_race_in_center_enter": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "next": [
+            "point_race_ac_entry_undone",
+            "point_race_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "point_race_ac_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry.png",
+        "roi": [
+            1200,
+            348,
+            42,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "point_race_ac_entry_undone",
+            "point_race_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "point_race_ac_entry_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Point_race/point_race_ac_undone.png",
+        "roi": [
+            180,
+            288,
+            1100,
+            225
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "target_offset": [
+            12,
+            116,
+            -40,
+            -114
+        ],
+        "next": [
+            "get_point_race_award"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "point_race_ac_done": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry_end.png",
+        "roi": [
+            180,
+            384,
+            1100,
+            118
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top"
         ]
     },
     "point_race_entry": {

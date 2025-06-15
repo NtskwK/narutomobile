@@ -2,6 +2,9 @@
     "practice_place": {
         "next": [
             "practice_place_entry"
+        ],
+        "interrupt": [
+            "back_main_screen"
         ]
     },
     "practice_place_entry": {
@@ -29,6 +32,7 @@
     "practice_place_undone": {
         "recognition": "TemplateMatch",
         "template": [
+            "Practice_place/practice_place_done.png",
             "Practice_place/practice_place_undone_day.png",
             "Practice_place/practice_place_undone_day_summer.png"
         ],

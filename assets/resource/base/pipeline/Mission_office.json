@@ -1,12 +1,87 @@
 {
     "mission_office": {
         "next": [
-            "mission_office_undone",
-            "mission_office_done"
+            "mission_office_in_center_enter",
+            "mission_office_ac_entry"
         ],
         "interrupt": [
-            "swipe_for_left_entries",
             "back_main_screen"
+        ]
+    },
+    "mission_office_in_center_enter": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "next": [
+            "mission_office_ac_undone",
+            "mission_office_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "mission_office_ac_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry.png",
+        "roi": [
+            1200,
+            348,
+            42,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "mission_office_ac_undone",
+            "mission_office_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "mission_office_ac_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/misson_ac_undone.png",
+        "roi": [
+            180,
+            288,
+            1100,
+            225
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "target_offset": [
+            12,
+            116,
+            -40,
+            -114
+        ],
+        "next": [
+            "check_no_mission_office_award"
+        ],
+        "interrupt": [
+            "get_mission_office_award"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "mission_office_ac_done": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry_end.png",
+        "roi": [
+            180,
+            384,
+            1100,
+            118
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top"
         ]
     },
     "mission_office_done": {
@@ -176,6 +251,9 @@
         "next": [
             "select_ninjia_for_relation_mission_by_frame"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 500
     },
     "take_mission_office_relation_mission": {
@@ -273,6 +351,9 @@
             "take_mission_office_mission_covered",
             "take_mission_office_mission"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 200
     },
     "take_mission_office_mission_covered": {
@@ -288,6 +369,9 @@
         "action": "Click",
         "next": [
             "mission_office_unselect_ninjia_for_relation"
+        ],
+        "interrupt": [
+            "mission_office_get_mission"
         ]
     },
     "mission_office_unselect_ninjia_for_relation": {
@@ -367,6 +451,7 @@
             431,
             414
         ],
+        "threshold": 0.55,
         "action": "Click",
         "green_mask": true,
         "order_by": "Vertical",
@@ -432,6 +517,9 @@
         "next": [
             "select_ninjia_for_mission_by_frame"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 500
     },
     "mission_office_c_mission": {
@@ -455,6 +543,9 @@
         "next": [
             "select_ninjia_for_mission_by_frame"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 500
     },
     "mission_office_solo_mission": {
@@ -477,6 +568,9 @@
         "green_mask": true,
         "next": [
             "select_ninjia_for_solo_mission_by_frame"
+        ],
+        "interrupt": [
+            "mission_office_get_mission"
         ],
         "post_wait_freezes": 500
     },
@@ -802,6 +896,9 @@
         "next": [
             "select_relation_ninjia_for_mission"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 200
     },
     "select_ninjia_for_solo_mission_by_frame": {
@@ -819,6 +916,9 @@
         "green_mask": true,
         "next": [
             "take_mission_office_mission"
+        ],
+        "interrupt": [
+            "mission_office_get_mission"
         ],
         "post_wait_freezes": 200
     },
@@ -838,6 +938,9 @@
         "next": [
             "select_ninjia_for_mission_by_frame_1"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 200
     },
     "select_ninjia_for_mission_by_frame_1": {
@@ -855,6 +958,9 @@
         "index": 1,
         "next": [
             "select_ninjia_for_mission_by_frame_2"
+        ],
+        "interrupt": [
+            "mission_office_get_mission"
         ],
         "post_wait_freezes": 200
     },
@@ -874,16 +980,19 @@
         "next": [
             "take_mission_office_mission"
         ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
         "post_wait_freezes": 200
     },
     "take_mission_office_mission": {
         "recognition": "TemplateMatch",
         "template": "Mission_office/take_mission.png",
         "roi": [
-            1109,
-            580,
-            110,
-            96
+            1141,
+            582,
+            66,
+            46
         ],
         "action": "Click",
         "next": [

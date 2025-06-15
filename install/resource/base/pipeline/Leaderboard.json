@@ -33,7 +33,15 @@
     "leaderboard_entry": {
         "recognition": "TemplateMatch",
         "template": [
-            "Leaderboard/board.png"
+            "Leaderboard/board.png",
+            "Leaderboard/board_night_undone.png",
+            "Leaderboard/board_night_done.png"
+        ],
+        "roi": [
+            5,
+            95,
+            1088,
+            518
         ],
         "threshold": 0.8,
         "green_mask": true,
