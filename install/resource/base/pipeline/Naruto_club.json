@@ -322,10 +322,10 @@
         "recognition": "TemplateMatch",
         "template": "Naruto_club/i_known.png",
         "roi": [
-            578,
-            551,
-            121,
-            50
+            348,
+            271,
+            634,
+            380
         ],
         "action": "Click",
         "next": [

@@ -33,7 +33,11 @@
     },
     "use_energy_by_ninjia_piece": {
         "recognition": "TemplateMatch",
-        "template": "Use_energy/adventure.png",
+        "template": [
+            "Use_energy/adventure.png",
+            "Use_energy/adventure_undone.png",
+            "Use_energy/adventure_undone_1.png"
+        ],
         "roi": [
             1111,
             586,

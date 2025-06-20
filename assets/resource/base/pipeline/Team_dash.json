@@ -221,10 +221,10 @@
             34
         ],
         "next": [
-            "team_dash_auto_fight1"
+            "team_dash_auto_fight"
         ]
     },
-    "team_dash_auto_fight1": {
+    "team_dash_auto_fight": {
         "recognition": "TemplateMatch",
         "template": "Team_dash/auto_fight.png",
         "roi": [
@@ -233,9 +233,12 @@
             107,
             107
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
-            "team_dash_remin_1"
+            "team_dash_remin_2",
+            "team_dash_remin_1",
+            "team_dash_remin_0"
         ],
         "post_delay": 60000
     },
@@ -251,7 +254,7 @@
             34
         ],
         "next": [
-            "team_dash_auto_fight2"
+            "team_dash_auto_fight"
         ],
         "interrupt": [
             "team_dash_group_help_entry"
@@ -283,6 +286,8 @@
         ],
         "action": "Click",
         "next": [
+            "team_dash_remin_2",
+            "team_dash_remin_1",
             "team_dash_remin_0"
         ],
         "post_delay": 60000

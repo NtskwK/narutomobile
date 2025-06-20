@@ -445,6 +445,7 @@
             "Ninjia_book/gold_waiting.png",
             "Ninjia_book/star_waiting.png",
             "Ninjia_book/energe_waiting.png",
+            "Ninjia_book/soul_waiting.png",
             "Ninjia_book/wooden_spike_roll_waiting.png"
         ],
         "roi": [
@@ -453,6 +454,7 @@
             1131,
             148
         ],
+        "threshold": 0.85,
         "next": [
             "back_main_screen_and_stop"
         ],
@@ -466,6 +468,7 @@
             "Ninjia_book/gold_waiting.png",
             "Ninjia_book/star_waiting.png",
             "Ninjia_book/energe_waiting.png",
+            "Ninjia_book/soul_waiting.png",
             "Ninjia_book/wooden_spike_roll_waiting.png"
         ],
         "roi": [
@@ -474,6 +477,7 @@
             1131,
             148
         ],
+        "threshold": 0.85,
         "next": [
             "confirm_ninjia_book_award"
         ],

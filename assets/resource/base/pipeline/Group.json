@@ -44,7 +44,7 @@
         "interrupt": [
             "Swipe_for_award_center_find"
         ],
-        "post_wait_freezes": 300
+        "post_wait_freezes": 500
     },
     "group_ac_undone": {
         "recognition": "TemplateMatch",
