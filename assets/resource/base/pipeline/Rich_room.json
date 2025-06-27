@@ -198,7 +198,7 @@
         "green_mask": true,
         "action": "Swipe",
         "threshold": 0.9,
-        "duration": 7000,
+        "duration": 5000,
         "next": [
             "click_skill1"
         ],

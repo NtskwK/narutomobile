@@ -129,7 +129,7 @@
             "entry": "use_energy",
             "check": true
         },
-	{
+        {
             "name": "丰饶",
             "entry": "rich_room",
             "check": true
@@ -214,16 +214,20 @@
                 {
                     "name": "做修行",
                     "pipeline_override": {
-                        "train_road": {
-                            "enabled": true
+                        "practice_place_undone": {
+                            "next": [
+                                "train_road"
+                            ]
                         }
                     }
                 },
                 {
                     "name": "不做修行",
                     "pipeline_override": {
-                        "train_road": {
-                            "enabled": false
+                        "practice_place_undone": {
+                            "next": [
+                                "survival_challenge"
+                            ]
                         }
                     }
                 }

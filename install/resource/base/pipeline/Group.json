@@ -1,8 +1,7 @@
 {
     "group": {
         "next": [
-            "group_award_in_center_enter",
-            "group_award_center_enter"
+            "group_entry"
         ],
         "interrupt": [
             "swipe_for_left_entries",

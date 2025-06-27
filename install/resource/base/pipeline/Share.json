@@ -174,7 +174,8 @@
             "check_main_screen"
         ],
         "interrupt": [
-            "weekly_sign"
+            "weekly_sign",
+            "click_x"
         ],
         "post_delay": 700
     },
