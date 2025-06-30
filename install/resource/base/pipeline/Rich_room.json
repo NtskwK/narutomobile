@@ -37,12 +37,26 @@
             "Rich_room/rich_room_undone_night.png"
         ],
         "green_mask": true,
-        "threshold": 0.5,
+        "threshold": 0.9,
         "action": "Click",
         "next": [
-            "challenge_rich_room"
+            "challenge_rich_room",
+            "rich_room_finished"
         ],
         "post_wait_freezes": 500
+    },
+    "rich_room_finished": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/finish.png",
+        "roi": [
+            617,
+            513,
+            74,
+            49
+        ],
+        "next": [
+            "back_main_screen_and_stop"
+        ]
     },
     "challenge_rich_room": {
         "recognition": "TemplateMatch",
