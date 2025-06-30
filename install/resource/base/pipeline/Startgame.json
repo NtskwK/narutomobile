@@ -5,7 +5,8 @@
         ],
         "interrupt": [
             "unagreement",
-            "agreement"
+            "agreement",
+            "check_main_screen_and_stop"
         ]
     },
     "click_start_game": {

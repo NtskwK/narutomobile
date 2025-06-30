@@ -1,11 +1,239 @@
 {
     "practice_place": {
         "next": [
-            "practice_place_entry"
+            "practice_place_in_center_enter",
+            "practice_place_ac_entry"
         ],
         "interrupt": [
             "back_main_screen"
         ]
+    },
+    "survival_challenge_in_center_enter": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "next": [
+            "survival_challenge_ac_entry_undone",
+            "survival_challenge_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "survival_challenge_ac_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry.png",
+        "roi": [
+            1200,
+            348,
+            42,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_ac_entry_undone",
+            "survival_challenge_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "survival_challenge_ac_entry_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_ac_undone.png",
+        "roi": [
+            180,
+            288,
+            1100,
+            225
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "target_offset": [
+            12,
+            116,
+            -40,
+            -114
+        ],
+        "next": [
+            "survival_challenge_yesterday_award"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "survival_challenge_ac_done": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry_end.png",
+        "roi": [
+            180,
+            384,
+            1100,
+            118
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top"
+        ]
+    },
+    "practice_place_in_center_enter": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "next": [
+            "practice_place_ac_entry_undone",
+            "practice_place_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "practice_place_ac_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry.png",
+        "roi": [
+            1200,
+            348,
+            42,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "practice_place_ac_entry_undone",
+            "practice_place_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "practice_place_ac_done": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry_end.png",
+        "roi": [
+            180,
+            384,
+            1100,
+            118
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top_survival_challenge"
+        ]
+    },
+    "Swipe_for_back_daily_award_top_survival_challenge": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "action": "Swipe",
+        "begin": [
+            294,
+            169,
+            56,
+            61
+        ],
+        "end": [
+            1133,
+            169,
+            56,
+            61
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top_survival_challenge_1"
+        ],
+        "post_wait_freezes": 100
+    },
+    "Swipe_for_back_daily_award_top_survival_challenge_1": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "action": "Swipe",
+        "begin": [
+            294,
+            169,
+            56,
+            61
+        ],
+        "end": [
+            1133,
+            169,
+            56,
+            61
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top_survival_challenge_2"
+        ],
+        "post_wait_freezes": 100
+    },
+    "Swipe_for_back_daily_award_top_survival_challenge_2": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "action": "Swipe",
+        "begin": [
+            294,
+            169,
+            56,
+            61
+        ],
+        "end": [
+            1133,
+            169,
+            56,
+            61
+        ],
+        "next": [
+            "survival_challenge_in_center_enter",
+            "survival_challenge_ac_entry"
+        ]
+    },
+    "practice_place_ac_entry_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/train_road_ac_undone.png",
+        "roi": [
+            180,
+            288,
+            1100,
+            225
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "target_offset": [
+            12,
+            116,
+            -40,
+            -114
+        ],
+        "next": [
+            "train_road_entry"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
     },
     "practice_place_entry": {
         "next": [
@@ -81,7 +309,8 @@
         ],
         "action": "Click",
         "next": [
-            "survival_challenge"
+            "survival_challenge_in_center_enter",
+            "survival_challenge_ac_entry"
         ]
     },
     "train_road_award": {
@@ -170,7 +399,7 @@
         ],
         "action": "Click",
         "next": [
-            "back_main_screen_and_stop"
+            "close_train_road"
         ]
     },
     "train_road_done": {
@@ -199,7 +428,8 @@
         ],
         "action": "Click",
         "next": [
-            "survival_challenge"
+            "survival_challenge_in_center_enter",
+            "survival_challenge_ac_entry"
         ]
     },
     "survival_challenge": {

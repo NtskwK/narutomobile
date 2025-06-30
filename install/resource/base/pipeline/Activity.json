@@ -93,7 +93,8 @@
         "threshold": 0.95,
         "action": "Click",
         "next": [
-            "mouthly_signature"
+            "mouthly_signature",
+            "check_mouthly_signature_title"
         ],
         "post_wait_freezes": 500
     },
@@ -106,9 +107,9 @@
         ],
         "roi": [
             0,
-            197,
-            176,
-            523
+            201,
+            178,
+            519
         ],
         "threshold": 0.95,
         "next": [
@@ -125,6 +126,28 @@
             61
         ],
         "action": "Click",
+        "next": [
+            "check_mouthly_signature_title",
+            "back_main_screen"
+        ]
+    },
+    "check_mouthly_signature_title": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/title.png",
+        "roi": [
+            525,
+            527,
+            101,
+            98
+        ],
+        "action": "Click",
+        "threshold": 0.68,
+        "target": [
+            525,
+            527,
+            101,
+            98
+        ],
         "next": [
             "back_main_screen"
         ]

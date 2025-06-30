@@ -156,7 +156,8 @@
             75,
             83
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
             "team_dash_my_help_award"
         ],

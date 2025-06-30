@@ -228,6 +228,18 @@
                             "next": [
                                 "survival_challenge"
                             ]
+                        },
+                        "practice_place_in_center_enter": {
+                            "next": [
+                                "survival_challenge_ac_entry_undone",
+                                "survival_challenge_ac_done"
+                            ]
+                        },
+                        "practice_place_ac_entry": {
+                            "next": [
+                                "survival_challenge_ac_entry_undone",
+                                "survival_challenge_ac_done"
+                            ]
                         }
                     }
                 }

@@ -428,14 +428,61 @@
         ],
         "threshold": 0.9,
         "next": [
-            "check_no_ninjia_book_award"
+            "check_no_ninjia_book_award_red_point"
         ],
         "interrupt": [
             "get_ninjia_book_award",
-            "back_main_screen_and_stop"
+            "Swipe_for_ninjia_book_award"
         ],
         "post_wait_freezes": 500,
         "action": "Click"
+    },
+    "Swipe_for_ninjia_book_award": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/ninjia_book_award_undone_v2.png",
+            "Ninjia_book/selected_red_point.png"
+        ],
+        "roi": [
+            106,
+            119,
+            83,
+            90
+        ],
+        "threshold": 0.9,
+        "action": "Swipe",
+        "begin": [
+            238,
+            522,
+            84,
+            86
+        ],
+        "end": [
+            416,
+            525,
+            84,
+            81
+        ],
+        "duration": 500
+    },
+    "check_no_ninjia_book_award_red_point": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Ninjia_book/ninjia_book_award_undone_v2.png",
+            "Ninjia_book/selected_red_point.png"
+        ],
+        "roi": [
+            106,
+            119,
+            83,
+            90
+        ],
+        "threshold": 0.9,
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "post_wait_freezes": 500,
+        "inverse": true
     },
     "check_no_ninjia_book_award": {
         "recognition": "TemplateMatch",
