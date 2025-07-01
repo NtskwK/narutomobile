@@ -34,10 +34,10 @@
         "recognition": "TemplateMatch",
         "template": [
             "Rich_room/rich_room_undone.png",
+            "Rich_room/rich_room_undone_day.png",
             "Rich_room/rich_room_undone_night.png"
         ],
         "green_mask": true,
-        "threshold": 0.9,
         "action": "Click",
         "next": [
             "challenge_rich_room",
