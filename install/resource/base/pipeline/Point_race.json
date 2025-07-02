@@ -64,7 +64,7 @@
             -114
         ],
         "next": [
-            "get_point_race_award"
+            "back_main_screen_and_stop"
         ],
         "action": "Click",
         "post_wait_freezes": 500
