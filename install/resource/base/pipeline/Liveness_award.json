@@ -43,6 +43,7 @@
         ],
         "threshold": 0.95,
         "next": [
+            "weekly_liveness_award_undone",
             "weekly_liveness_award_done"
         ]
     },

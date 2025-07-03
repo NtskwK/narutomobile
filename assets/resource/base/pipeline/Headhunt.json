@@ -22,7 +22,7 @@
             "free_headhunt_waiting"
         ],
         "interrupt": [],
-        "post_delay": 700
+        "post_delay": 900
     },
     "no_free_headhunt": {
         "recognition": "TemplateMatch",
