@@ -26,9 +26,22 @@
             "close_new_ninjia_page",
             "close_headhunt_end_announcement",
             "weekly_sign",
+            "close_friend_rank",
             "back_main_screen"
         ],
         "post_delay": 8000
+    },
+    "close_friend_rank": {
+        "recognition": "TemplateMatch",
+        "template": "Startgame/friend_rank.png",
+        "roi": [
+            738,
+            629,
+            93,
+            56
+        ],
+        "action": "Swipe",
+        "duration": 50
     },
     "check_main_screen_and_stop": {
         "recognition": "TemplateMatch",
