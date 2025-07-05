@@ -477,6 +477,9 @@
         "next": [
             "survival_challenge_yesterday_award"
         ],
+        "interrupt": [
+            "survival_challenge_reset"
+        ],
         "post_wait_freezes": 500
     },
     "survival_challenge_yesterday_award": {
@@ -507,14 +510,15 @@
             "0"
         ],
         "roi": [
-            564,
-            605,
-            34,
+            560,
+            609,
+            74,
             42
         ],
         "next": [
             "survival_challenge_sweep"
-        ]
+        ],
+        "post_wait_freezes": 200
     },
     "survival_challenge_reset_undone": {
         "recognition": "OCR",
@@ -522,14 +526,37 @@
             "1"
         ],
         "roi": [
-            564,
-            605,
-            34,
+            560,
+            609,
+            74,
             42
         ],
+        "action": "Click",
+        "target": [
+            864,
+            626,
+            56,
+            47
+        ],
+        "next": [
+            "confirm_survival_challenge_reset"
+        ],
+        "post_wait_freezes": 200
+    },
+    "confirm_survival_challenge_reset": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_sweep_confirm.png",
+        "roi": [
+            535,
+            415,
+            205,
+            74
+        ],
+        "action": "Click",
         "next": [
             "survival_challenge_sweep"
-        ]
+        ],
+        "post_wait_freezes": 200
     },
     "survival_challenge_sweep": {
         "next": [
