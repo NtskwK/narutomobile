@@ -486,10 +486,10 @@
         "recognition": "TemplateMatch",
         "template": "Practice_place/survival_challenge_yesterday_award.png",
         "roi": [
-            628,
-            13,
-            140,
-            82
+            451,
+            626,
+            108,
+            19
         ],
         "action": "Click",
         "next": [

@@ -198,17 +198,44 @@
         "next": [
             "mission_office_3_mission",
             "mission_office_solo_mission",
-            "mission_office_relation_mission"
+            "mission_office_relation_mission",
+            "mission_office_3_advance_mission"
         ]
+    },
+    "mission_office_3_advance_mission": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Mission_office/advance_mission_undone_masked.png"
+        ],
+        "roi": [
+            517,
+            197,
+            724,
+            363
+        ],
+        "action": "Click",
+        "target_offset": [
+            556,
+            54,
+            -578,
+            -69
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "next": [
+            "select_ninjia_for_mission_by_frame"
+        ],
+        "post_wait_freezes": 500
     },
     "mission_office_3_mission": {
         "recognition": "TemplateMatch",
         "template": [
+            "Mission_office/Sharingan_mission_undone_masked.png",
+            "Mission_office/kage_mission_undone_masked.png",
             "Mission_office/s_mission_undone_masked.png",
             "Mission_office/a_mission_undone_masked.png",
             "Mission_office/b_mission_undone_masked.png",
-            "Mission_office/c_mission_undone_masked.png",
-            "Mission_office/Sharingan_mission_undone_masked.png"
+            "Mission_office/c_mission_undone_masked.png"
         ],
         "roi": [
             517,
