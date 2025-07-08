@@ -14,7 +14,7 @@
             "Leaderboard/practice_place.png",
             "Leaderboard/practice_place_summer.png"
         ],
-        "threshold": 0.8,
+        "threshold": 0.7,
         "green_mask": true,
         "action": "Swipe",
         "begin": [
@@ -43,7 +43,7 @@
             1088,
             518
         ],
-        "threshold": 0.8,
+        "threshold": 0.5,
         "green_mask": true,
         "action": "Click",
         "next": [

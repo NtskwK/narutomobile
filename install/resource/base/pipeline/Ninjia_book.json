@@ -269,7 +269,13 @@
         ],
         "next": [],
         "action": "Click",
-        "post_wait_freezes": 200
+        "target": [
+            1245,
+            69,
+            11,
+            11
+        ],
+        "post_wait_freezes": 400
     },
     "ninjia_book_leaderboard": {
         "recognition": "TemplateMatch",
@@ -477,7 +483,7 @@
             83,
             90
         ],
-        "threshold": 0.9,
+        "threshold": 0.85,
         "next": [
             "back_main_screen_and_stop"
         ],
@@ -535,10 +541,10 @@
         "recognition": "TemplateMatch",
         "template": "Ninjia_book/get_award.png",
         "roi": [
-            588,
-            612,
-            91,
-            55
+            493,
+            562,
+            261,
+            143
         ],
         "action": "Click",
         "post_wait_freezes": 200
