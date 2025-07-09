@@ -12,7 +12,7 @@
             "click_club_icon"
         ],
         "interrupt": [
-            "naruto_club_entry"
+            "back_main_screen"
         ]
     },
     "click_club_icon": {
