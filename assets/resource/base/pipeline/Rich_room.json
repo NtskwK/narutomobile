@@ -1,11 +1,85 @@
 {
     "rich_room": {
         "next": [
-            "rich_room_entry"
+            "rich_room_in_center_enter",
+            "rich_room_ac_entry"
         ],
         "interrupt": [
-            "swipe_for_right_entries",
             "back_main_screen"
+        ]
+    },
+    "rich_room_in_center_enter": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "next": [
+            "rich_room_ac_entry_undone",
+            "rich_room_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "rich_room_ac_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry.png",
+        "roi": [
+            1200,
+            348,
+            42,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "rich_room_ac_entry_undone",
+            "rich_room_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "rich_room_ac_entry_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/rich_room_ac_undone.png",
+        "roi": [
+            180,
+            288,
+            1100,
+            225
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "target_offset": [
+            12,
+            116,
+            -40,
+            -114
+        ],
+        "next": [
+            "challenge_rich_room",
+            "rich_room_finished"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "rich_room_ac_done": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry_end.png",
+        "roi": [
+            180,
+            384,
+            1100,
+            118
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top"
         ]
     },
     "rich_room_entry": {
@@ -97,7 +171,7 @@
             "Rich_room/normal_attack_1.png"
         ],
         "action": "Swipe",
-        "threshold": 0.5,
+        "threshold": 0.7,
         "inverse": true,
         "next": [
             "back_main_screen_and_stop"

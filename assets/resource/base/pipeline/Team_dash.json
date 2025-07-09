@@ -63,10 +63,11 @@
             -114
         ],
         "next": [
-            "team_dash_group_help_undone"
+            "team_dash_group_help_undone",
+            "team_dash_group_help_done"
         ],
         "action": "Click",
-        "post_wait_freezes": 500
+        "post_wait_freezes": 600
     },
     "team_dash_ac_done": {
         "recognition": "TemplateMatch",
@@ -124,8 +125,25 @@
         ],
         "action": "Click",
         "next": [
-            "team_dash_my_help_done",
-            "team_dash_my_help_undone"
+            "team_dash_my_help_undone",
+            "team_dash_my_help_done"
+        ],
+        "interrupt": [
+            "team_dash_group_help_undone"
+        ],
+        "post_wait_freezes": 500
+    },
+    "team_dash_group_help_done": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/team_dash_group_help_done.png",
+        "roi": [
+            990,
+            602,
+            72,
+            64
+        ],
+        "next": [
+            "team_dash_auto_fight"
         ],
         "interrupt": [
             "team_dash_group_help_undone"
@@ -227,7 +245,10 @@
     },
     "team_dash_auto_fight": {
         "recognition": "TemplateMatch",
-        "template": "Team_dash/auto_fight.png",
+        "template": [
+            "Team_dash/auto_fight.png",
+            "Team_dash/auto_match.png"
+        ],
         "roi": [
             1138,
             572,
