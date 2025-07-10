@@ -262,7 +262,22 @@
             "team_dash_remin_1",
             "team_dash_remin_0"
         ],
+        "interrupt": [
+            "team_dash_keep_fight"
+        ],
         "post_delay": 60000
+    },
+    "team_dash_keep_fight": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/keep_fight.png",
+        "roi": [
+            442,
+            381,
+            161,
+            59
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200
     },
     "team_dash_remin_1": {
         "recognition": "OCR",
