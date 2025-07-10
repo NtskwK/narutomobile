@@ -248,7 +248,7 @@
             69,
             71
         ],
-        "duration": 15000,
+        "duration": 5000,
         "next": [
             "clicker_skill1"
         ]
@@ -259,13 +259,14 @@
         "green_mask": true,
         "threshold": 0.4,
         "action": "Swipe",
-        "duration": 200,
+        "duration": 50,
         "next": [
             "click_skill2"
         ],
         "interrupt": [
             "peace"
-        ]
+        ],
+        "post_delay": 1000
     },
     "click_skill2": {
         "recognition": "TemplateMatch",
@@ -273,7 +274,7 @@
         "green_mask": true,
         "action": "Swipe",
         "threshold": 0.5,
-        "duration": 200,
+        "duration": 50,
         "next": [
             "normal_attack"
         ],

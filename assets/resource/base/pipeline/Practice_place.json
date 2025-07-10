@@ -523,7 +523,8 @@
     "survival_challenge_reset_undone": {
         "recognition": "OCR",
         "expected": [
-            "1"
+            "1",
+            "l"
         ],
         "roi": [
             560,
