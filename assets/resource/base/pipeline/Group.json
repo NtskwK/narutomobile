@@ -222,7 +222,7 @@
         "action": "Click",
         "next": "group_award",
         "pre_wait_freezes": 300,
-        "post_wait_freezes": 300
+        "post_wait_freezes": 500
     },
     "group_award": {
         "next": [

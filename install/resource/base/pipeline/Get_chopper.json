@@ -45,7 +45,8 @@
         ],
         "interrupt": [
             "start_chooper"
-        ]
+        ],
+        "post_wait_freezes": 100
     },
     "check_chopper_done": {
         "recognition": "OCR",

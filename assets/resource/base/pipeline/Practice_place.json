@@ -521,16 +521,13 @@
         "post_wait_freezes": 200
     },
     "survival_challenge_reset_undone": {
-        "recognition": "OCR",
-        "expected": [
-            "1",
-            "l"
-        ],
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_reset_undone.png",
         "roi": [
             560,
             609,
-            74,
-            42
+            51,
+            37
         ],
         "action": "Click",
         "target": [
@@ -555,9 +552,24 @@
         ],
         "action": "Click",
         "next": [
-            "survival_challenge_sweep"
+            "survival_challenge_confirm_tp"
         ],
         "post_wait_freezes": 200
+    },
+    "survival_challenge_confirm_tp": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_yesterday_award.png",
+        "roi": [
+            451,
+            626,
+            108,
+            19
+        ],
+        "action": "Click",
+        "next": [
+            "survival_challenge_sweep"
+        ],
+        "post_wait_freezes": 100
     },
     "survival_challenge_sweep": {
         "next": [

@@ -290,6 +290,8 @@
             29,
             34
         ],
+        "action": "Click",
+        "post_wait_freezes": 200,
         "next": [
             "team_dash_auto_fight"
         ],
