@@ -69,7 +69,7 @@
             "get_mission_office_award"
         ],
         "action": "Click",
-        "post_delay": 300
+        "post_wait_freezes": 400
     },
     "mission_office_ac_done": {
         "recognition": "TemplateMatch",
