@@ -131,7 +131,7 @@
         "interrupt": [
             "team_dash_group_help_undone"
         ],
-        "post_wait_freezes": 500
+        "post_wait_freezes": 600
     },
     "team_dash_group_help_done": {
         "recognition": "TemplateMatch",
@@ -159,7 +159,7 @@
             77,
             91
         ],
-        "threshold": 0.96,
+        "threshold": 0.7,
         "next": [
             "team_dash_invite"
         ],
@@ -175,7 +175,7 @@
             83
         ],
         "action": "Swipe",
-        "duration": 50,
+        "duration": 30,
         "next": [
             "team_dash_my_help_award"
         ],
@@ -258,12 +258,36 @@
         "action": "Swipe",
         "duration": 50,
         "next": [
+            "team_dash_keep_fight"
+        ],
+        "interrupt": [
             "team_dash_remin_2",
             "team_dash_remin_1",
             "team_dash_remin_0"
         ],
-        "interrupt": [
+        "post_delay": 60000
+    },
+    "team_dash_auto_match": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Team_dash/auto_fight.png",
+            "Team_dash/auto_match.png"
+        ],
+        "roi": [
+            1138,
+            572,
+            107,
+            107
+        ],
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
             "team_dash_keep_fight"
+        ],
+        "interrupt": [
+            "team_dash_remin_2",
+            "team_dash_remin_1",
+            "team_dash_remin_0"
         ],
         "post_delay": 60000
     },
@@ -277,6 +301,12 @@
             59
         ],
         "action": "Click",
+        "threshold": 0.5,
+        "next": [
+            "team_dash_remin_2",
+            "team_dash_remin_1",
+            "team_dash_remin_0"
+        ],
         "post_wait_freezes": 200
     },
     "team_dash_remin_1": {
