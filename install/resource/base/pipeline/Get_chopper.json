@@ -1,10 +1,87 @@
 {
     "get_chopper": {
         "next": [
-            "get_chopper_entry"
+            "get_chopper_in_center_enter",
+            "get_chopper_ac_entry"
         ],
         "interrupt": [
             "back_main_screen"
+        ]
+    },
+    "get_chopper_in_center_enter": {
+        "recognition": "TemplateMatch",
+        "template": "Share/check_in_daily_award.png",
+        "roi": [
+            37,
+            172,
+            130,
+            47
+        ],
+        "next": [
+            "get_chopper_ac_entry_undone",
+            "get_chopper_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "get_chopper_ac_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry.png",
+        "roi": [
+            1200,
+            348,
+            42,
+            39
+        ],
+        "action": "Click",
+        "next": [
+            "get_chopper_ac_entry_undone",
+            "get_chopper_ac_done"
+        ],
+        "interrupt": [
+            "Swipe_for_award_center_find"
+        ],
+        "post_wait_freezes": 300
+    },
+    "get_chopper_ac_entry_undone": {
+        "recognition": "TemplateMatch",
+        "template": "Get_chopper/get_chopper_ac_undone.png",
+        "roi": [
+            180,
+            288,
+            1100,
+            225
+        ],
+        "threshold": 0.9,
+        "green_mask": true,
+        "target_offset": [
+            12,
+            116,
+            -40,
+            -114
+        ],
+        "next": [
+            "start_chooper"
+        ],
+        "interrupt": [
+            "check_chopper_done"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 600
+    },
+    "get_chopper_ac_done": {
+        "recognition": "TemplateMatch",
+        "template": "Share/center_entry_end.png",
+        "roi": [
+            180,
+            384,
+            1100,
+            118
+        ],
+        "next": [
+            "Swipe_for_back_daily_award_top"
         ]
     },
     "get_chopper_entry": {

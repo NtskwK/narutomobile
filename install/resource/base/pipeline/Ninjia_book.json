@@ -253,8 +253,8 @@
             "ninjia_book_award_done"
         ],
         "interrupt": [
-            "ninjia_book_liveness_award",
-            "close_ninjia_book_level_up_page_when_liveness"
+            "close_ninjia_book_level_up_page_when_liveness",
+            "ninjia_book_liveness_award"
         ],
         "post_wait_freezes": 500
     },
