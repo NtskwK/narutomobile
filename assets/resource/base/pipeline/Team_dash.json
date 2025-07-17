@@ -258,6 +258,7 @@
         "action": "Swipe",
         "duration": 50,
         "next": [
+            "team_dash_do_not_remind_gold",
             "team_dash_keep_fight"
         ],
         "interrupt": [
@@ -306,6 +307,22 @@
             "team_dash_remin_2",
             "team_dash_remin_1",
             "team_dash_remin_0"
+        ],
+        "post_wait_freezes": 200
+    },
+    "team_dash_do_not_remind_gold": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/do_not_remind_gold.png",
+        "roi": [
+            548,
+            468,
+            45,
+            44
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "next": [
+            "team_dash_keep_fight"
         ],
         "post_wait_freezes": 200
     },

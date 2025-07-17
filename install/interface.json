@@ -100,6 +100,7 @@
             "name": "小队突袭",
             "entry": "team_dash",
             "option": [
+                "勾选本周不再提醒",
                 "等待自动战斗时间选择"
             ],
             "check": true
@@ -305,6 +306,31 @@
                         },
                         "team_dash_auto_fight2": {
                             "post_delay": 90000
+                        }
+                    }
+                }
+            ]
+        },
+        "勾选本周不再提醒": {
+            "cases": [
+                {
+                    "name": "勾选",
+                    "pipeline_override": {
+                        "team_dash_auto_fight": {
+                            "next": [
+                                "team_dash_do_not_remind_gold",
+                                "team_dash_keep_fight"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不勾选",
+                    "pipeline_override": {
+                        "team_dash_auto_fight": {
+                            "next": [
+                                "team_dash_keep_fight"
+                            ]
                         }
                     }
                 }

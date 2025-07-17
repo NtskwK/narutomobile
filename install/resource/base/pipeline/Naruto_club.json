@@ -24,14 +24,16 @@
             39,
             36
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 100,
         "next": [
             "check_surf_post"
         ],
         "interrupt": [
             "surf_post"
         ],
-        "post_wait_freezes": 300
+        "post_wait_freezes": 300,
+        "post_delay": 2000
     },
     "check_surf_post": {
         "recognition": "TemplateMatch",
@@ -204,7 +206,7 @@
         "next": [
             "close_ninja_station"
         ],
-        "post_wait_freezes": 7000
+        "post_wait_freezes": 8000
     },
     "close_ninja_station": {
         "recognition": "TemplateMatch",
@@ -453,6 +455,9 @@
             "gold_helper_undone",
             "gold_helper_wait",
             "gold_helper_done"
+        ],
+        "interrupt": [
+            "swipe_for_mission"
         ]
     },
     "gold_helper_undone": {

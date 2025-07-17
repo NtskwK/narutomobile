@@ -493,8 +493,24 @@
         ],
         "action": "Click",
         "next": [
+            "survival_challenge_yesterday_award_1"
+        ],
+        "post_wait_freezes": 200
+    },
+    "survival_challenge_yesterday_award_1": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/survival_challenge_yesterday_award.png",
+        "roi": [
+            451,
+            626,
+            108,
+            19
+        ],
+        "action": "Click",
+        "next": [
             "survival_challenge_reset"
-        ]
+        ],
+        "post_wait_freezes": 200
     },
     "survival_challenge_reset": {
         "next": [

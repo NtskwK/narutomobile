@@ -246,7 +246,7 @@
             170
         ],
         "inverse": true,
-        "threshold": 0.9,
+        "threshold": 0.8,
         "action": "Click",
         "next": [
             "ninjia_book_award_undone",

@@ -20,7 +20,8 @@
             55
         ],
         "green_mask": true,
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 100,
         "next": [
             "sent_energy"
         ],
