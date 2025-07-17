@@ -91,7 +91,8 @@
             523
         ],
         "threshold": 0.95,
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 100,
         "next": [
             "mouthly_signature",
             "check_mouthly_signature_title"
