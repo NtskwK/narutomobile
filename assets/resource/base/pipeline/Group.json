@@ -333,7 +333,8 @@
             170,
             48
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "target_offset": [
             300,
             0,
@@ -363,7 +364,7 @@
             61,
             59
         ],
-        "threshold": 0.95,
+        "threshold": 0.7,
         "next": "close_group_pray"
     },
     "third_group_award": {
@@ -375,7 +376,7 @@
             88,
             83
         ],
-        "threshold": 0.98,
+        "threshold": 0.7,
         "action": "Click",
         "next": "close_group_pray"
     },

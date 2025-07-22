@@ -244,6 +244,15 @@
             "close_friend_rank"
         ]
     },
+    "click_x_single": {
+        "recognition": "TemplateMatch",
+        "template": "Share/green_masked_x.png",
+        "action": "Swipe",
+        "duration": 50,
+        "green_mask": true,
+        "threshold": 0.5,
+        "post_delay": 500
+    },
     "check_no_x": {
         "recognition": "TemplateMatch",
         "template": "Share/green_masked_x.png",

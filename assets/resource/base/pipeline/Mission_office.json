@@ -201,6 +201,22 @@
             "mission_office_solo_mission",
             "mission_office_relation_mission",
             "mission_office_3_advance_mission"
+        ],
+        "interrupt": [
+            "mission_office_complete"
+        ]
+    },
+    "mission_office_complete": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/complete.png",
+        "roi": [
+            760,
+            367,
+            247,
+            56
+        ],
+        "next": [
+            "back_main_screen_and_stop"
         ]
     },
     "mission_office_3_advance_mission": {
@@ -224,9 +240,28 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "select_ninjia_for_mission_by_frame"
+            "mission_office_recommended_team"
         ],
         "post_wait_freezes": 500
+    },
+    "mission_office_recommended_team": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/recommended_team.png",
+        "roi": [
+            842,
+            560,
+            155,
+            37
+        ],
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
+            "take_mission_office_mission"
+        ],
+        "interrupt": [
+            "mission_office_get_mission"
+        ],
+        "post_wait_freezes": 200
     },
     "mission_office_3_mission": {
         "recognition": "TemplateMatch",
@@ -254,7 +289,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "select_ninjia_for_mission_by_frame"
+            "mission_office_recommended_team"
         ],
         "post_wait_freezes": 500
     },
@@ -303,7 +338,7 @@
         "threshold": 0.9,
         "green_mask": true,
         "next": [
-            "select_ninjia_for_relation_mission_by_frame"
+            "mission_office_recommended_team"
         ],
         "interrupt": [
             "mission_office_get_mission"

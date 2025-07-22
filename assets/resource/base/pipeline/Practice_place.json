@@ -514,10 +514,10 @@
     },
     "survival_challenge_reset": {
         "next": [
-            "survival_challenge_reset_done"
+            "survival_challenge_reset_undone"
         ],
         "interrupt": [
-            "survival_challenge_reset_undone"
+            "survival_challenge_reset_done"
         ]
     },
     "survival_challenge_reset_done": {
