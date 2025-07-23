@@ -175,9 +175,29 @@
         "template": "Group/selected_group_gameplay_undone_button.png",
         "action": "Click",
         "next": [
+            "above_kage_group_pray",
             "chopper_group_pray"
         ],
         "post_wait_freezes": 600
+    },
+    "above_kage_group_pray": {
+        "recognition": "TemplateMatch",
+        "template": "Group/above_kage_pray.png",
+        "action": "Swipe",
+        "duration": 50,
+        "roi": [
+            753,
+            550,
+            44,
+            42
+        ],
+        "next": [
+            "confirm_chopper_group_pray"
+        ],
+        "interrupt": [
+            "close_chopper_group_pray"
+        ],
+        "post_delay": 3000
     },
     "chopper_group_pray": {
         "recognition": "TemplateMatch",
@@ -208,7 +228,9 @@
         "action": "Click",
         "next": [
             "group_award"
-        ]
+        ],
+        "pre_wait_freezes": 300,
+        "post_wait_freezes": 500
     },
     "confirm_chopper_group_pray": {
         "recognition": "TemplateMatch",
@@ -293,7 +315,7 @@
             59,
             44
         ],
-        "threshold": 0.98,
+        "threshold": 0.7,
         "next": "third_group_award_entry"
     },
     "second_group_award": {
@@ -305,10 +327,36 @@
             77,
             66
         ],
-        "threshold": 0.98,
-        "action": "Click",
+        "threshold": 0.7,
+        "action": "Swipe",
+        "duration": 50,
         "next": "second_group_award_box",
-        "post_wait_freezes": 300
+        "interrupt": [
+            "second_group_award_box_done"
+        ],
+        "post_wait_freezes": 700
+    },
+    "second_group_award_box_done": {
+        "recognition": "TemplateMatch",
+        "template": "Group/group_pray_red_packet_done.png",
+        "roi": [
+            627,
+            182,
+            27,
+            32
+        ],
+        "action": "Click",
+        "target": [
+            940,
+            322,
+            79,
+            71
+        ],
+        "post_wait_freezes": 800,
+        "next": [
+            "third_group_award",
+            "third_group_award_done"
+        ]
     },
     "second_group_award_box": {
         "recognition": "TemplateMatch",
@@ -319,8 +367,9 @@
             102,
             80
         ],
-        "threshold": 0.98,
-        "action": "Click",
+        "threshold": 0.7,
+        "action": "Swipe",
+        "duration": 50,
         "next": "close_second_group_award_box",
         "post_wait_freezes": 300
     },
@@ -333,15 +382,14 @@
             170,
             48
         ],
-        "action": "Swipe",
-        "duration": 50,
-        "target_offset": [
-            300,
-            0,
-            -60,
-            0
+        "action": "Click",
+        "target": [
+            940,
+            322,
+            79,
+            71
         ],
-        "post_wait_freezes": 300,
+        "post_wait_freezes": 800,
         "next": [
             "third_group_award",
             "third_group_award_done"
@@ -397,8 +445,8 @@
     },
     "pursuit_dawn_organization": {
         "next": [
-            "pursuit_dawn_organization_done",
-            "pursuit_dawn_organization_undone"
+            "pursuit_dawn_organization_undone",
+            "pursuit_dawn_organization_done"
         ],
         "interrupt": [
             "back_main_screen",
@@ -473,10 +521,26 @@
     },
     "to_pursuit_dawn_organization_award": {
         "next": [
-            "check_no_pursuit_dawn_organization_award"
+            "check_no_pursuit_dawn_organization_award",
+            "one_key_get_pursuit_dawn_organization_award"
         ],
         "interrupt": [
             "get_pursuit_dawn_organization_award"
+        ]
+    },
+    "one_key_get_pursuit_dawn_organization_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/one_key_dawn_organization_award.png",
+        "roi": [
+            454,
+            429,
+            71,
+            47
+        ],
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
+            "back_main_screen_and_stop"
         ]
     },
     "get_pursuit_dawn_organization_award": {

@@ -1,0 +1,337 @@
+{
+    "weekly_win": {
+        "next": [
+            "weekly_win_entry"
+        ],
+        "interrupt": [
+            "weekly_win_in_duel_field",
+            "back_main_screen"
+        ]
+    },
+    "weekly_win_in_duel_field": {
+        "recognition": "OCR",
+        "expected": [
+            "忍",
+            "术",
+            "对",
+            "决"
+        ],
+        "roi": [
+            254,
+            609,
+            123,
+            47
+        ],
+        "next": [
+            "weekly_win_match"
+        ],
+        "post_delay": 1000
+    },
+    "weekly_win_entry": {
+        "recognition": "TemplateMatch",
+        "template": "Weekly_win/duel_field.png",
+        "threshold": 0.8,
+        "action": "Swipe",
+        "duration": 30,
+        "next": [
+            "weekly_win_match"
+        ],
+        "interrupt": [],
+        "green_mask": true,
+        "post_delay": 1500
+    },
+    "weekly_win_match": {
+        "recognition": "OCR",
+        "expected": [
+            "忍",
+            "术",
+            "对",
+            "决"
+        ],
+        "roi": [
+            254,
+            609,
+            123,
+            47
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "next": [
+            "weekly_win_match_fight"
+        ],
+        "post_delay": 1000
+    },
+    "weekly_win_rank": {
+        "recognition": "OCR",
+        "expected": [
+            "段",
+            "位",
+            "赛"
+        ],
+        "roi": [
+            498,
+            607,
+            111,
+            49
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "post_delay": 1000
+    },
+    "weekly_win_match_fight": {
+        "recognition": "TemplateMatch",
+        "template": "Weekly_win/fight.png",
+        "roi": [
+            1150,
+            574,
+            69,
+            69
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "next": [
+            "weekly_win_matching"
+        ],
+        "post_delay": 1000
+    },
+    "weekly_win_matching": {
+        "recognition": "OCR",
+        "expected": [
+            "时",
+            "间"
+        ],
+        "roi": [
+            593,
+            424,
+            66,
+            46
+        ],
+        "next": [
+            "weekly_win_check_matching_done"
+        ],
+        "interrupt": [
+            "sleep_500ms"
+        ]
+    },
+    "sleep_500ms": {
+        "post_delay": 500
+    },
+    "weekly_win_check_matching_done": {
+        "recognition": "OCR",
+        "expected": [
+            "时",
+            "间"
+        ],
+        "roi": [
+            593,
+            424,
+            66,
+            46
+        ],
+        "inverse": true,
+        "next": [
+            "weekly_win_match_fighting"
+        ],
+        "interrupt": [
+            "sleep_500ms"
+        ]
+    },
+    "weekly_win_match_fighting": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/normal_attack_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "duration": 50,
+        "threshold": 0.9,
+        "next": [
+            "weekly_win_click_skill_1"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_click_skill_1": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/skill1_masked.png",
+        "green_mask": true,
+        "threshold": 0.2,
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
+            "weekly_win_click_skill_2"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ],
+        "post_delay": 1000
+    },
+    "weekly_win_click_skill_2": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/skill2_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.2,
+        "duration": 50,
+        "next": [
+            "weekly_win_normal_attack"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_normal_attack": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/normal_attack_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.9,
+        "duration": 6000,
+        "next": [
+            "weekly_win_replace_0"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_replace_0": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/replace_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.6,
+        "duration": 30,
+        "next": [
+            "weekly_win_roll"
+        ],
+        "interrupt": [
+            "weekly_win_replace_1",
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_roll": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/roll_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.4,
+        "duration": 30,
+        "next": [
+            "weekly_win_replace_1"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_replace_1": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/replace_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.6,
+        "duration": 30,
+        "next": [
+            "weekly_win_summon"
+        ],
+        "interrupt": [
+            "weekly_win_replace_2",
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_summon": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/summon_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.4,
+        "duration": 30,
+        "next": [
+            "weekly_win_replace_2"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_replace_2": {
+        "recognition": "TemplateMatch",
+        "template": "Rich_room/replace_masked.png",
+        "green_mask": true,
+        "action": "Swipe",
+        "threshold": 0.6,
+        "duration": 30,
+        "next": [
+            "weekly_win_click_skill_1"
+        ],
+        "interrupt": [
+            "weekly_win_peace"
+        ]
+    },
+    "weekly_win_peace": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Rich_room/normal_attack.png",
+            "Rich_room/normal_attack_1.png"
+        ],
+        "action": "Swipe",
+        "threshold": 0.7,
+        "inverse": true,
+        "next": [
+            "weekly_win_substitution",
+            "weekly_win_fail",
+            "weekly_win_success"
+        ],
+        "interrupt": [
+            "sleep_500ms"
+        ]
+    },
+    "weekly_win_success": {
+        "recognition": "TemplateMatch",
+        "template": "Weekly_win/success.png",
+        "roi": [
+            748,
+            468,
+            37,
+            32
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "threshold": 0.9,
+        "next": [
+            "weekly_win_match_fight"
+        ],
+        "post_delay": 3000
+    },
+    "weekly_win_fail": {
+        "recognition": "TemplateMatch",
+        "template": "Weekly_win/fail.png",
+        "roi": [
+            745,
+            473,
+            39,
+            37
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "threshold": 0.9,
+        "next": [
+            "weekly_win_match_fight"
+        ],
+        "post_delay": 3000
+    },
+    "weekly_win_substitution": {
+        "recognition": "TemplateMatch",
+        "template": "Weekly_win/substitution.png",
+        "roi": [
+            632,
+            520,
+            44,
+            36
+        ],
+        "action": "Swipe",
+        "duration": 100,
+        "threshold": 0.9,
+        "next": [
+            "weekly_win_match_fighting"
+        ],
+        "post_delay": 3000
+    }
+}

@@ -340,10 +340,26 @@
         "action": "Click",
         "post_wait_freezes": 200,
         "next": [
+            "team_dash_above_kage_sweep",
             "team_dash_auto_fight"
         ],
         "interrupt": [
             "team_dash_group_help_entry"
+        ]
+    },
+    "team_dash_above_kage_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/above_kage_sweep.png",
+        "roi": [
+            1165,
+            584,
+            44,
+            42
+        ],
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
+            "back_main_screen_and_stop"
         ]
     },
     "team_dash_group_help_entry": {

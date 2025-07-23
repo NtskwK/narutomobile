@@ -621,6 +621,7 @@
             "survival_challenge_sweep_ready"
         ],
         "interrupt": [
+            "start_survival_challenge_sweep",
             "survival_challenge_done"
         ],
         "post_wait_freezes": 300

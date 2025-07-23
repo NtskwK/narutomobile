@@ -141,6 +141,13 @@
             "check": true
         },
         {
+            "name": "周胜",
+            "entry": "weekly_win",
+            "option": [
+                "匹配还是排位"
+            ]
+        },
+        {
             "name": "百忍大战",
             "entry": "hundred_ninjia"
         }
@@ -330,6 +337,40 @@
                         "team_dash_auto_fight": {
                             "next": [
                                 "team_dash_keep_fight"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "匹配还是排位": {
+            "cases": [
+                {
+                    "name": "匹配",
+                    "pipeline_override": {
+                        "weekly_win_in_duel_field": {
+                            "next": [
+                                "weekly_win_match"
+                            ]
+                        },
+                        "weekly_win_entry": {
+                            "next": [
+                                "weekly_win_match"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "排位(没做完)",
+                    "pipeline_override": {
+                        "weekly_win_in_duel_field": {
+                            "next": [
+                                "weekly_win_rank"
+                            ]
+                        },
+                        "weekly_win_entry": {
+                            "next": [
+                                "weekly_win_rank"
                             ]
                         }
                     }
