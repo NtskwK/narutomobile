@@ -426,7 +426,25 @@
         ],
         "threshold": 0.7,
         "action": "Click",
-        "next": "close_group_pray"
+        "next": [
+            "close_third_group_award"
+        ],
+        "post_wait_freezes": 600
+    },
+    "close_third_group_award": {
+        "recognition": "TemplateMatch",
+        "template": "Group/close_third_group_award.png",
+        "roi": [
+            1052,
+            172,
+            54,
+            54
+        ],
+        "action": "Click",
+        "next": [
+            "close_group_pray"
+        ],
+        "post_wait_freezes": 600
     },
     "close_group_pray": {
         "recognition": "TemplateMatch",
@@ -513,7 +531,8 @@
             56
         ],
         "threshold": 0.97,
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
             "to_pursuit_dawn_organization_award"
         ],
