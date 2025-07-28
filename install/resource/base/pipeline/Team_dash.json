@@ -263,8 +263,7 @@
         "interrupt": [
             "team_dash_keep_fight",
             "sleep_500ms"
-        ],
-        "post_delay": 60000
+        ]
     },
     "team_dash_auto_match": {
         "recognition": "TemplateMatch",
@@ -347,13 +346,15 @@
         ]
     },
     "check_in_team_dash_sweep": {
-        "recognition": "TemplateMatch",
-        "template": "Team_dash/in_sweep.png",
+        "recognition": "OCR",
+        "expected": [
+            "0"
+        ],
         "roi": [
-            41,
-            345,
-            14,
-            17
+            589,
+            21,
+            99,
+            38
         ],
         "next": [
             "check_not_in_team_dash_sweep"
@@ -363,20 +364,23 @@
         ]
     },
     "check_not_in_team_dash_sweep": {
-        "recognition": "TemplateMatch",
-        "template": "Team_dash/in_sweep.png",
+        "recognition": "OCR",
+        "expected": [
+            "0"
+        ],
         "roi": [
-            41,
-            345,
-            14,
-            17
+            589,
+            21,
+            99,
+            38
         ],
         "inverse": true,
         "next": [
             "team_dash_remin_2",
             "team_dash_remin_1",
             "team_dash_remin_0"
-        ]
+        ],
+        "post_delay": 4000
     },
     "team_dash_above_kage_sweep": {
         "recognition": "TemplateMatch",
