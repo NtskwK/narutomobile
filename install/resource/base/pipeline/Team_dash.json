@@ -258,13 +258,11 @@
         "action": "Swipe",
         "duration": 50,
         "next": [
-            "team_dash_do_not_remind_gold",
-            "team_dash_keep_fight"
+            "check_in_team_dash_sweep"
         ],
         "interrupt": [
-            "team_dash_remin_2",
-            "team_dash_remin_1",
-            "team_dash_remin_0"
+            "team_dash_keep_fight",
+            "sleep_500ms"
         ],
         "post_delay": 60000
     },
@@ -304,6 +302,7 @@
         "action": "Click",
         "threshold": 0.5,
         "next": [
+            "team_dash_above_kage_sweep",
             "team_dash_remin_2",
             "team_dash_remin_1",
             "team_dash_remin_0"
@@ -347,6 +346,38 @@
             "team_dash_group_help_entry"
         ]
     },
+    "check_in_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/in_sweep.png",
+        "roi": [
+            41,
+            345,
+            14,
+            17
+        ],
+        "next": [
+            "check_not_in_team_dash_sweep"
+        ],
+        "interrupt": [
+            "sleep_500ms"
+        ]
+    },
+    "check_not_in_team_dash_sweep": {
+        "recognition": "TemplateMatch",
+        "template": "Team_dash/in_sweep.png",
+        "roi": [
+            41,
+            345,
+            14,
+            17
+        ],
+        "inverse": true,
+        "next": [
+            "team_dash_remin_2",
+            "team_dash_remin_1",
+            "team_dash_remin_0"
+        ]
+    },
     "team_dash_above_kage_sweep": {
         "recognition": "TemplateMatch",
         "template": "Team_dash/above_kage_sweep.png",
@@ -356,11 +387,17 @@
             44,
             42
         ],
+        "threshold": 0.8,
         "action": "Swipe",
         "duration": 50,
         "next": [
-            "back_main_screen_and_stop"
-        ]
+            "team_dash_keep_fight"
+        ],
+        "interrupt": [
+            "team_dash_remin_0",
+            "sleep_500ms"
+        ],
+        "post_wait_freezes": 1000
     },
     "team_dash_group_help_entry": {
         "recognition": "TemplateMatch",

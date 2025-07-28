@@ -330,7 +330,9 @@
     },
     "confirm_train_road_award": {
         "recognition": "TemplateMatch",
-        "template": "Practice_place/confirm_train_road_award.png",
+        "template": [
+            "Practice_place/confirm_train_road_award.png"
+        ],
         "roi": [
             461,
             121,
@@ -373,6 +375,38 @@
         ],
         "post_wait_freezes": 500
     },
+    "above_kage_confirm_train_road_reset": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/above_kage_sweep.png",
+        "roi": [
+            580,
+            525,
+            34,
+            39
+        ],
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
+            "above_kage_confirm_train_road_award"
+        ],
+        "post_wait_freezes": 300
+    },
+    "above_kage_confirm_train_road_award": {
+        "recognition": "TemplateMatch",
+        "template": "Practice_place/above_kage_sweep.png",
+        "roi": [
+            580,
+            525,
+            34,
+            39
+        ],
+        "action": "Swipe",
+        "duration": 50,
+        "next": [
+            "confirm_train_road_award"
+        ],
+        "post_wait_freezes": 300
+    },
     "confirm_train_road_reset": {
         "recognition": "TemplateMatch",
         "template": "Practice_place/confirm_train_road_reset.png",
@@ -384,7 +418,8 @@
         ],
         "action": "Click",
         "next": [
-            "confirm_train_road_sweep"
+            "confirm_train_road_sweep",
+            "above_kage_confirm_train_road_reset"
         ],
         "post_wait_freezes": 300
     },

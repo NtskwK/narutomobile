@@ -79,7 +79,6 @@
     "close_ninjia_book_share": {
         "recognition": "OCR",
         "expected": [
-            "关闭",
             "关",
             "闭"
         ],
@@ -230,9 +229,10 @@
             "check_no_ninjia_book_liveness_award"
         ],
         "interrupt": [
+            "ninjia_book_liveness_award",
             "close_ninjia_book_level_up_page_when_liveness"
         ],
-        "post_wait_freezes": 500
+        "post_delay": 800
     },
     "check_no_ninjia_book_liveness_award": {
         "recognition": "TemplateMatch",
@@ -246,7 +246,7 @@
             170
         ],
         "inverse": true,
-        "threshold": 0.8,
+        "threshold": 0.961,
         "action": "Click",
         "next": [
             "ninjia_book_award_undone",
@@ -383,6 +383,9 @@
         "action": "Click",
         "next": [
             "ninjia_book_share_to_qq"
+        ],
+        "interrupt": [
+            "ninjia_book_share_v2"
         ],
         "post_wait_freezes": 1000
     },

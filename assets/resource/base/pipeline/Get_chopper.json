@@ -24,7 +24,7 @@
         "interrupt": [
             "Swipe_for_award_center_find"
         ],
-        "post_wait_freezes": 300
+        "post_wait_freezes": 700
     },
     "get_chopper_ac_entry": {
         "recognition": "TemplateMatch",
@@ -69,7 +69,7 @@
             "check_chopper_done"
         ],
         "action": "Click",
-        "post_wait_freezes": 600
+        "post_wait_freezes": 700
     },
     "get_chopper_ac_done": {
         "recognition": "TemplateMatch",
