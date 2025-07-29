@@ -174,6 +174,7 @@
             75,
             83
         ],
+        "threshold": 0.95,
         "action": "Swipe",
         "duration": 30,
         "next": [
@@ -255,15 +256,16 @@
             107,
             107
         ],
-        "action": "Swipe",
-        "duration": 50,
+        "action": "Click",
         "next": [
             "check_in_team_dash_sweep"
         ],
         "interrupt": [
             "team_dash_keep_fight",
+            "team_dash_auto_fight",
             "sleep_500ms"
-        ]
+        ],
+        "post_delay": 800
     },
     "team_dash_auto_match": {
         "recognition": "TemplateMatch",

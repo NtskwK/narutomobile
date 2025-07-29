@@ -65,9 +65,14 @@
             75,
             66
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
             "hundred_ninjia_selcet_ninjia"
+        ],
+        "interrupt": [
+            "hundred_ninjia_match",
+            "sleep_500ms"
         ],
         "post_delay": 26000
     },
@@ -80,13 +85,15 @@
             1120,
             213
         ],
-        "threshold": [
-            0.6
-        ],
+        "threshold": 0.6,
         "green_mask": true,
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
             "hundred_ninjia_confirm_selcet_ninjia"
+        ],
+        "interrupt": [
+            "hundred_ninjia_match"
         ]
     },
     "hundred_ninjia_confirm_selcet_ninjia": {
@@ -98,11 +105,13 @@
             197,
             75
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
             "hundred_ninjia_check_fight"
         ],
         "interrupt": [
+            "hundred_ninjia_selcet_ninjia",
             "wait_5_second"
         ]
     },
@@ -152,9 +161,13 @@
             200,
             69
         ],
-        "action": "Click",
+        "action": "Swipe",
+        "duration": 50,
         "next": [
             "hundred_ninjia_match"
+        ],
+        "interrupt": [
+            "sleep_500ms"
         ],
         "post_delay": 4000
     }

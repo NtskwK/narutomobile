@@ -226,13 +226,13 @@
         "threshold": 0.9,
         "action": "Click",
         "next": [
-            "check_no_ninjia_book_liveness_award"
-        ],
-        "interrupt": [
-            "ninjia_book_liveness_award",
             "close_ninjia_book_level_up_page_when_liveness"
         ],
-        "post_delay": 800
+        "interrupt": [
+            "check_no_ninjia_book_liveness_award",
+            "ninjia_book_liveness_award"
+        ],
+        "post_delay": 3000
     },
     "check_no_ninjia_book_liveness_award": {
         "recognition": "TemplateMatch",
@@ -267,7 +267,12 @@
             169,
             58
         ],
-        "next": [],
+        "next": [
+            "check_no_ninjia_book_liveness_award"
+        ],
+        "interrupt": [
+            "ninjia_book_liveness_award"
+        ],
         "action": "Click",
         "target": [
             1245,
