@@ -35,7 +35,8 @@
         "template": [
             "Leaderboard/board.png",
             "Leaderboard/board_night_undone.png",
-            "Leaderboard/board_night_done.png"
+            "Leaderboard/board_night_done.png",
+            "Leaderboard/board_with_title.png"
         ],
         "roi": [
             5,
