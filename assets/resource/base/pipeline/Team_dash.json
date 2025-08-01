@@ -242,7 +242,13 @@
         ],
         "next": [
             "team_dash_auto_fight"
-        ]
+        ],
+        "interrupt": [
+            "team_dash_remin_2",
+            "team_dash_remin_1",
+            "team_dash_remin_0"
+        ],
+        "post_wait_freezes": 300
     },
     "team_dash_auto_fight": {
         "recognition": "TemplateMatch",

@@ -97,6 +97,9 @@
             "mouthly_signature",
             "check_mouthly_signature_title"
         ],
+        "interrupt": [
+            "mouthly_sign_undone"
+        ],
         "post_wait_freezes": 500
     },
     "mouthly_sign_done": {
