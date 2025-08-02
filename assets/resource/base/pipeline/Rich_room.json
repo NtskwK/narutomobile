@@ -266,7 +266,7 @@
         "interrupt": [
             "peace"
         ],
-        "post_delay": 1000
+        "post_delay": 1500
     },
     "click_skill2": {
         "recognition": "TemplateMatch",

@@ -175,10 +175,12 @@
             83
         ],
         "threshold": 0.95,
-        "action": "Swipe",
-        "duration": 30,
+        "action": "Click",
         "next": [
             "team_dash_my_help_award"
+        ],
+        "interrupt": [
+            "team_dash_my_help_undone"
         ],
         "post_wait_freezes": 500
     },

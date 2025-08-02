@@ -195,7 +195,8 @@
             "confirm_chopper_group_pray"
         ],
         "interrupt": [
-            "close_chopper_group_pray"
+            "close_chopper_group_pray",
+            "above_kage_group_pray"
         ],
         "post_delay": 3000
     },
@@ -213,7 +214,8 @@
             "confirm_chopper_group_pray"
         ],
         "interrupt": [
-            "close_chopper_group_pray"
+            "close_chopper_group_pray",
+            "chopper_group_pray"
         ]
     },
     "close_chopper_group_pray": {
