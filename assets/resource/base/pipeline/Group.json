@@ -216,7 +216,8 @@
         "interrupt": [
             "close_chopper_group_pray",
             "chopper_group_pray"
-        ]
+        ],
+        "post_delay": 3000
     },
     "close_chopper_group_pray": {
         "recognition": "TemplateMatch",
