@@ -90,7 +90,7 @@
             176,
             523
         ],
-        "threshold": 0.95,
+        "threshold": 0.9,
         "action": "Swipe",
         "duration": 100,
         "next": [
@@ -115,7 +115,7 @@
             178,
             519
         ],
-        "threshold": 0.95,
+        "threshold": 0.9,
         "next": [
             "back_main_screen"
         ]

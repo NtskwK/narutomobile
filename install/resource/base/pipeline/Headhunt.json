@@ -42,6 +42,10 @@
             "confrim_free_headhunt",
             "click_x_single"
         ],
+        "interrupt": [
+            "headhunt_recruit_undone",
+            "headhunt_recruit_done"
+        ],
         "post_delay": 700
     },
     "confrim_free_headhunt": {

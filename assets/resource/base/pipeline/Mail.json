@@ -12,7 +12,8 @@
             "mail_done"
         ],
         "interrupt": [
-            "open_mail"
+            "open_mail",
+            "back_main_screen"
         ]
     },
     "mail_done": {
