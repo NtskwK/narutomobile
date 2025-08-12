@@ -82,6 +82,14 @@ jobs:
           out-file-path: "MFA"
           extract: true
 
+      - name: Clean up MFAAvalonia archive
+        if: matrix.os != 'android'
+        shell: bash
+        run: |
+          ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
+          rm -f "${ARCHIVE_FILE_PATH}"
+          echo "Archive cleanup command executed for MFAAvalonia on Windows."
+
       - name: Install
         shell: bash
         run: |
