@@ -74,10 +74,11 @@ jobs:
 
       - name: Download MFAAvalonia
         id: download_mfa
+        if: matrix.os == 'android'
         uses: robinraju/release-downloader@v1
         with:
           repository: SweetSmellFox/MFAAvalonia
-          fileName: "MFAAvalonia-*-win-${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}*"
+          fileName: "MFAAvalonia-*-${{ (matrix.os == 'win' && 'win') || (matrix.os == 'macos' && 'osx') || (matrix.os == 'linux' && 'linux') }}-${{ (matrix.arch == 'x86_64' && 'x64') || (matrix.arch == 'aarch64' && 'arm64') }}*"
           latest: true
           out-file-path: "MFA"
           extract: true
@@ -90,6 +91,7 @@ jobs:
 
       - name: Clean up MFAAvalonia archive
         shell: bash
+        if: matrix.os == 'android'
         run: |
           ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
           rm -f "${ARCHIVE_FILE_PATH}"
