@@ -155,6 +155,6 @@ Win10 或者 Win11 系统自带了一份 "Python"，但它其实只是一个安�
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
+感谢以下开发者对本项目作出的贡献:
 
-[![Contributors](https://contrib.rocks/image?repo=MaaXYZ/duorua/narotomobile&max=1000)](https://github.com/duorua/narotomobile.git)
+![Contributors](https://contrib.rocks/image?repo=duorua/narotomobile&max=1000)
