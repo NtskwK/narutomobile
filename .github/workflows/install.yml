@@ -83,12 +83,6 @@ jobs:
           out-file-path: "MFA"
           extract: true
 
-      - name: debug
-        shell: bash
-        run: |
-          ls .
-
-
       - name: Clean up MFAAvalonia archive
         shell: bash
         if: matrix.os != 'android'
