@@ -73,7 +73,8 @@ jobs:
           extract: true
 
       - name: Download MFAAvalonia
-        if: matrix.os != 'android'
+        id: download_mfa
+        if: matrix.os == 'android'
         uses: robinraju/release-downloader@v1
         with:
           repository: SweetSmellFox/MFAAvalonia
