@@ -111,7 +111,8 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaNM-${{ matrix.os }}-${{ matrix.arch }}
+          # 在 artifact 名称中添加 tag
+          name: MaaNM-${{ matrix.os }}-${{ matrix.arch }}-${{ needs.meta.outputs.tag }}
           path: "install"
 
   release:
@@ -126,7 +127,7 @@ jobs:
       - run: |
           cd assets
           for f in *; do
-            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+            (cd $f && zip -r ../${{ needs.meta.outputs.tag }}-$f.zip .)
           done
 
       - uses: softprops/action-gh-release@v2
