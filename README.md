@@ -16,7 +16,7 @@
 </p>
 
 <div align="center">
-需要使用平板1600x900分辨率运行
+本项目需要在模拟器设置里将分辨率调整为平板1600x900达到最佳运行效果
 </div>
 
 ## 快速开始
@@ -27,25 +27,35 @@
 
 ## 如何参与开发
 
-### 前置条件
+学习[M9A 开发须知](https://github.com/MAA1999/M9A/blob/main/docs/zh_cn/develop/%E5%BC%80%E5%8F%91%E5%89%8D%E9%A1%BB%E7%9F%A5.md)了解如何在本地以开发模式运行项目（本项目与M9A的项目结构类似，可以作为学习参考）。
 
-1. 首先你需要了解[MaaFramework](https://github.com/MaaXYZ/MaaFramework)
+### 环境配置
 
-2. 如果要写新的功能请参考
-[任务流水线（Pipeline）协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
+我们强烈推荐您使用[VSCode](https://code.visualstudio.com/Download)进行开发，因为社区提供了优秀的[Maa Pipeline Support](https://marketplace.visualstudio.com/items?itemName=nekosu.maa-support) VSCode 插件来进行调试。同时，你还能在项目的推荐插件列表来获取我们推荐使用的插件。
 
-语法规范：
-https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md
-通过这个去了解如何修改（assets\resource\base\pipeline\my_task.json）文件
+- 安装vscode
+- 安装git
+- 安装 python（≥3.9）
+- 选择性安装调试/开发工具
 
-同时注意使用增加截图的时候使用[MFATools](https://github.com/SweetSmellFox/MFATools)截图
+    | 工具 | 简介 |
+    | --- | --- |
+    | [MaaDebugger](https://github.com/MaaXYZ/MaaDebugger) | 独立调试工具 |
+    | [Maa Pipeline Support](https://marketplace.visualstudio.com/items?itemName=nekosu.maa-support) | VSCode 插件，提供调试、截图、获取 ROI 、取色等功能 |
+    | [MFA Tools(仅win)](https://github.com/SweetSmellFox/MFATools) | 独立截图、获取 ROI 及取色工具 |
+    | [ImageCropper(不推荐)](https://github.com/MaaXYZ/MaaFramework/tree/main/tools/ImageCropper) | 独立截图及获取 ROI 工具 |
 
-使用[MAAdebugger](https://github.com/MaaXYZ/MaaDebugger)进行调试
+### 开始开发
 
-> [!TIP]
-> 如果你想要方便的打开MAAdebugger可以参考`narotomobile\MaaDebugger.bat`文件编写一个批处理文件
+1. 阅读[M9A 开发须知](https://github.com/MAA1999/M9A/blob/main/docs/zh_cn/develop/%E5%BC%80%E5%8F%91%E5%89%8D%E9%A1%BB%E7%9F%A5.md)，了解如何在本地以开发模式运行本项目（本项目与M9A的项目结构类似，可以作为学习参考）。
 
-可以阅读[视频教程](https://www.bilibili.com/video/BV1yr421E7MW/)
+2. 如果不会写代码，但对某些功能的实现有明确的思路可以参考
+[任务流水线（Pipeline）协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)以学习如何将思路转化为具体实现，并通过这个去了解如何在`assets\resource\base\pipeline`中编写流水线文件。然后学习[Project Interface 协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.2-ProjectInterface%E5%8D%8F%E8%AE%AE.md#project-interface-%E5%8D%8F%E8%AE%AE)，了解如何让软件能够调用你写的流水线文件。
+
+3. 我有一定的Python基础，想要尝试为项目编写代码。可以阅读
+[MaaFramework 开发文档](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)以了解如何为项目开发新功能。
+
+4. 为项目贡献你所编写的内容，请参考[牛牛也能看懂的 GitHub Pull Request 使用指南](https://maa.plus/docs/zh-cn/develop/pr-tutorial.html)
 
 ## FAQ
 
@@ -68,7 +78,6 @@ https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
 本项目的前端使用了 **[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)** 。
-
 
 感谢以下开发者对本项目作出的贡献:
 
