@@ -8,3 +8,11 @@ echo %cd%
 
 python ./install.py
 install/MaaPiCli.exe
+
+mkdir deps
+
+echo 请下载最新版的MaaFramework并解压至deps目录（如果不存在，请手动创建）
+@REM 打开MaaFW最新版本的发布页面
+start https://github.com/MaaXYZ/MaaFramework/releases/tag/latest
+
+pause
