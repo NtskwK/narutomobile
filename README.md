@@ -36,6 +36,6 @@
 
 本项目的前端使用了 **[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)** 。
 
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
+感谢以下开发者对本项目作出的贡献:
 
 [![Contributors](https://contrib.rocks/image?repo=duorua/narutomobile)](https://github.com/duorua/narutomobile/graphs/contributors)
