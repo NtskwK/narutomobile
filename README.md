@@ -39,3 +39,7 @@
 感谢以下开发者对本项目作出的贡献:
 
 [![Contributors](https://contrib.rocks/image?repo=duorua/narutomobile)](https://github.com/duorua/narutomobile/graphs/contributors)
+
+### Join us
+
+聊天群： 1047724031
