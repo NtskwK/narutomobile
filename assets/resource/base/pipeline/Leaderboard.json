@@ -1,7 +1,8 @@
 {
     "leaderboard": {
         "next": [
-            "leaderboard_entry"
+            "leaderboard_entry",
+            "leaderboard_entry_by_ocr"
         ],
         "interrupt": [
             "swipe_for_left_entries",
@@ -11,10 +12,9 @@
     "swipe_for_left_entries": {
         "recognition": "TemplateMatch",
         "template": [
-            "Leaderboard/practice_place.png",
-            "Leaderboard/practice_place_summer.png"
+            "Startgame/main_green_masked.png"
         ],
-        "threshold": 0.7,
+        "threshold": 0.8,
         "green_mask": true,
         "action": "Swipe",
         "begin": [
@@ -30,13 +30,25 @@
             50
         ]
     },
+    "leaderboard_entry_by_ocr": {
+        "recognition": "OCR",
+        "expected": [
+            "排",
+            "行",
+            "榜"
+        ],
+        "action": "Click",
+        "next": [
+            "click_thumb"
+        ],
+        "post_wait_freezes": 300
+    },
     "leaderboard_entry": {
         "recognition": "TemplateMatch",
         "template": [
             "Leaderboard/board.png",
             "Leaderboard/board_night_undone.png",
-            "Leaderboard/board_night_done.png",
-            "Leaderboard/board_with_title.png"
+            "Leaderboard/board_night_done.png"
         ],
         "roi": [
             5,
@@ -44,7 +56,7 @@
             1088,
             518
         ],
-        "threshold": 0.5,
+        "threshold": 0.8,
         "green_mask": true,
         "action": "Click",
         "next": [
