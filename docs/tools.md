@@ -1,18 +1,11 @@
-# 个性化配置
+# 开发工具
 
-## 目录
+🚧施工中🚧
 
-- [问题模板](#问题模板)
+## 辅助工具
+
 - [VSCode插件](#vscode-plugins)
 - [代码格式化工具](#代码格式化工具)
-
-## 问题模板
-
-好的模板可以节省您与用户的沟通时间，帮助您更快地找到问题所在。
-
-借鉴于 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights) 项目模板，我们结合 `MaaFramework` 实际使用情况，提供一套可行的选择。
-
-您可以简单的将 `.github/ISSUE_TEMPLATE` 目录下 `cn-bug-report.yaml` 和 `cn-bug-report.yaml` 文件中 `MXX` 修改为您自己的项目名称，即可使用。
 
 ## VSCode 插件 <a id="vscode-plugins"></a>
 
@@ -95,7 +88,6 @@
         - yaml
         - json
 ```
-
 
 配置文件 `.prettierrc.yaml` , [具体规则](https://prettier.io/docs/en/options.html)
 
