@@ -153,7 +153,8 @@
             39
         ],
         "next": [
-            "close_qq_friend_share"
+            "close_qq_friend_share",
+            "close_qq_friend_share_portrait"
         ],
         "interrupt": [
             "close_weekly_ninjia_title"
@@ -161,6 +162,24 @@
         "action": "Click",
         "pre_wait_freezes": 200,
         "post_wait_freezes": 400
+    },
+    "close_qq_friend_share_portrait": {
+        "recognition": "OCR",
+        "expected": [
+            "关闭",
+            "关",
+            "闭"
+        ],
+        "roi": [
+            8,
+            16,
+            200,
+            130
+        ],
+        "action": "Click",
+        "next": [
+            "check_main_screen_and_stop"
+        ]
     },
     "close_qq_friend_share": {
         "recognition": "OCR",

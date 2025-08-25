@@ -73,6 +73,7 @@ jobs:
           extract: true
 
       - name: Download MFAAvalonia
+        id: download_mfa
         if: matrix.os != 'android'
         uses: robinraju/release-downloader@v1
         with:
@@ -81,6 +82,15 @@ jobs:
           latest: true
           out-file-path: "MFA"
           extract: true
+
+      - name: Clean up MFAAvalonia archive
+        shell: bash
+        if: matrix.os != 'android'
+        run: |
+          ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
+          echo "${ARCHIVE_FILE_PATH}"
+          rm -f "${ARCHIVE_FILE_PATH}"
+          echo "Archive cleanup command executed for MFAAvalonia."
 
       - name: Install
         shell: bash
@@ -101,7 +111,8 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaNM-${{ matrix.os }}-${{ matrix.arch }}
+          # 在 artifact 名称中添加 tag
+          name: MaaNM-${{ matrix.os }}-${{ matrix.arch }}-${{ needs.meta.outputs.tag }}
           path: "install"
 
   release:
@@ -116,7 +127,7 @@ jobs:
       - run: |
           cd assets
           for f in *; do
-            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+            (cd $f && zip -r ../${{ needs.meta.outputs.tag }}-$f.zip .)
           done
 
       - uses: softprops/action-gh-release@v2

@@ -112,6 +112,6 @@
         "interrupt": [
             "back_main_screen"
         ],
-        "post_wait_freezes": 300
+        "post_wait_freezes": 500
     }
 }
