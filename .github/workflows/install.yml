@@ -126,6 +126,7 @@ jobs:
 
       - run: |
           cd assets
+          ls .
           for f in *; do
             (cd $f && zip -r ../${{ needs.meta.outputs.tag }}-$f.zip .)
           done
