@@ -10,9 +10,9 @@
         ]
     },
     "swipe_for_left_entries": {
-        "recognition": "TemplateMatch",
+        "recognition": "OCR",
         "template": [
-            "Startgame/main_green_masked.png"
+            "Public/main_green_masked.png"
         ],
         "threshold": 0.8,
         "green_mask": true,
@@ -83,8 +83,7 @@
         ],
         "action": "Click",
         "next": [
-            "close_announcement",
-            "check_main_screen_and_stop"
+            "back_main_screen_and_stop"
         ],
         "interrupt": [
             "back_main_screen"

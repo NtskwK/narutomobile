@@ -67,7 +67,6 @@
         ],
         "interrupt": [
             "close_weekly_ninjia_title",
-            "share_entry",
             "share_to_qq_friend"
         ],
         "action": "Click",
@@ -85,35 +84,6 @@
         "next": [
             "Swipe_for_back_daily_award_top"
         ]
-    },
-    "share_entry": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Startgame/main_green_masked.png"
-        ],
-        "roi": [
-            11,
-            0,
-            1269,
-            720
-        ],
-        "action": "Click",
-        "target": [
-            54,
-            32,
-            69,
-            47
-        ],
-        "green_mask": true,
-        "next": [
-            "try_share"
-        ],
-        "interrupt": [
-            "close_weekly_ninjia_title",
-            "share_entry",
-            "share_to_qq_friend"
-        ],
-        "post_wait_freezes": 300
     },
     "try_share": {
         "recognition": "TemplateMatch",
@@ -166,20 +136,8 @@
         "action": "StopApp",
         "package": "com.tencent.mobileqq",
         "next": [
-            "click_x_single",
-            "check_main_screen_and_stop"
-        ]
-    },
-    "back_main_screen": {
-        "next": [
-            "check_main_screen"
-        ],
-        "interrupt": [
             "click_x",
-            "weekly_sign",
-            "close_chat",
-            "close_friend_rank",
-            "close_new_ninjia_page",
+            "back_main_screen_and_stop"
         ]
     },
     "close_weekly_ninjia_title": {
@@ -196,20 +154,6 @@
         ],
         "action": "Click"
     },
-    "back_main_screen_and_stop": {
-        "next": [
-            "check_main_screen_and_stop"
-        ],
-        "interrupt": [
-            "confirm_quit_team",
-            "click_x",
-            "weekly_sign",
-            "close_chat",
-            "close_friend_rank",
-            "close_new_ninjia_page",
-            "close_qq_app"
-        ]
-    },
     "confirm_quit_team": {
         "recognition": "TemplateMatch",
         "template": "Share/quit_team.png",
@@ -221,67 +165,6 @@
         ],
         "action": "Swipe",
         "duration": 50
-    },
-    "close_chat": {
-        "recognition": "TemplateMatch",
-        "template": "Share/chat_close_button.png",
-        "roi": [
-            807,
-            295,
-            53,
-            104
-        ],
-        "action": "Click"
-    },
-    "keep_close_x": {
-        "next": [
-            "check_no_x"
-        ],
-        "interrupt": [
-            "click_x",
-            "close_headhunt_end_announcement",
-            "keep_close_x",
-            "close_friend_rank"
-        ]
-    },
-    "click_x_single": {
-        "recognition": "TemplateMatch",
-        "template": "Share/green_masked_x.png",
-        "action": "Swipe",
-        "duration": 50,
-        "green_mask": true,
-        "threshold": 0.5,
-        "post_delay": 500
-    },
-    "check_no_x": {
-        "recognition": "TemplateMatch",
-        "template": "Share/green_masked_x.png",
-        "action": "DoNothing",
-        "green_mask": true,
-        "inverse": true,
-        "threshold": 0.5,
-        "next": [
-            "check_main_screen"
-        ],
-        "interrupt": [
-            "weekly_sign",
-            "click_x"
-        ],
-        "post_delay": 700
-    },
-    "click_x": {
-        "recognition": "TemplateMatch",
-        "template": "Share/green_masked_x.png",
-        "action": "Click",
-        "green_mask": true,
-        "threshold": 0.5,
-        "next": [
-            "keep_close_x"
-        ],
-        "interrupt": [
-            "close_headhunt_end_announcement"
-        ],
-        "post_delay": 500
     },
     "award_center_enter": {
         "recognition": "TemplateMatch",

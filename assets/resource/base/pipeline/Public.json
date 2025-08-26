@@ -1,0 +1,118 @@
+{
+    "check_main_screen": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Public/main_green_masked.png"
+        ],
+        "roi": [
+            11,
+            0,
+            1269,
+            720
+        ],
+        "threshold": 0.95,
+        "action": "DoNothing",
+        "green_mask": true,
+        "post_delay": 500
+    },
+    "back_main_screen_and_stop": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Public/main_green_masked.png"
+        ],
+        "roi": [
+            11,
+            0,
+            1269,
+            720
+        ],
+        "threshold": 0.95,
+        "action": "StopTask",
+        "green_mask": true,
+        "post_delay": 500,
+        "interrupt": [
+            "back_main_screen"
+        ]
+    },
+    "back_main_screen": {
+        "next": [
+            "check_main_screen"
+        ],
+        "interrupt": [
+            "click_x",
+            "confirm_friend_rank",
+            "close_chat",
+            "weekly_sign"
+        ]
+    },
+    "confirm_friend_rank": {
+        "recognition": "TemplateMatch",
+        "template": "Public/confirm.png",
+        "roi": [
+            738,
+            629,
+            93,
+            56
+        ],
+        "action": "Swipe",
+        "duration": 50
+    },
+    "close_chat": {
+        "recognition": "TemplateMatch",
+        "template": "Public/chat_close_button.png",
+        "roi": [
+            807,
+            295,
+            53,
+            104
+        ],
+        "action": "Click"
+    },
+    "close_announcement": {
+        "next": [
+            "check_main_screen"
+        ],
+        "interrupt": [
+            "click_x"
+        ]
+    },
+    "click_x": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Public/green_masked_x.png",
+            "Public/headhunt_end_green_masked.png"
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "threshold": 0.5,
+        "post_delay": 500
+    },
+    "close_new_ninjia_page": {
+        "recognition": "TemplateMatch",
+        "template": "Public/right_up_x.png",
+        "roi": [
+            1188,
+            0,
+            92,
+            52
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
+    "weekly_sign": {
+        "recognition": "OCR",
+        "expected": [
+            "领取",
+            "领",
+            "取"
+        ],
+        "roi": [
+            606,
+            587,
+            68,
+            36
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100
+    }
+}

@@ -53,33 +53,10 @@
         ],
         "action": "Click",
         "next": [
-            "check_close_before_game_notice"
-        ],
-        "interrupt": [
-            "close_before_game_notice"
-        ],
-        "post_delay": 500
-    },
-    "check_close_before_game_notice": {
-        "recognition": "TemplateMatch",
-        "template": "Startup/x.png",
-        "roi": [
-            1010,
-            53,
-            93,
-            77
-        ],
-        "action": "Click",
-        "inverse": true,
-        "next": [
             "check_start_game"
         ],
         "interrupt": [
-            "agree_log_in",
-            "close_teenager_page",
-            "unagreement",
-            "agreement",
-            "click_icon"
+            "close_before_game_notice"
         ],
         "post_delay": 500
     },

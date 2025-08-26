@@ -40,7 +40,7 @@
         "action": "Click",
         "next": [
             "confrim_free_headhunt",
-            "click_x_single"
+            "click_x"
         ],
         "interrupt": [
             "headhunt_recruit_undone",

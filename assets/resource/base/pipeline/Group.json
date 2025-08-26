@@ -4,7 +4,7 @@
             "group_entry"
         ],
         "interrupt": [
-            "swipe_for_left_entries",
+            "close_announcement",
             "back_main_screen"
         ]
     },

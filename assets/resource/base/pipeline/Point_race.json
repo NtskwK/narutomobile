@@ -100,7 +100,7 @@
         "threshold": 0.8,
         "action": "Click",
         "next": [
-            "check_main_screen_and_stop"
+            "back_main_screen_and_stop"
         ]
     },
     "point_race_undone": {
