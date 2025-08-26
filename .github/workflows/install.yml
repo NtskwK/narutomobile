@@ -111,13 +111,12 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          # 在 artifact 名称中添加 tag
-          name: MaaNM-${{ matrix.os }}-${{ matrix.arch }}-${{ needs.meta.outputs.tag }}
+          name: MaaNM-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: install
+    needs: [install,meta]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
@@ -128,7 +127,7 @@ jobs:
           cd assets
           ls .
           for f in *; do
-            (cd $f && zip -r ../${{ needs.meta.outputs.tag }}-$f.zip .)
+            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
           done
 
       - uses: softprops/action-gh-release@v2
