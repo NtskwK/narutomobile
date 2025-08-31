@@ -275,8 +275,7 @@
     "click_x": {
         "recognition": "TemplateMatch",
         "template": [
-            "Share/green_masked_x.png",
-            "Share/x.png"
+            "Share/green_masked_x.png"
         ],
         "action": "Click",
         "green_mask": true,

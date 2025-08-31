@@ -1,11 +1,9 @@
 {
     "leaderboard": {
         "next": [
-            "leaderboard_entry",
-            "leaderboard_entry_by_ocr"
+            "leaderboard_check_in_main_scream"
         ],
         "interrupt": [
-            "swipe_for_left_entries",
             "back_main_screen"
         ]
     },
@@ -43,6 +41,28 @@
         ],
         "post_wait_freezes": 300
     },
+    "leaderboard_check_in_main_scream": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Startgame/main_green_masked.png"
+        ],
+        "roi": [
+            11,
+            0,
+            1269,
+            720
+        ],
+        "threshold": 0.95,
+        "green_mask": true,
+        "next": [
+            "leaderboard_entry",
+            "leaderboard_entry_by_ocr"
+        ],
+        "interrupt": [
+            "swipe_for_left_entries"
+        ],
+        "post_delay": 500
+    },
     "leaderboard_entry": {
         "recognition": "TemplateMatch",
         "template": [
@@ -70,7 +90,8 @@
         "action": "Click",
         "next": [
             "close_board"
-        ]
+        ],
+        "post_delay": 500
     },
     "close_board": {
         "recognition": "TemplateMatch",
