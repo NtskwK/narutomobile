@@ -167,7 +167,7 @@
         "package": "com.tencent.mobileqq",
         "next": [
             "click_x_single",
-            "check_main_screen_and_stop"
+            "back_main_screen_and_stop"
         ]
     },
     "back_main_screen": {
@@ -246,7 +246,10 @@
     },
     "click_x_single": {
         "recognition": "TemplateMatch",
-        "template": "Share/green_masked_x.png",
+        "template": [
+            "Share/green_masked_x.png",
+            "Share/x.png"
+        ],
         "action": "Swipe",
         "duration": 50,
         "green_mask": true,
@@ -271,7 +274,10 @@
     },
     "click_x": {
         "recognition": "TemplateMatch",
-        "template": "Share/green_masked_x.png",
+        "template": [
+            "Share/green_masked_x.png",
+            "Share/x.png"
+        ],
         "action": "Click",
         "green_mask": true,
         "threshold": 0.5,
