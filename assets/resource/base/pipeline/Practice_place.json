@@ -656,10 +656,37 @@
             "survival_challenge_sweep_ready"
         ],
         "interrupt": [
+            "check_survival_challenge_done",
             "start_survival_challenge_sweep",
             "survival_challenge_done"
         ],
         "post_wait_freezes": 300
+    },
+    "check_survival_challenge_done": {
+        "recognition": "OCR",
+        "expected": [
+            "已",
+            "通",
+            "过",
+            "所",
+            "有",
+            "关",
+            "卡",
+            "扫",
+            "荡",
+            "卷",
+            "不",
+            "足"
+        ],
+        "roi": [
+            515,
+            332,
+            229,
+            47
+        ],
+        "next": [
+            "survival_challenge_done"
+        ]
     },
     "survival_challenge_done": {
         "next": [
