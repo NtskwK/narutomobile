@@ -206,8 +206,7 @@
             "weekly_sign",
             "close_chat",
             "close_friend_rank",
-            "close_new_ninjia_page",
-            "close_qq_app"
+            "close_new_ninjia_page"
         ]
     },
     "confirm_quit_team": {
@@ -253,6 +252,7 @@
         "action": "Swipe",
         "duration": 50,
         "green_mask": true,
+        "next": "back_main_screen_and_stop",
         "threshold": 0.5,
         "post_delay": 500
     },
